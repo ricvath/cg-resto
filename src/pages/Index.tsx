@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Hero } from "@/components/Hero";
 import { Button } from "@/components/ui/button";
-import { MapPin, Utensils, Wine, Family } from "lucide-react";
+import { MapPin, Utensils, Wine, Users } from "lucide-react";
 
 const Index = () => {
   const [language, setLanguage] = useState<"en" | "es">("en");
@@ -88,7 +88,7 @@ const Index = () => {
               <h3 className="font-playfair text-xl mb-2">Fine Wines</h3>
             </div>
             <div className="p-6 bg-white rounded-lg shadow-sm">
-              <Family className="w-12 h-12 mx-auto mb-4" />
+              <Users className="w-12 h-12 mx-auto mb-4" />
               <h3 className="font-playfair text-xl mb-2">Family Dining</h3>
             </div>
           </div>
