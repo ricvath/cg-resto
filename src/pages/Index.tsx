@@ -1,11 +1,25 @@
-
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Hero } from "@/components/Hero";
 import { Button } from "@/components/ui/button";
-import { MapPin, Utensils, Wine, Users } from "lucide-react";
+import { MapPin, Utensils, Wine, Users, Facebook, Instagram, Mail } from "lucide-react";
+import Map from "@/components/Map";
 
 const Index = () => {
   const [language, setLanguage] = useState<"en" | "es">("en");
+  const [showFloatingCta, setShowFloatingCta] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const heroSection = document.querySelector('.min-h-screen');
+      if (heroSection) {
+        const heroBottom = heroSection.getBoundingClientRect().bottom;
+        setShowFloatingCta(heroBottom < 0);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const content = {
     en: {
@@ -26,6 +40,19 @@ const Index = () => {
         title: "Family Welcome",
         description: "Our spacious garden provides a safe, open-air environment where children can play while adults savor their dining experience.",
       },
+      reserve: "Reserve a Table",
+      steaks: "Steaks & Seafood",
+      wines: "Fine Wines",
+      family: "Family Dining",
+      location: "Location",
+      locationText: "In the heart of Marbella's Costa del Sol",
+      footer: {
+        privacy: "Privacy Policy",
+        legal: "Legal Warning",
+        cookies: "Cookies Policy",
+        contact: "Contact Us",
+        rights: "All rights reserved."
+      }
     },
     es: {
       about: {
@@ -45,20 +72,35 @@ const Index = () => {
         title: "Bienvenida Familiar",
         description: "Nuestro espacioso jardín proporciona un ambiente seguro al aire libre donde los niños pueden jugar mientras los adultos saborean su experiencia gastronómica.",
       },
-    },
+      reserve: "Reservar Mesa",
+      steaks: "Carnes y Mariscos",
+      wines: "Vinos Selectos",
+      family: "Comida Familiar",
+      location: "Ubicación",
+      locationText: "En el corazón de la Costa del Sol de Marbella",
+      footer: {
+        privacy: "Política de Privacidad",
+        legal: "Aviso Legal",
+        cookies: "Política de Cookies",
+        contact: "Contáctenos",
+        rights: "Todos los derechos reservados."
+      }
+    }
   };
 
   return (
     <div className="relative">
-      <Hero />
+      <Hero language={language} />
       
-      {/* Sticky Reservation Button */}
-      <Button
-        className="fixed bottom-8 right-8 z-50 bg-[#2C2C2C] text-white hover:bg-[#1a1a1a]"
-        size="lg"
-      >
-        Reserve a Table
-      </Button>
+      {/* Floating CTA Button */}
+      {showFloatingCta && (
+        <Button
+          className="fixed top-8 right-8 z-50 bg-[#2C2C2C] text-white hover:bg-[#1a1a1a]"
+          size="lg"
+        >
+          {content[language].reserve}
+        </Button>
+      )}
 
       {/* About Section */}
       <section className="py-20 px-4 bg-white">
@@ -81,15 +123,15 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="p-6 bg-white rounded-lg shadow-sm">
               <Utensils className="w-12 h-12 mx-auto mb-4" />
-              <h3 className="font-playfair text-xl mb-2">Steaks & Seafood</h3>
+              <h3 className="font-playfair text-xl mb-2">{content[language].steaks}</h3>
             </div>
             <div className="p-6 bg-white rounded-lg shadow-sm">
               <Wine className="w-12 h-12 mx-auto mb-4" />
-              <h3 className="font-playfair text-xl mb-2">Fine Wines</h3>
+              <h3 className="font-playfair text-xl mb-2">{content[language].wines}</h3>
             </div>
             <div className="p-6 bg-white rounded-lg shadow-sm">
               <Users className="w-12 h-12 mx-auto mb-4" />
-              <h3 className="font-playfair text-xl mb-2">Family Dining</h3>
+              <h3 className="font-playfair text-xl mb-2">{content[language].family}</h3>
             </div>
           </div>
         </div>
@@ -99,17 +141,22 @@ const Index = () => {
       <section className="py-20 px-4 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <MapPin className="w-12 h-12 mx-auto mb-4" />
-          <h2 className="font-playfair text-4xl mb-6">Location</h2>
-          <p className="text-lg mb-8">In the heart of Marbella's Costa del Sol</p>
-          <div className="h-[400px] bg-[#F8F7F4] rounded-lg"></div>
+          <h2 className="font-playfair text-4xl mb-6">{content[language].location}</h2>
+          <p className="text-lg mb-8">{content[language].locationText}</p>
+          <Map />
         </div>
       </section>
 
       {/* Footer */}
       <footer className="py-12 px-4 bg-[#2C2C2C] text-white">
         <div className="max-w-4xl mx-auto">
-          <div className="flex justify-between items-center mb-8">
-            <div className="space-x-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div className="space-y-2">
+              <a href="#" className="block hover:text-gray-300">{content[language].footer.privacy}</a>
+              <a href="#" className="block hover:text-gray-300">{content[language].footer.legal}</a>
+              <a href="#" className="block hover:text-gray-300">{content[language].footer.cookies}</a>
+            </div>
+            <div className="space-x-4 flex justify-center items-center">
               <button
                 onClick={() => setLanguage("en")}
                 className={`${language === "en" ? "text-white" : "text-gray-400"}`}
@@ -123,9 +170,20 @@ const Index = () => {
                 Español
               </button>
             </div>
+            <div className="flex justify-center md:justify-end space-x-6">
+              <a href="#" className="hover:text-gray-300">
+                <Facebook className="w-6 h-6" />
+              </a>
+              <a href="#" className="hover:text-gray-300">
+                <Instagram className="w-6 h-6" />
+              </a>
+              <a href="#" className="hover:text-gray-300">
+                <Mail className="w-6 h-6" />
+              </a>
+            </div>
           </div>
           <div className="text-center text-sm text-gray-400">
-            © {new Date().getFullYear()} Cortes Garden. All rights reserved.
+            © {new Date().getFullYear()} Cortes Garden. {content[language].footer.rights}
           </div>
         </div>
       </footer>
