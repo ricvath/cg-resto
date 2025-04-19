@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Hero } from "@/components/Hero";
 import { Button } from "@/components/ui/button";
@@ -104,10 +103,10 @@ const Index = () => {
       )}
 
       {/* About Section */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-20 px-4 bg-primary">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-playfair text-4xl mb-6">{content[language].about.title}</h2>
-          <h3 className="font-playfair text-2xl mb-6 text-[#4A4A4A]">
+          <h2 className="font-myanmar text-4xl mb-6">{content[language].about.title}</h2>
+          <h3 className="font-myanmar text-2xl mb-6">
             {content[language].about.subtitle}
           </h3>
           <p className="text-lg leading-relaxed">
@@ -117,39 +116,39 @@ const Index = () => {
       </section>
 
       {/* Cuisine Preview */}
-      <section className="py-20 px-4 bg-[#F8F7F4]">
+      <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-playfair text-4xl mb-8">{content[language].cuisine.title}</h2>
+          <h2 className="font-myanmar text-4xl mb-8">{content[language].cuisine.title}</h2>
           <p className="text-lg mb-12">{content[language].cuisine.subtitle}</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="p-6 bg-white rounded-lg shadow-sm">
-              <Utensils className="w-12 h-12 mx-auto mb-4" />
-              <h3 className="font-playfair text-xl mb-2">{content[language].steaks}</h3>
+              <Utensils className="w-8 h-8 mx-auto mb-4" />
+              <h3 className="font-myanmar text-xl mb-2">{content[language].steaks}</h3>
             </div>
             <div className="p-6 bg-white rounded-lg shadow-sm">
-              <Wine className="w-12 h-12 mx-auto mb-4" />
-              <h3 className="font-playfair text-xl mb-2">{content[language].wines}</h3>
+              <Wine className="w-8 h-8 mx-auto mb-4" />
+              <h3 className="font-myanmar text-xl mb-2">{content[language].wines}</h3>
             </div>
             <div className="p-6 bg-white rounded-lg shadow-sm">
-              <Users className="w-12 h-12 mx-auto mb-4" />
-              <h3 className="font-playfair text-xl mb-2">{content[language].familyDining}</h3>
+              <Users className="w-8 h-8 mx-auto mb-4" />
+              <h3 className="font-myanmar text-xl mb-2">{content[language].familyDining}</h3>
             </div>
           </div>
         </div>
       </section>
 
       {/* Location */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <MapPin className="w-12 h-12 mx-auto mb-4" />
-          <h2 className="font-playfair text-4xl mb-6">{content[language].location}</h2>
-          <p className="text-lg mb-8">{content[language].locationText}</p>
+          <MapPin className="w-8 h-8 mx-auto mb-4" />
+          <h2 className="font-myanmar text-4xl mb-6">{content[language].location}</h2>
+          <p className="text-lg mb-8">Urb. La Dama de Noche, Bloque 15. 29660, Marbella</p>
           <Map />
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-4 bg-[#2C2C2C] text-white">
+      <footer className="py-12 px-4 bg-black text-white">
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div className="space-y-2">

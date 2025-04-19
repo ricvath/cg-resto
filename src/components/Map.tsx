@@ -12,14 +12,14 @@ const Map = () => {
 
     map.current = new maplibregl.Map({
       container: mapContainer.current,
-      style: 'https://api.maptiler.com/maps/basic-v2/style.json?key=YOUR_KEY_HERE', // Replace with your key
-      center: [-4.8857, 36.5092], // Marbella coordinates
-      zoom: 14
+      style: 'https://api.maptiler.com/maps/streets-v2-light/style.json?key=osJqt1lunU1203raWN2v',
+      center: [-4.951441, 36.500897], // Marbella coordinates
+      zoom: 12
     });
 
     // Add marker for Cortes Garden
     const marker = new maplibregl.Marker()
-      .setLngLat([-4.8857, 36.5092])
+      .setLngLat([-4.951441, 36.500897])
       .addTo(map.current);
 
     // Add navigation controls
@@ -31,7 +31,7 @@ const Map = () => {
   }, []);
 
   return (
-    <div ref={mapContainer} className="h-[400px] w-full rounded-lg shadow-lg" />
+    <div ref={mapContainer} className="h-[400px] w-full rounded-lg border-black border-2" />
   );
 };
 

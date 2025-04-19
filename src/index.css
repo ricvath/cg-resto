@@ -1,4 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+
+@font-face {
+  font-family: 'Myanmar MN';
+  src: url('/myanmarmn.woff2') format('woff2'),
+       url('/myanmarmn.woff') format('woff'),
+       url('/myanmarmn.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 @tailwind base;
 @tailwind components;
@@ -6,8 +16,8 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: oklch(90.98% 0.022 80.68);
+    --foreground: oklch(47.54% 0.020 75.92);
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -15,11 +25,14 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: oklch(90.98% 0.022 80.68);
+    --primary-foreground: oklch(47.54% 0.020 75.92);
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --tertiary: oklch(47.54% 0.020 75.92);
+    --tertiary-foreground: oklch(100.00% 0.000 0);
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
@@ -34,7 +47,7 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
 
-    --radius: 0.5rem;
+    --radius: 0.1rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -91,36 +104,14 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
   
+  .font-myanmar {
+    @apply uppercase tracking-[0.2em];
+  }
+
   body {
-    @apply bg-[#FCFBF8] text-[#2C2C2C] antialiased;
+    @apply antialiased;
   }
 }
 
 @layer utilities {
-  .text-shadow {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  }
-  
-  .bg-blur {
-    backdrop-filter: blur(8px);
-  }
-  
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  
-  .animate-fade-in {
-    animation: fadeIn 0.8s ease-out forwards;
-  }
-  
-  @keyframes leafShadow {
-    0% { transform: rotate(0deg); }
-    50% { transform: rotate(2deg); }
-    100% { transform: rotate(0deg); }
-  }
-  
-  .animate-leaf-shadow {
-    animation: leafShadow 8s ease-in-out infinite;
-  }
 }

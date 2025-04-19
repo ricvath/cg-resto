@@ -64,7 +64,7 @@ export default {
         }
       },
       fontFamily: {
-        playfair: ["Playfair Display", "serif"],
+        myanmar: ["Myanmar MN", "serif"],
         sans: ["Inter", "sans-serif"],
       },
       borderRadius: {
@@ -96,5 +96,4 @@ export default {
       }
     },
   },
-  plugins: [require("tailwindcss-animate")],
 } satisfies Config;
