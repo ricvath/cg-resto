@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Hero } from "@/components/Hero";
 import { Button } from "@/components/ui/button";
@@ -36,14 +37,14 @@ const Index = () => {
         title: "Drinks & Ambiance",
         description: "Enjoy craft cocktails, fresh juices, and a curated wine selection at our outdoor bar, perfectly complementing the garden atmosphere.",
       },
-      family: {
+      familySection: {
         title: "Family Welcome",
         description: "Our spacious garden provides a safe, open-air environment where children can play while adults savor their dining experience.",
       },
       reserve: "Reserve a Table",
       steaks: "Steaks & Seafood",
       wines: "Fine Wines",
-      family: "Family Dining",
+      familyDining: "Family Dining",
       location: "Location",
       locationText: "In the heart of Marbella's Costa del Sol",
       footer: {
@@ -68,14 +69,14 @@ const Index = () => {
         title: "Bebidas y Ambiente",
         description: "Disfrute de cócteles artesanales, jugos frescos y una selección de vinos curada en nuestro bar al aire libre, complementando perfectamente la atmósfera del jardín.",
       },
-      family: {
+      familySection: {
         title: "Bienvenida Familiar",
         description: "Nuestro espacioso jardín proporciona un ambiente seguro al aire libre donde los niños pueden jugar mientras los adultos saborean su experiencia gastronómica.",
       },
       reserve: "Reservar Mesa",
       steaks: "Carnes y Mariscos",
       wines: "Vinos Selectos",
-      family: "Comida Familiar",
+      familyDining: "Comida Familiar",
       location: "Ubicación",
       locationText: "En el corazón de la Costa del Sol de Marbella",
       footer: {
@@ -131,7 +132,7 @@ const Index = () => {
             </div>
             <div className="p-6 bg-white rounded-lg shadow-sm">
               <Users className="w-12 h-12 mx-auto mb-4" />
-              <h3 className="font-playfair text-xl mb-2">{content[language].family}</h3>
+              <h3 className="font-playfair text-xl mb-2">{content[language].familyDining}</h3>
             </div>
           </div>
         </div>
