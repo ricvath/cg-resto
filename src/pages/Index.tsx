@@ -95,7 +95,7 @@ const Index = () => {
       {/* Floating CTA Button */}
       {showFloatingCta && (
         <Button
-          className="fixed top-8 right-8 z-50 bg-[#2C2C2C] text-white hover:bg-[#1a1a1a]"
+          className="fixed top-8 right-8 z-50 bg-primary text-primary-foreground hover:text-muted-foreground"
           size="lg"
         >
           {content[language].reserve}
@@ -103,86 +103,94 @@ const Index = () => {
       )}
 
       {/* About Section */}
-      <section className="py-20 px-4 bg-primary">
+      <section className="py-24 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-myanmar text-4xl mb-6">{content[language].about.title}</h2>
-          <h3 className="font-myanmar text-2xl mb-6">
+          <h3 className="font-myanmar text-xl mb-6">
             {content[language].about.subtitle}
           </h3>
-          <p className="text-lg leading-relaxed">
+          <p className="text-md leading-relaxed">
             {content[language].about.description}
           </p>
         </div>
       </section>
 
       {/* Cuisine Preview */}
-      <section className="py-20 px-4">
+      <section className="py-24 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-myanmar text-4xl mb-8">{content[language].cuisine.title}</h2>
-          <p className="text-lg mb-12">{content[language].cuisine.subtitle}</p>
+          <p className="text-md mb-12">{content[language].cuisine.subtitle}</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-6 bg-white rounded-lg shadow-sm">
+            <div className="p-6 bg-card shadow-sm">
               <Utensils className="w-8 h-8 mx-auto mb-4" />
-              <h3 className="font-myanmar text-xl mb-2">{content[language].steaks}</h3>
+              <h3 className="font-myanmar text-xl">{content[language].steaks}</h3>
             </div>
-            <div className="p-6 bg-white rounded-lg shadow-sm">
+            <div className="p-6 bg-card shadow-sm">
               <Wine className="w-8 h-8 mx-auto mb-4" />
-              <h3 className="font-myanmar text-xl mb-2">{content[language].wines}</h3>
+              <h3 className="font-myanmar text-xl">{content[language].wines}</h3>
             </div>
-            <div className="p-6 bg-white rounded-lg shadow-sm">
+            <div className="p-6 bg-card shadow-sm">
               <Users className="w-8 h-8 mx-auto mb-4" />
-              <h3 className="font-myanmar text-xl mb-2">{content[language].familyDining}</h3>
+              <h3 className="font-myanmar text-xl">{content[language].familyDining}</h3>
             </div>
           </div>
         </div>
       </section>
 
       {/* Location */}
-      <section className="py-20 px-4">
+      <section className="py-24 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <MapPin className="w-8 h-8 mx-auto mb-4" />
           <h2 className="font-myanmar text-4xl mb-6">{content[language].location}</h2>
-          <p className="text-lg mb-8">Urb. La Dama de Noche, Bloque 15. 29660, Marbella</p>
+          <p className="text-md mb-8">Urb. La Dama de Noche, Bloque 15. 29660, Marbella</p>
           <Map />
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-4 bg-black text-white">
-        <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            <div className="space-y-2">
-              <a href="#" className="block hover:text-gray-300">{content[language].footer.privacy}</a>
-              <a href="#" className="block hover:text-gray-300">{content[language].footer.legal}</a>
-              <a href="#" className="block hover:text-gray-300">{content[language].footer.cookies}</a>
-            </div>
-            <div className="space-x-4 flex justify-center items-center">
+      <footer className="py-12 px-4 bg-primary text-primary-foreground">
+        <div className="max-w-4xl mx-auto space-y-12">
+          {/* Top row with language switcher and social icons */}
+          <div className="flex justify-between items-center">
+            {/* Language switcher */}
+            <div className="font-myanmar text-xl space-x-4">
               <button
                 onClick={() => setLanguage("en")}
-                className={`${language === "en" ? "text-white" : "text-gray-400"}`}
+                className={`${language === "en" ? "text-white" : "text-muted-foreground"}`}
               >
-                English
+                ENG
               </button>
               <button
                 onClick={() => setLanguage("es")}
-                className={`${language === "es" ? "text-white" : "text-gray-400"}`}
+                className={`${language === "es" ? "text-white" : "text-muted-foreground"}`}
               >
-                Español
+                ESP
               </button>
             </div>
-            <div className="flex justify-center md:justify-end space-x-6">
-              <a href="#" className="hover:text-gray-300">
+            
+            {/* Social icons */}
+            <div className="flex space-x-6">
+              <a href="#" className="hover:text-muted-foreground">
                 <Facebook className="w-6 h-6" />
               </a>
-              <a href="#" className="hover:text-gray-300">
+              <a href="#" className="hover:text-muted-foreground">
                 <Instagram className="w-6 h-6" />
               </a>
-              <a href="#" className="hover:text-gray-300">
+              <a href="#" className="hover:text-muted-foreground">
                 <Mail className="w-6 h-6" />
               </a>
             </div>
           </div>
-          <div className="text-center text-sm text-gray-400">
+
+          {/* Center row with policies */}
+          <div className="flex justify-center space-x-8 text-sm">
+            <a href="#" className="text-center hover:text-muted-foreground">{content[language].footer.privacy}</a>
+            <a href="#" className="text-center hover:text-muted-foreground">{content[language].footer.legal}</a>
+            <a href="#" className="text-center hover:text-muted-foreground">{content[language].footer.cookies}</a>
+          </div>
+
+          {/* Bottom row with copyright */}
+          <div className="text-center text-sm text-muted-foreground">
             © {new Date().getFullYear()} Cortes Garden. {content[language].footer.rights}
           </div>
         </div>
