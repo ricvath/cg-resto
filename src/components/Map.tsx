@@ -28,10 +28,11 @@ const Map = () => {
   };
 
   useEffect(() => {
-    if (!mapContainer.current) return;
+    const currentMapContainer = mapContainer.current;
+    if (!currentMapContainer) return;
 
     map.current = new maplibregl.Map({
-      container: mapContainer.current,
+      container: currentMapContainer,
       style: 'https://api.maptiler.com/maps/streets-v2-light/style.json?key=yE0MnEy8Yj2W5ZhXuAZS',
       center: [coordinates.lng, coordinates.lat],
       zoom: 14,
@@ -64,13 +65,16 @@ const Map = () => {
     };
 
     // Add wheel event listener
-    mapContainer.current.addEventListener('wheel', handleWheel, { passive: false });
+    currentMapContainer.addEventListener('wheel', handleWheel, { passive: false });
 
+    // Cleanup function
     return () => {
-      map.current?.remove();
-      mapContainer.current?.removeEventListener('wheel', handleWheel);
+      if (map.current) {
+        map.current.remove();
+      }
+      currentMapContainer.removeEventListener('wheel', handleWheel);
     };
-  }, []);
+  }, [coordinates.lat, coordinates.lng]); // Add coordinates to dependencies
 
   return (
     <div className="relative">

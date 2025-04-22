@@ -57,7 +57,7 @@ const Index = () => {
     es: {
       about: {
         title: "Sobre Nosotros",
-        subtitle: "Arraigado en la Naturaleza. Diseñado para el Placer.",
+        subtitle: "Inspirado por la Naturaleza. Creado para el Placer.",
         description: "Un jardín escondido en Marbella, donde el alma mediterránea se encuentra con el fuego culinario. Rodeado de palmeras y fuentes de agua, ofrecemos una experiencia gastronómica elegante y relajada con amplio estacionamiento para su comodidad.",
       },
       cuisine: {
@@ -94,10 +94,10 @@ const Index = () => {
       
       {/* Floating CTA Button */}
       {showFloatingCta && (
-        <Button
+        <Button 
           className="fixed top-8 right-8 z-50 bg-primary text-primary-foreground hover:text-muted-foreground"
           size="lg"
-        >
+          onClick={() => window.open('https://meet.move2marbella.com/widget/form/Mw1oNoGGlYFKFKNoIEhj?notrack=true', '_blank')}>
           {content[language].reserve}
         </Button>
       )}
@@ -170,10 +170,10 @@ const Index = () => {
             
             {/* Social icons */}
             <div className="flex space-x-6">
-              <a href="#" className="hover:text-muted-foreground">
+              <a href="https://www.facebook.com/cortesgarden" className="hover:text-muted-foreground">
                 <Facebook className="w-6 h-6" />
               </a>
-              <a href="#" className="hover:text-muted-foreground">
+              <a href="https://www.instagram.com/cortesgarden" className="hover:text-muted-foreground">
                 <Instagram className="w-6 h-6" />
               </a>
               <a href="#" className="hover:text-muted-foreground">
