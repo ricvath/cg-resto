@@ -95,7 +95,7 @@ const Index = () => {
       {/* Floating CTA Button */}
       {showFloatingCta && (
         <Button 
-          className="fixed top-8 right-8 z-50 bg-primary text-primary-foreground hover:text-muted-foreground"
+          className="fixed top-4 right-4 z-50 bg-primary text-primary-foreground hover:text-muted-foreground"
           size="lg"
           onClick={() => window.open('https://meet.move2marbella.com/widget/form/Mw1oNoGGlYFKFKNoIEhj?notrack=true', '_blank')}>
           {content[language].reserve}
@@ -105,32 +105,31 @@ const Index = () => {
       {/* About Section */}
       <section className="py-24 px-4">
         <div className="max-w-4xl mx-auto text-center">
+          <img src="/leaf-2.svg" alt="Decorative leaf" className="w-8 md:w-12 mx-auto my-8" />
           <h2 className="font-myanmar text-4xl mb-6">{content[language].about.title}</h2>
           <h3 className="font-myanmar text-xl mb-6">
             {content[language].about.subtitle}
           </h3>
-          <p className="text-md leading-relaxed">
+          <p className="text-md leading-6">
             {content[language].about.description}
           </p>
         </div>
       </section>
 
       {/* Cuisine Preview */}
-      <section className="py-24 px-4">
+      <section className="py-12 px-4">
         <div className="max-w-4xl mx-auto text-center">
+        <img src="/leaf-1.svg" alt="Decorative leaf" className="w-8 md:w-12 mx-auto my-12" />
           <h2 className="font-myanmar text-4xl mb-8">{content[language].cuisine.title}</h2>
           <p className="text-md mb-12">{content[language].cuisine.subtitle}</p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-6 bg-card shadow-sm">
-              <Utensils className="w-8 h-8 mx-auto mb-4" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-secondary">
+            <div className="p-6 bg-[url('/food.jpg')] bg-cover bg-center shadow-sm flex items-center justify-center h-40">
               <h3 className="font-myanmar text-xl">{content[language].steaks}</h3>
             </div>
-            <div className="p-6 bg-card shadow-sm">
-              <Wine className="w-8 h-8 mx-auto mb-4" />
+            <div className="p-6 bg-[url('/wine.jpg')] bg-cover bg-center shadow-sm flex items-center justify-center h-40">
               <h3 className="font-myanmar text-xl">{content[language].wines}</h3>
             </div>
-            <div className="p-6 bg-card shadow-sm">
-              <Users className="w-8 h-8 mx-auto mb-4" />
+            <div className="p-6 bg-[url('/family.jpg')] bg-cover bg-center shadow-sm flex items-center justify-center h-40">
               <h3 className="font-myanmar text-xl">{content[language].familyDining}</h3>
             </div>
           </div>
@@ -140,7 +139,7 @@ const Index = () => {
       {/* Location */}
       <section className="py-24 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <MapPin className="w-8 h-8 mx-auto mb-4" />
+        <img src="/leaf-4.svg" alt="Decorative leaf" className="w-8 md:w-12 mx-auto my-8"/>
           <h2 className="font-myanmar text-4xl mb-6">{content[language].location}</h2>
           <p className="text-md mb-8">Urb. La Dama de Noche, Bloque 15. 29660, Marbella</p>
           <Map />
@@ -148,7 +147,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-4 bg-primary text-primary-foreground">
+      <footer className="py-12 px-4 bg-primary text-secondary">
         <div className="max-w-4xl mx-auto space-y-12">
           {/* Top row with language switcher and social icons */}
           <div className="flex justify-between items-center">

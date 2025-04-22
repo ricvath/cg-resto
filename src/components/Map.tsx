@@ -81,7 +81,7 @@ const Map = () => {
       <div ref={mapContainer} className="h-[400px] w-full border-foreground border-2" />
       <Button
         onClick={handleOpenMaps}
-        className="absolute bottom-3 left-3 bg-primary text-primary-foreground hover:bg-primary/80 shadow-md"
+        className="absolute top-3 left-3 bg-primary text-primary-foreground hover:bg-primary/80 shadow-md"
       >
         <ExternalLink className="w-4 h-4 mr-1" />
         Open in Maps

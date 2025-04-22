@@ -28,7 +28,7 @@ export const Hero = ({ language }: HeroProps) => {
       {/* Content */}
       <div className="relative flex flex-col items-center justify-center z-10 gap-4 md:gap-10 text-center p-4">
         <object className="w-48 md:w-72 md:mb-6 mb-2" type="image/svg+xml" data="/logo.svg">Cortes Garden</object>
-        <p className="font-myanmar text-3xl text-primary-foreground md:text-4xl mb-8 max-w-2xl mx-auto">
+        <p className="font-myanmar text-3xl text-secondary md:text-4xl mb-4 max-w-2xl mx-auto">
           {content[language].subheading}
         </p>
         <Button 
