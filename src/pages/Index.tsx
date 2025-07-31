@@ -7,6 +7,7 @@ import Map from "@/components/Map";
 const Index = () => {
   const [language, setLanguage] = useState<"en" | "es">("en");
   const [showFloatingCta, setShowFloatingCta] = useState(false);
+  const [currentMenu, setCurrentMenu] = useState<'morning' | 'evening'>('morning');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,6 +22,35 @@ const Index = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Determine which menu to show based on Spain local time
+  useEffect(() => {
+    const updateMenu = () => {
+      const now = new Date();
+      const spainTime = new Date(now.toLocaleString("en-US", {timeZone: "Europe/Madrid"}));
+      const hour = spainTime.getHours();
+      
+      // Morning menu: 6:00 - 17:00, Evening menu: 17:00 - 6:00
+      if (hour >= 6 && hour < 17) {
+        setCurrentMenu('morning');
+      } else {
+        setCurrentMenu('evening');
+      }
+    };
+
+    updateMenu();
+    // Update every minute to ensure accuracy
+    const interval = setInterval(updateMenu, 60000);
+    
+    return () => clearInterval(interval);
+  }, []);
+
+  const handleMenuClick = () => {
+    const menuFile = currentMenu === 'morning' 
+      ? '/C.G.morning-menu.2025.07.31.pdf'
+      : '/C.G.evening-menu.2025.07.31.pdf';
+    window.open(menuFile, '_blank');
+  };
+
   const content = {
     en: {
       about: {
@@ -30,7 +60,8 @@ const Index = () => {
       },
       cuisine: {
         title: "Food for Every Mood",
-        subtitle: "While our full menu is coming soon, here's what you can expect:",
+        subtitle: "From fresh breakfast delights to sophisticated evening dining, our menu celebrates Mediterranean flavors with international influences:",
+        menuButton: "MENU"
       },
       drinks: {
         title: "Drinks & Ambiance",
@@ -40,7 +71,7 @@ const Index = () => {
         title: "Family Welcome",
         description: "Our spacious garden provides a safe, open-air environment where children can play while adults savor their dining experience.",
       },
-      reserve: "Reserve a Table",
+      reserve: "RESERVE",
       steaks: "Global Fusion",
       wines: "Wines & Cocktails",
       familyDining: "Fun Dining",
@@ -62,7 +93,8 @@ const Index = () => {
       },
       cuisine: {
         title: "Comida para Todos los Gustos",
-        subtitle: "Mientras nuestro menú completo está en camino, esto es lo que puede esperar:",
+        subtitle: "Desde deliciosos desayunos frescos hasta cenas sofisticadas, nuestro menú celebra los sabores mediterráneos con influencias internacionales:",
+        menuButton: "MENÚ"
       },
       drinks: {
         title: "Bebidas y Ambiente",
@@ -72,7 +104,7 @@ const Index = () => {
         title: "Bienvenida Familiar",
         description: "Nuestro espacioso jardín proporciona un ambiente seguro al aire libre donde los niños pueden jugar mientras los adultos saborean su experiencia gastronómica.",
       },
-      reserve: "Reservar Mesa",
+      reserve: "RESERVAR",
       steaks: "Fusión Global",
       wines: "Vinos & Cócteles",
       familyDining: "Comida Divertida",
@@ -122,7 +154,7 @@ const Index = () => {
         <img src="/leaf-1.svg" alt="Decorative leaf" className="w-8 md:w-12 mx-auto my-12" />
           <h2 className="font-myanmar text-4xl mb-8">{content[language].cuisine.title}</h2>
           <p className="text-md mb-12">{content[language].cuisine.subtitle}</p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-secondary">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-secondary mb-12">
             <div className="p-6 bg-[url('/food.jpg')] bg-cover bg-center shadow-sm flex items-center justify-center h-40">
               <h3 className="font-myanmar text-xl">{content[language].steaks}</h3>
             </div>
@@ -133,6 +165,13 @@ const Index = () => {
               <h3 className="font-myanmar text-xl">{content[language].familyDining}</h3>
             </div>
           </div>
+          <Button 
+            size="lg"
+            className="bg-primary text-primary-foreground hover:text-muted-foreground"
+            onClick={handleMenuClick}
+          >
+            {content[language].cuisine.menuButton}
+          </Button>
         </div>
       </section>
 
