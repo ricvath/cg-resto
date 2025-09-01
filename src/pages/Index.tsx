@@ -129,7 +129,7 @@ const Index = () => {
         <Button 
           className="fixed top-4 right-4 z-50 bg-primary text-primary-foreground hover:text-muted-foreground"
           size="lg"
-          onClick={() => window.open('https://meet.move2marbella.com/widget/form/Mw1oNoGGlYFKFKNoIEhj?notrack=true', '_blank')}>
+          onClick={() => window.open('https://www.opentable.es/r/cortes-garden-marbella-reservations-marbella?restref=443829&lang=en-GB&ot_source=Restaurant%20website', '_blank')}>
           {content[language].reserve}
         </Button>
       )}

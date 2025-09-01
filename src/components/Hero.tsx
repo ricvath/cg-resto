@@ -76,7 +76,7 @@ export const Hero = ({ language }: HeroProps) => {
           <Button 
             size="lg" 
             className="bg-secondary text-secondary-foreground hover:text-muted-foreground font-medium text-md"
-            onClick={() => window.open('https://meet.move2marbella.com/widget/form/Mw1oNoGGlYFKFKNoIEhj?notrack=true', '_blank')}
+            onClick={() => window.open('https://www.opentable.es/r/cortes-garden-marbella-reservations-marbella?restref=443829&lang=en-GB&ot_source=Restaurant%20website', '_blank')}
           >
             {content[language].cta}
           </Button>
