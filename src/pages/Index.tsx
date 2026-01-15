@@ -8,7 +8,7 @@ const Index = () => {
   const [language, setLanguage] = useState<"en" | "es">("en");
   const [showFloatingCta, setShowFloatingCta] = useState(false);
   const [currentMenu, setCurrentMenu] = useState<"morning" | "evening">(
-    "morning"
+    "morning",
   );
 
   useEffect(() => {
@@ -29,7 +29,7 @@ const Index = () => {
     const updateMenu = () => {
       const now = new Date();
       const spainTime = new Date(
-        now.toLocaleString("en-US", { timeZone: "Europe/Madrid" })
+        now.toLocaleString("en-US", { timeZone: "Europe/Madrid" }),
       );
       const hour = spainTime.getHours();
 
@@ -144,8 +144,8 @@ const Index = () => {
           size="lg"
           onClick={() =>
             window.open(
-              "https://www.opentable.es/r/cortes-garden-marbella-reservations-marbella?restref=443829&lang=en-GB&ot_source=Restaurant%20website",
-              "_blank"
+              "https://widget.thefork.com/a268eafa-2b04-408f-873e-f54390fb3fdd",
+              "_blank",
             )
           }
         >
@@ -258,7 +258,8 @@ const Index = () => {
             {/* Social icons */}
             <div className="flex space-x-6">
               <a
-                href="https://www.tiktok.com/@cortesgarden" target="_blank"
+                href="https://www.tiktok.com/@cortesgarden"
+                target="_blank"
                 className="hover:text-muted-foreground"
               >
                 <svg
@@ -271,19 +272,22 @@ const Index = () => {
                 </svg>
               </a>
               <a
-                href="https://www.facebook.com/cortesgarden" target="_blank"
+                href="https://www.facebook.com/cortesgarden"
+                target="_blank"
                 className="hover:text-muted-foreground"
               >
                 <Facebook className="w-6 h-6" />
               </a>
               <a
-                href="https://www.instagram.com/cortesgarden" target="_blank"
+                href="https://www.instagram.com/cortesgarden"
+                target="_blank"
                 className="hover:text-muted-foreground"
               >
                 <Instagram className="w-6 h-6" />
               </a>
               <a
-                href="https://wa.me/34622829980" target="_blank"
+                href="https://wa.me/34622829980"
+                target="_blank"
                 className="hover:text-muted-foreground"
               >
                 <svg
