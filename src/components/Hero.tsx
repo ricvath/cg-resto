@@ -7,7 +7,7 @@ interface HeroProps {
 
 export const Hero = ({ language }: HeroProps) => {
   const [currentMenu, setCurrentMenu] = useState<"morning" | "evening">(
-    "morning"
+    "morning",
   );
 
   const content = {
@@ -28,7 +28,7 @@ export const Hero = ({ language }: HeroProps) => {
     const updateMenu = () => {
       const now = new Date();
       const spainTime = new Date(
-        now.toLocaleString("en-US", { timeZone: "Europe/Madrid" })
+        now.toLocaleString("en-US", { timeZone: "Europe/Madrid" }),
       );
       const hour = spainTime.getHours();
 
@@ -89,8 +89,8 @@ export const Hero = ({ language }: HeroProps) => {
             className="bg-secondary text-secondary-foreground hover:text-muted-foreground font-medium text-md"
             onClick={() =>
               window.open(
-                "https://www.opentable.es/r/cortes-garden-marbella-reservations-marbella?restref=443829&lang=en-GB&ot_source=Restaurant%20website",
-                "_blank"
+                "https://widget.thefork.com/a268eafa-2b04-408f-873e-f54390fb3fdd",
+                "_blank",
               )
             }
           >
