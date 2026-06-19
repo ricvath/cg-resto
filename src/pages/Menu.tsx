@@ -95,7 +95,7 @@ const menuSections: MenuSection[] = [
       { name: "Salmon al Horno con Gambones", price: "31.00€", description: "Oven baked salmon with king prawns, jasmine rice and grilled vegetables", image: imageLibrary.main, imageAlt: "Salmon al Horno con Gambones" },
       { name: "Sesamo Tataki Atun", price: "22.00€", description: "Gently-seared red tuna with citrus-soy sauce, wasabi and hiyashi wakame seaweed", image: principalImage("sesamo-tataki-atun.jpg"), imageAlt: "Sesamo Tataki Atun" },
       { name: "Calamar Frito Entero", price: "22.00€", description: "Whole fried calamari in onion-tomato based marinara sauce", image: imageLibrary.main, imageAlt: "Calamar Frito Entero" },
-      { name: "Costillas de Cerdo Ahumado (500g)", price: "28.75€", description: "Slow smoked BBQ spareribs, coleslaw and french fries", image: imageLibrary.main, imageAlt: "Costillas de Cerdo Ahumado" },
+      { name: "Costillas de Cerdo Ahumado (500g)", price: "28.75€", description: "Slow smoked BBQ spareribs, coleslaw and french fries", image: principalImage("costillas-de-cerdo.jpg"), imageAlt: "Costillas de Cerdo Ahumado" },
       { name: "Codillo de Cerdo Asado al Horno (500g)", price: "28.75€", description: "Oven baked smoked ham hock with grill vegetables and french fries", image: imageLibrary.main, imageAlt: "Codillo de Cerdo Asado al Horno" },
       { name: "Costillas de Ternera Ahumado (500g)", price: "30.00€", description: "Slow smoked BBQ beef ribs with coleslaw & french fries", image: imageLibrary.main, imageAlt: "Costillas de Ternera Ahumado" },
     ],
