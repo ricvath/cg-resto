@@ -33,6 +33,8 @@ const imageLibrary = {
 
 const pizzaImage = (fileName: string) => `/menu/pizza/${fileName}`;
 const saladImage = (fileName: string) => `/menu/salad/${fileName}`;
+const starterImage = (fileName: string) => `/menu/starter/${fileName}`;
+const sideImage = (fileName: string) => `/menu/side/${fileName}`;
 
 const menuSections: MenuSection[] = [
   {
@@ -55,10 +57,10 @@ const menuSections: MenuSection[] = [
       { name: "Tabla de Guacamole", price: "11.00€", description: "Guacamole with toast, olives & cherry tomato", image: imageLibrary.main, imageAlt: "Tabla de Guacamole" },
       { name: "Mini Focaccia with Allioli", price: "2.50€", description: "Mini focaccia with garlic mayonnaise & home made tomato sauce", image: imageLibrary.main, imageAlt: "Mini Focaccia with Allioli" },
       { name: "Tabla de Jamon y Queso", price: "19.50€", description: "Serrano ham and cheese selection board", image: imageLibrary.main, imageAlt: "Tabla de Jamon y Queso" },
-      { name: "Basket 3x3", price: "15.00€", description: "3x tempura king prawns, 3x Kentucky style chicken, 3x BBQ chicken wings, cocktail sauce, garlic mayo, BBQ sauce", image: imageLibrary.main, imageAlt: "Basket 3x3" },
-      { name: "Lumpia", price: "vegetarian 8.90€ / pork 9.90€", description: "Traditional Filipino fried spring rolls (4pcs)", image: imageLibrary.main, imageAlt: "Lumpia" },
-      { name: "Langostino en Tempura", price: "11.50€", description: "Tempura king prawns with kimchi mayo (5pcs)", image: imageLibrary.main, imageAlt: "Langostino en Tempura" },
-      { name: "Tiras de Pollo", price: "12.00€", description: "Kentucky style chicken with chips (5pcs) + 1 sauce", image: imageLibrary.main, imageAlt: "Tiras de Pollo" },
+      { name: "Basket 3x3", price: "15.00€", description: "3x tempura king prawns, 3x Kentucky style chicken, 3x BBQ chicken wings, cocktail sauce, garlic mayo, BBQ sauce", image: starterImage("basket-3x3.jpg"), imageAlt: "Basket 3x3" },
+      { name: "Lumpia", price: "vegetarian 8.90€ / pork 9.90€", description: "Traditional Filipino fried spring rolls (4pcs)", image: starterImage("lumpia.jpg"), imageAlt: "Lumpia" },
+      { name: "Langostino en Tempura", price: "11.50€", description: "Tempura king prawns with kimchi mayo (5pcs)", image: starterImage("langostino-tempura.jpg"), imageAlt: "Langostino en Tempura" },
+      { name: "Tiras de Pollo", price: "12.00€", description: "Kentucky style chicken with chips (5pcs) + 1 sauce", image: starterImage("tiras-de-pollo.jpg"), imageAlt: "Tiras de Pollo" },
       { name: "Edamames Fritos", price: "5.50€", description: "Fried edamame beans salted and spicy", image: imageLibrary.main, imageAlt: "Edamames Fritos" },
     ],
   },
@@ -72,9 +74,9 @@ const menuSections: MenuSection[] = [
   {
     title: "Side Dishes",
     items: [
-      { name: "Patatas Fritas", price: "5.50€", description: "French fries", image: imageLibrary.main, imageAlt: "Patatas Fritas" },
-      { name: "Patatas Steakhouse", price: "5.50€", description: "Steak potatoes", image: imageLibrary.main, imageAlt: "Patatas Steakhouse" },
-      { name: "Boniato Frito", price: "6.90€", description: "Sweet potato fries", image: imageLibrary.main, imageAlt: "Boniato Frito" },
+      { name: "Patatas Fritas", price: "5.50€", description: "French fries", image: sideImage("patatas-fritas.jpg"), imageAlt: "Patatas Fritas" },
+      { name: "Patatas Steakhouse", price: "5.50€", description: "Steak potatoes", image: sideImage("patatas-steakhouse.jpg"), imageAlt: "Patatas Steakhouse" },
+      { name: "Boniato Frito", price: "6.90€", description: "Sweet potato fries", image: sideImage("boniato-frito.jpg"), imageAlt: "Boniato Frito" },
       { name: "Salsas · Sauces", price: "2.50€", description: "Ketchup, mayo, garlic mayo, BBQ, chipotle mayo, roasted jalapeno mayo", image: imageLibrary.main, imageAlt: "Salsas Sauces" },
     ],
   },
