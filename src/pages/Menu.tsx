@@ -37,6 +37,7 @@ const breakfastImage = (fileName: string) => `/menu/breakfast/${fileName}`;
 const saladImage = (fileName: string) => `/menu/salad/${fileName}`;
 const starterImage = (fileName: string) => `/menu/starter/${fileName}`;
 const sideImage = (fileName: string) => `/menu/side/${fileName}`;
+const principalImage = (fileName: string) => `/menu/principal/${fileName}`;
 
 const menuSections: MenuSection[] = [
   {
@@ -87,9 +88,9 @@ const menuSections: MenuSection[] = [
     items: [
       { name: "Gambas Pil-Pil", price: "17.50€", description: "King prawns in olive oil with garlic and chili", image: imageLibrary.main, imageAlt: "Gambas Pil-Pil" },
       { name: "Alitas de Pollo BBQ con Patatas Fritas", price: "19.50€", description: "Sriracha chicken wings in honey-based BBQ sauce with coleslaw & chips", image: imageLibrary.main, imageAlt: "Alitas de Pollo BBQ con Patatas Fritas" },
-      { name: "Espagueti Gamba Scampi", price: "20.00€", description: "King prawns spaghetti", image: imageLibrary.main, imageAlt: "Espagueti Gamba Scampi" },
-      { name: "Espagueti Bolonesa", price: "18.00€", description: "Bologna style spaghetti", image: imageLibrary.main, imageAlt: "Espagueti Bolonesa" },
-      { name: "Sinangag", priceOptions: ["beef 14.50€", "king prawns 15.50€", "beef & prawns 16.90€"], description: "Traditional Filipino garlic fried rice", image: imageLibrary.main, imageAlt: "Sinangag" },
+      { name: "Espagueti Gamba Scampi", price: "20.00€", description: "King prawns spaghetti", image: principalImage("espagueti-gamba-scampi.jpg"), imageAlt: "Espagueti Gamba Scampi" },
+      { name: "Espagueti Bolonesa", price: "18.00€", description: "Bologna style spaghetti", image: principalImage("espagueti-bolonesa.jpg"), imageAlt: "Espagueti Bolonesa" },
+      { name: "Sinangag", priceOptions: ["beef 14.50€", "king prawns 15.50€", "beef & prawns 16.90€"], description: "Traditional Filipino garlic fried rice", image: principalImage("sinangag-beef.jpg"), imageAlt: "Sinangag" },
       { name: "Filete de Salmon Ahumado (350g)", price: "30.00€", description: "Jasmine rice, wine-orange sauce, grill vegetables and smoked grilled salmon steak", image: imageLibrary.main, imageAlt: "Filete de Salmon Ahumado" },
       { name: "Salmon al Horno con Gambones", price: "31.00€", description: "Oven baked salmon with king prawns, jasmine rice and grilled vegetables", image: imageLibrary.main, imageAlt: "Salmon al Horno con Gambones" },
       { name: "Sesamo Tataki Atun", price: "22.00€", description: "Gently-seared red tuna with citrus-soy sauce, wasabi and hiyashi wakame seaweed", image: imageLibrary.main, imageAlt: "Sesamo Tataki Atun" },
