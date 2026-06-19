@@ -168,7 +168,7 @@ const Menu = () => {
                   >
                     <MenuImageDialog item={item} />
                     <div>
-                      <h3 className="text-xl font-semibold leading-snug tracking-wide md:text-2xl">
+                      <h3 className="font-myanmar text-lg font-normal leading-snug tracking-[0.16em] md:text-xl">
                         {item.name}
                       </h3>
                       {item.description && (
