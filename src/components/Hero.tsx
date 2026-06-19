@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 interface HeroProps {
@@ -6,9 +6,7 @@ interface HeroProps {
 }
 
 export const Hero = ({ language }: HeroProps) => {
-  const [currentMenu, setCurrentMenu] = useState<"morning" | "evening">(
-    "morning",
-  );
+  const navigate = useNavigate();
 
   const content = {
     en: {
@@ -23,36 +21,8 @@ export const Hero = ({ language }: HeroProps) => {
     },
   };
 
-  // Determine which menu to show based on Spain local time
-  useEffect(() => {
-    const updateMenu = () => {
-      const now = new Date();
-      const spainTime = new Date(
-        now.toLocaleString("en-US", { timeZone: "Europe/Madrid" }),
-      );
-      const hour = spainTime.getHours();
-
-      // Morning menu: 6:00 - 17:00, Evening menu: 17:00 - 6:00
-      if (hour >= 6 && hour < 17) {
-        setCurrentMenu("morning");
-      } else {
-        setCurrentMenu("evening");
-      }
-    };
-
-    updateMenu();
-    // Update every minute to ensure accuracy
-    const interval = setInterval(updateMenu, 60000);
-
-    return () => clearInterval(interval);
-  }, []);
-
   const handleMenuClick = () => {
-    const menuFile =
-      currentMenu === "morning"
-        ? "/C.G.morning-menu.2025.07.31.pdf"
-        : "/C.G.evening-menu.2025.07.31.pdf";
-    window.open(menuFile, "_blank");
+    navigate("/menu");
   };
 
   return (

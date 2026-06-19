@@ -1,0 +1,188 @@
+import { Link } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+
+type MenuItem = {
+  name: string;
+  price?: string;
+  image: string;
+  imageAlt: string;
+};
+
+type MenuSection = {
+  title: string;
+  image: string;
+  imageAlt: string;
+  items: MenuItem[];
+};
+
+const imageLibrary = {
+  breakfast:
+    "https://cortesgardenmarbella.com/wp-content/uploads/2025/11/DirtyCroissant-1024x1024.jpg",
+  main:
+    "https://cortesgardenmarbella.com/wp-content/uploads/2025/11/codillo-copy-867x1024.jpg",
+  pizza: "/food.jpg",
+};
+
+const menuSections: MenuSection[] = [
+  {
+    title: "Breakfasts",
+    image: imageLibrary.breakfast,
+    imageAlt: "Cortes Garden breakfast plate with croissant, eggs and juice",
+    items: [
+      { name: "Andalusian Breakfast", price: "12.90€", image: imageLibrary.breakfast, imageAlt: "Andalusian Breakfast" },
+      { name: "Catalan Breakfast", price: "5.50€", image: imageLibrary.breakfast, imageAlt: "Catalan Breakfast" },
+      { name: "English Breakfast", price: "14.90€", image: imageLibrary.breakfast, imageAlt: "English Breakfast" },
+      { name: "Mediterran Breakfast", price: "11.50€", image: imageLibrary.breakfast, imageAlt: "Mediterran Breakfast" },
+      { name: "Croissant Maxi", price: "2.80€", image: imageLibrary.breakfast, imageAlt: "Croissant Maxi" },
+      { name: "Croissant with butter and jam", price: "3.70€", image: imageLibrary.breakfast, imageAlt: "Croissant with butter and jam" },
+      { name: "Dirty Croissant", price: "10.90€", image: imageLibrary.breakfast, imageAlt: "Dirty Croissant" },
+      { name: "Syrniki", price: "10.90€", image: imageLibrary.breakfast, imageAlt: "Syrniki" },
+      { name: "Mediterran Benedict Egg", price: "10.90€", image: imageLibrary.breakfast, imageAlt: "Mediterran Benedict Egg" },
+    ],
+  },
+  {
+    title: "Main Courses",
+    image: imageLibrary.main,
+    imageAlt: "Cortes Garden main course with roasted meat, fries and vegetables",
+    items: [
+      { name: "Gambas Pil Pil", price: "17.50€", image: imageLibrary.main, imageAlt: "Gambas Pil Pil" },
+      { name: "Chicken wings with BBQ Sauce", price: "19.50€", image: imageLibrary.main, imageAlt: "Chicken wings with BBQ Sauce" },
+      { name: "King Prawn Spaghetti", price: "20.00€", image: imageLibrary.main, imageAlt: "King Prawn Spaghetti" },
+      { name: "Bologna style Spaghetti", price: "18.00€", image: imageLibrary.main, imageAlt: "Bologna style Spaghetti" },
+      { name: "Sinangag", price: "14.50€", image: imageLibrary.main, imageAlt: "Sinangag" },
+      { name: "Cortes Noodles", price: "14.50€", image: imageLibrary.main, imageAlt: "Cortes Noodles" },
+      { name: "Salmon filet with vegetables", price: "31.00€", image: imageLibrary.main, imageAlt: "Salmon filet with vegetables" },
+      { name: "Atun Tataki", price: "22.00€", image: imageLibrary.main, imageAlt: "Atun Tataki" },
+      { name: "Whole fried Calamari", price: "22.00€", image: imageLibrary.main, imageAlt: "Whole fried Calamari" },
+    ],
+  },
+  {
+    title: "Pizza",
+    image: imageLibrary.pizza,
+    imageAlt: "Cortes Garden table dish",
+    items: [
+      { name: "Margherita", price: "12.50€", image: imageLibrary.pizza, imageAlt: "Margherita pizza" },
+      { name: "Napolitana", price: "13.50€", image: imageLibrary.pizza, imageAlt: "Napolitana pizza" },
+      { name: "Prosciutto", price: "16.00€", image: imageLibrary.pizza, imageAlt: "Prosciutto pizza" },
+      { name: "Salami Picante", price: "16.00€", image: imageLibrary.pizza, imageAlt: "Salami Picante pizza" },
+      { name: "Quatro Formaggi", price: "16.50€", image: imageLibrary.pizza, imageAlt: "Quatro Formaggi pizza" },
+      { name: "Bolognese", price: "17.20€", image: imageLibrary.pizza, imageAlt: "Bolognese pizza" },
+      { name: "Gambas Pil Pil", price: "17.50€", image: imageLibrary.pizza, imageAlt: "Gambas Pil Pil pizza" },
+      { name: "Frutti di Mare", price: "17.50€", image: imageLibrary.pizza, imageAlt: "Frutti di Mare pizza" },
+      { name: "Trufa", price: "17.50€", image: imageLibrary.pizza, imageAlt: "Trufa pizza" },
+    ],
+  },
+];
+
+const MenuImageDialog = ({ item }: { item: MenuItem }) => (
+  <Dialog>
+    <DialogTrigger asChild>
+      <button
+        type="button"
+        className="h-14 w-14 shrink-0 overflow-hidden rounded-full border border-primary/15 shadow-sm transition hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background"
+        aria-label={`Show larger photo for ${item.name}`}
+      >
+        <img
+          src={item.image}
+          alt={item.imageAlt}
+          className="h-full w-full object-cover"
+          loading="lazy"
+        />
+      </button>
+    </DialogTrigger>
+    <DialogContent className="max-w-3xl border-none bg-background p-3">
+      <DialogTitle className="font-myanmar pr-10 text-2xl">
+        {item.name}
+      </DialogTitle>
+      <DialogDescription>
+        Larger menu image. Close this window to return to the menu.
+      </DialogDescription>
+      <img
+        src={item.image}
+        alt={item.imageAlt}
+        className="max-h-[72vh] w-full rounded-sm object-contain"
+      />
+    </DialogContent>
+  </Dialog>
+);
+
+const Menu = () => {
+  return (
+    <main className="min-h-screen bg-background text-foreground">
+      <section className="relative overflow-hidden px-4 py-10 md:py-16">
+        <div className="absolute inset-0 bg-[url('/leaf-3.svg')] bg-[length:220px] bg-left-top bg-no-repeat opacity-10" />
+        <div className="relative mx-auto max-w-5xl">
+          <Button asChild variant="outline" className="mb-10 border-primary/25">
+            <Link to="/" className="inline-flex items-center gap-2">
+              <ArrowLeft className="h-4 w-4" />
+              Back
+            </Link>
+          </Button>
+
+          <div className="grid gap-8 md:grid-cols-[1fr_0.75fr] md:items-end">
+            <div>
+              <p className="mb-4 text-xs uppercase tracking-[0.35em] text-muted-foreground">
+                Cortes Garden Marbella
+              </p>
+              <h1 className="font-myanmar text-5xl leading-tight md:text-7xl">
+                The Menu
+              </h1>
+            </div>
+            <p className="max-w-md text-sm leading-7 md:justify-self-end">
+              Breakfasts, main courses and pizzas from the garden table. Tap any
+              dish photo to see it larger, then close it to return here.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-4 pb-20">
+        <div className="mx-auto grid max-w-5xl gap-10">
+          {menuSections.map((section) => (
+            <article
+              key={section.title}
+              className="grid gap-6 border-t border-primary/20 pt-8 md:grid-cols-[220px_1fr]"
+            >
+              <div className="md:sticky md:top-8 md:self-start">
+                <img
+                  src={section.image}
+                  alt={section.imageAlt}
+                  className="mb-5 aspect-square w-full max-w-[220px] rounded-sm object-cover shadow-sm"
+                  loading="lazy"
+                />
+                <h2 className="font-myanmar text-2xl">{section.title}</h2>
+              </div>
+
+              <div className="divide-y divide-primary/15">
+                {section.items.map((item) => (
+                  <div
+                    key={`${section.title}-${item.name}`}
+                    className="grid grid-cols-[56px_1fr_auto] items-center gap-4 py-4"
+                  >
+                    <MenuImageDialog item={item} />
+                    <h3 className="text-base font-medium leading-snug">
+                      {item.name}
+                    </h3>
+                    <p className="font-myanmar text-sm text-primary">
+                      {item.price}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+    </main>
+  );
+};
+
+export default Menu;
