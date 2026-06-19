@@ -12,14 +12,13 @@ import {
 type MenuItem = {
   name: string;
   price?: string;
+  description?: string;
   image: string;
   imageAlt: string;
 };
 
 type MenuSection = {
   title: string;
-  image: string;
-  imageAlt: string;
   items: MenuItem[];
 };
 
@@ -36,8 +35,6 @@ const pizzaImage = (fileName: string) => `/menu/pizza/${fileName}`;
 const menuSections: MenuSection[] = [
   {
     title: "Breakfasts",
-    image: imageLibrary.breakfast,
-    imageAlt: "Cortes Garden breakfast plate with croissant, eggs and juice",
     items: [
       { name: "Andalusian Breakfast", price: "12.90€", image: imageLibrary.breakfast, imageAlt: "Andalusian Breakfast" },
       { name: "Catalan Breakfast", price: "5.50€", image: imageLibrary.breakfast, imageAlt: "Catalan Breakfast" },
@@ -52,8 +49,6 @@ const menuSections: MenuSection[] = [
   },
   {
     title: "Main Courses",
-    image: imageLibrary.main,
-    imageAlt: "Cortes Garden main course with roasted meat, fries and vegetables",
     items: [
       { name: "Gambas Pil Pil", price: "17.50€", image: imageLibrary.main, imageAlt: "Gambas Pil Pil" },
       { name: "Chicken wings with BBQ Sauce", price: "19.50€", image: imageLibrary.main, imageAlt: "Chicken wings with BBQ Sauce" },
@@ -68,28 +63,26 @@ const menuSections: MenuSection[] = [
   },
   {
     title: "Pizza",
-    image: imageLibrary.pizza,
-    imageAlt: "Cortes Garden Margherita pizza",
     items: [
-      { name: "Margherita", price: "12.50€", image: pizzaImage("margherita.jpg"), imageAlt: "Margherita pizza" },
-      { name: "Napolitana", price: "13.50€", image: pizzaImage("garlic.jpg"), imageAlt: "Napolitana pizza" },
-      { name: "Vegetariana", price: "16.50€", image: pizzaImage("alcachofa.jpg"), imageAlt: "Vegetariana pizza" },
-      { name: "Salami Picante", price: "16.00€", image: pizzaImage("salami-picante.jpg"), imageAlt: "Salami Picante pizza" },
-      { name: "Salami Picante Gorgonzola", price: "16.80€", image: pizzaImage("salami-picante.jpg"), imageAlt: "Salami Picante Gorgonzola pizza" },
-      { name: "Prosciutto", price: "16.00€", image: pizzaImage("prosciutto.jpg"), imageAlt: "Prosciutto pizza" },
-      { name: "Caprichosa", price: "16.30€", image: pizzaImage("caprichosa.jpg"), imageAlt: "Caprichosa pizza" },
-      { name: "Hawaiana", price: "16.30€", image: pizzaImage("hawaiana.jpg"), imageAlt: "Hawaiana pizza" },
-      { name: "Quatro Staggioni", price: "16.50€", image: pizzaImage("alcachofa.jpg"), imageAlt: "Quatro Staggioni pizza" },
-      { name: "Serrano", price: "16.50€", image: pizzaImage("serrano.jpg"), imageAlt: "Serrano pizza" },
-      { name: "Quatro Formaggi", price: "16.50€", image: pizzaImage("quatro-formaggi.jpg"), imageAlt: "Quatro Formaggi pizza" },
-      { name: "Tonno", price: "16.50€", image: pizzaImage("tonno.jpg"), imageAlt: "Tonno pizza" },
-      { name: "Bolognese", price: "17.20€", image: pizzaImage("bolognese.jpg"), imageAlt: "Bolognese pizza" },
-      { name: "Andaluz", price: "16.80€", image: pizzaImage("andaluz.jpg"), imageAlt: "Andaluz pizza" },
-      { name: "Texas BBQ Pulled Pork", price: "17.20€", image: pizzaImage("chopped.jpg"), imageAlt: "Texas BBQ Pulled Pork pizza" },
-      { name: "Kansas BBQ Pulled Chicken", price: "17.20€", image: pizzaImage("chopped.jpg"), imageAlt: "Kansas BBQ Pulled Chicken pizza" },
-      { name: "Gambas Pil Pil", price: "17.50€", image: pizzaImage("gambas-pil-pil.jpg"), imageAlt: "Gambas Pil Pil pizza" },
-      { name: "Frutti di Mare", price: "17.50€", image: pizzaImage("frutti-di-mare.jpg"), imageAlt: "Frutti di Mare pizza" },
-      { name: "Trufa", price: "17.50€", image: pizzaImage("trufa.jpg"), imageAlt: "Trufa pizza" },
+      { name: "Margherita", price: "12.50€", description: "Tomato sauce, mozzarella, cherry tomato, fresh basil", image: pizzaImage("margherita.jpg"), imageAlt: "Margherita pizza" },
+      { name: "Napolitana", price: "13.50€", description: "Tomato sauce, mozzarella, cherry tomato, garlic", image: pizzaImage("garlic.jpg"), imageAlt: "Napolitana pizza" },
+      { name: "Vegetariana", price: "16.50€", description: "Tomato sauce, mozzarella, mushroom, black olives, artichoke, dried tomato", image: pizzaImage("alcachofa.jpg"), imageAlt: "Vegetariana pizza" },
+      { name: "Salami Picante", price: "16.00€", description: "Tomato sauce, mozzarella, hot salami, chili", image: pizzaImage("salami-picante.jpg"), imageAlt: "Salami Picante pizza" },
+      { name: "Salami Picante Gorgonzola", price: "16.80€", description: "Tomato sauce, mozzarella, hot salami, gorgonzola, chili", image: pizzaImage("salami-picante.jpg"), imageAlt: "Salami Picante Gorgonzola pizza" },
+      { name: "Prosciutto", price: "16.00€", description: "Tomato sauce, mozzarella, Parma ham", image: pizzaImage("prosciutto.jpg"), imageAlt: "Prosciutto pizza" },
+      { name: "Caprichosa", price: "16.30€", description: "Tomato sauce, mozzarella, Parma ham, mushroom", image: pizzaImage("caprichosa.jpg"), imageAlt: "Caprichosa pizza" },
+      { name: "Hawaiana", price: "16.30€", description: "Tomato sauce, mozzarella, Parma ham, pineapple", image: pizzaImage("hawaiana.jpg"), imageAlt: "Hawaiana pizza" },
+      { name: "Quatro Staggioni", price: "16.50€", description: "Tomato sauce, mozzarella, Parma ham, mushroom, artichoke, black olives", image: pizzaImage("alcachofa.jpg"), imageAlt: "Quatro Staggioni pizza" },
+      { name: "Serrano", price: "16.50€", description: "Tomato sauce, mozzarella, Serrano ham, arugula, parmesan cheese", image: pizzaImage("serrano.jpg"), imageAlt: "Serrano pizza" },
+      { name: "Quatro Formaggi", price: "16.50€", description: "Tomato sauce, mozzarella, goat cheese, gorgonzola, parmesan cheese", image: pizzaImage("quatro-formaggi.jpg"), imageAlt: "Quatro Formaggi pizza" },
+      { name: "Tonno", price: "16.50€", description: "Tomato sauce, mozzarella, tuna, black olives, green caper, onion", image: pizzaImage("tonno.jpg"), imageAlt: "Tonno pizza" },
+      { name: "Bolognese", price: "17.20€", description: "Tomato sauce, mozzarella, Bolognese style meat, parmesan cheese", image: pizzaImage("bolognese.jpg"), imageAlt: "Bolognese pizza" },
+      { name: "Andaluz", price: "16.80€", description: "Tomato sauce, mozzarella, bacon, hot salami, onion, corn, chili", image: pizzaImage("andaluz.jpg"), imageAlt: "Andaluz pizza" },
+      { name: "Texas BBQ Pulled Pork", price: "17.20€", description: "BBQ sauce, mozzarella, pulled pork, bacon, corn, onion", image: pizzaImage("chopped.jpg"), imageAlt: "Texas BBQ Pulled Pork pizza" },
+      { name: "Kansas BBQ Pulled Chicken", price: "17.20€", description: "BBQ sauce, mozzarella, BBQ pulled chicken, fried onion", image: pizzaImage("chopped.jpg"), imageAlt: "Kansas BBQ Pulled Chicken pizza" },
+      { name: "Gambas Pil Pil", price: "17.50€", description: "Tomato sauce, mozzarella, king prawns, garlic, cherry tomato, chili", image: pizzaImage("gambas-pil-pil.jpg"), imageAlt: "Gambas Pil Pil pizza" },
+      { name: "Frutti di Mare", price: "17.50€", description: "Tomato sauce, mozzarella, prawns, mussels, octopus, calamary, garlic", image: pizzaImage("frutti-di-mare.jpg"), imageAlt: "Frutti di Mare pizza" },
+      { name: "Trufa", price: "17.50€", description: "Mozzarella, truffle, egg, fresh basil", image: pizzaImage("trufa.jpg"), imageAlt: "Trufa pizza" },
     ],
   },
 ];
@@ -161,29 +154,30 @@ const Menu = () => {
           {menuSections.map((section) => (
             <article
               key={section.title}
-              className="grid gap-6 border-t border-primary/20 pt-8 md:grid-cols-[220px_1fr]"
+              className="grid gap-6 border-t border-primary/20 pt-8 md:grid-cols-[180px_1fr]"
             >
               <div className="md:sticky md:top-8 md:self-start">
-                <img
-                  src={section.image}
-                  alt={section.imageAlt}
-                  className="mb-5 aspect-square w-full max-w-[220px] rounded-sm bg-[#e8dfcd] object-cover mix-blend-multiply shadow-sm"
-                  loading="lazy"
-                />
-                <h2 className="font-myanmar text-2xl">{section.title}</h2>
+                <h2 className="font-myanmar text-3xl md:text-4xl">{section.title}</h2>
               </div>
 
               <div className="divide-y divide-primary/15">
                 {section.items.map((item) => (
                   <div
                     key={`${section.title}-${item.name}`}
-                    className="grid grid-cols-[56px_1fr_auto] items-center gap-4 py-4"
+                    className="grid grid-cols-[56px_1fr_auto] items-start gap-4 py-4"
                   >
                     <MenuImageDialog item={item} />
-                    <h3 className="text-base font-medium leading-snug">
-                      {item.name}
-                    </h3>
-                    <p className="font-myanmar text-sm text-primary">
+                    <div>
+                      <h3 className="text-xl font-semibold leading-snug tracking-wide md:text-2xl">
+                        {item.name}
+                      </h3>
+                      {item.description && (
+                        <p className="mt-1 max-w-xl text-sm leading-5 text-muted-foreground md:text-base">
+                          {item.description}
+                        </p>
+                      )}
+                    </div>
+                    <p className="font-myanmar pt-1 text-base text-primary md:text-lg">
                       {item.price}
                     </p>
                   </div>
