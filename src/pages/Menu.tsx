@@ -87,7 +87,7 @@ const menuSections: MenuSection[] = [
     title: "Principal",
     items: [
       { name: "Gambas Pil-Pil", price: "17.50€", description: "King prawns in olive oil with garlic and chili", image: principalImage("gambas-pil-pil.jpg"), imageAlt: "Gambas Pil-Pil" },
-      { name: "Alitas de Pollo BBQ con Patatas Fritas", price: "19.50€", description: "Sriracha chicken wings in honey-based BBQ sauce with coleslaw & chips", image: imageLibrary.main, imageAlt: "Alitas de Pollo BBQ con Patatas Fritas" },
+      { name: "Alitas de Pollo BBQ con Patatas Fritas", price: "19.50€", description: "Sriracha chicken wings in honey-based BBQ sauce with coleslaw & chips", image: principalImage("alitas-de-pollo.jpg"), imageAlt: "Alitas de Pollo BBQ con Patatas Fritas" },
       { name: "Espagueti Gamba Scampi", price: "20.00€", description: "King prawns spaghetti", image: principalImage("espagueti-gamba-scampi.jpg"), imageAlt: "Espagueti Gamba Scampi" },
       { name: "Espagueti Bolonesa", price: "18.00€", description: "Bologna style spaghetti", image: principalImage("espagueti-bolonesa.jpg"), imageAlt: "Espagueti Bolonesa" },
       { name: "Sinangag", priceOptions: ["beef 14.50€", "king prawns 15.50€", "beef & prawns 16.90€"], description: "Traditional Filipino garlic fried rice", image: principalImage("sinangag-beef.jpg"), imageAlt: "Sinangag" },
