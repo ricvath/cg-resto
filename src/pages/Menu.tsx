@@ -27,6 +27,7 @@ const imageLibrary = {
     "https://cortesgardenmarbella.com/wp-content/uploads/2025/11/DirtyCroissant-1024x1024.jpg",
   main:
     "https://cortesgardenmarbella.com/wp-content/uploads/2025/11/codillo-copy-867x1024.jpg",
+  salad: "/food.jpg",
   pizza: "/menu/pizza/margherita.jpg",
 };
 
@@ -59,6 +60,17 @@ const menuSections: MenuSection[] = [
       { name: "Salmon filet with vegetables", price: "31.00€", image: imageLibrary.main, imageAlt: "Salmon filet with vegetables" },
       { name: "Atun Tataki", price: "22.00€", image: imageLibrary.main, imageAlt: "Atun Tataki" },
       { name: "Whole fried Calamari", price: "22.00€", image: imageLibrary.main, imageAlt: "Whole fried Calamari" },
+    ],
+  },
+  {
+    title: "Salad",
+    items: [
+      { name: "Ensalada Cortes", price: "14.00€", description: "Iceberg lettuce, cherry tomato, cucumber, sweetcorn, red onion, goat cheese, raisin, nut mix, balsamic vinegar", image: imageLibrary.salad, imageAlt: "Ensalada Cortes" },
+      { name: "Ensalada Mediterranean Quinoa", price: "17.00€", description: "Quinoa, cucumber, dried tomato, black olives, chickpea, feta cheese, iceberg lettuce, arugula, shredded carrot with olive oil, lemon, pine nut", image: imageLibrary.salad, imageAlt: "Ensalada Mediterranean Quinoa" },
+      { name: "Ensalada Kalamata", price: "16.00€", description: "Cherry tomato, feta, bell pepper, cucumber, red onion, kalamata olives, oregano, caper, kalamata dressing", image: imageLibrary.salad, imageAlt: "Ensalada Kalamata" },
+      { name: "Aztec", price: "18.00€", description: "Iceberg lettuce, cherry tomato, pulled BBQ chicken, baby spinach, sweetcorn, avocado, bell pepper, red onion, pumpkin seeds, chipotle mayo", image: imageLibrary.salad, imageAlt: "Aztec salad" },
+      { name: "Ensalada BBQ Pulled Pork", price: "18.50€", description: "Lettuce, pulled BBQ pork, jalapeno, bell pepper, red onion, shredded carrot, pickles, cheddar, croutons, crispy fried onion, walnut, honey BBQ dressing", image: imageLibrary.salad, imageAlt: "Ensalada BBQ Pulled Pork" },
+      { name: "Satay King Prawn", price: "18.50€", description: "Quinoa, king prawns, shredded carrot, edamame beans, soybean sprouts, Chinese salad mix, bell pepper, avocado, toasted cashew, satay peanut sauce", image: imageLibrary.salad, imageAlt: "Satay King Prawn salad" },
     ],
   },
   {
