@@ -89,13 +89,13 @@ const MenuImageDialog = ({ item }: { item: MenuItem }) => (
     <DialogTrigger asChild>
       <button
         type="button"
-        className="h-14 w-14 shrink-0 overflow-hidden rounded-full border border-primary/15 shadow-sm transition hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background"
+        className="h-14 w-14 shrink-0 overflow-hidden rounded-full border border-primary/15 bg-[#e8dfcd] p-1 shadow-sm transition hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background"
         aria-label={`Show larger photo for ${item.name}`}
       >
         <img
           src={item.image}
           alt={item.imageAlt}
-          className="h-full w-full object-cover"
+          className="h-full w-full rounded-full object-cover mix-blend-multiply"
           loading="lazy"
         />
       </button>
@@ -110,7 +110,7 @@ const MenuImageDialog = ({ item }: { item: MenuItem }) => (
       <img
         src={item.image}
         alt={item.imageAlt}
-        className="max-h-[72vh] w-full rounded-sm object-contain"
+        className="max-h-[72vh] w-full rounded-sm bg-[#e8dfcd] object-contain mix-blend-multiply"
       />
     </DialogContent>
   </Dialog>
@@ -157,7 +157,7 @@ const Menu = () => {
                 <img
                   src={section.image}
                   alt={section.imageAlt}
-                  className="mb-5 aspect-square w-full max-w-[220px] rounded-sm object-cover shadow-sm"
+                  className="mb-5 aspect-square w-full max-w-[220px] rounded-sm bg-[#e8dfcd] object-cover mix-blend-multiply shadow-sm"
                   loading="lazy"
                 />
                 <h2 className="font-myanmar text-2xl">{section.title}</h2>
