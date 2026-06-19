@@ -50,6 +50,35 @@ const menuSections: MenuSection[] = [
     ],
   },
   {
+    title: "Starter",
+    items: [
+      { name: "Tabla de Guacamole", price: "11.00€", description: "Guacamole with toast, olives & cherry tomato", image: imageLibrary.main, imageAlt: "Tabla de Guacamole" },
+      { name: "Mini Focaccia with Allioli", price: "2.50€", description: "Mini focaccia with garlic mayonnaise & home made tomato sauce", image: imageLibrary.main, imageAlt: "Mini Focaccia with Allioli" },
+      { name: "Tabla de Jamon y Queso", price: "19.50€", description: "Serrano ham and cheese selection board", image: imageLibrary.main, imageAlt: "Tabla de Jamon y Queso" },
+      { name: "Basket 3x3", price: "15.00€", description: "3x tempura king prawns, 3x Kentucky style chicken, 3x BBQ chicken wings, cocktail sauce, garlic mayo, BBQ sauce", image: imageLibrary.main, imageAlt: "Basket 3x3" },
+      { name: "Lumpia", price: "vegetarian 8.90€ / pork 9.90€", description: "Traditional Filipino fried spring rolls (4pcs)", image: imageLibrary.main, imageAlt: "Lumpia" },
+      { name: "Langostino en Tempura", price: "11.50€", description: "Tempura king prawns with kimchi mayo (5pcs)", image: imageLibrary.main, imageAlt: "Langostino en Tempura" },
+      { name: "Tiras de Pollo", price: "12.00€", description: "Kentucky style chicken with chips (5pcs) + 1 sauce", image: imageLibrary.main, imageAlt: "Tiras de Pollo" },
+      { name: "Edamames Fritos", price: "5.50€", description: "Fried edamame beans salted and spicy", image: imageLibrary.main, imageAlt: "Edamames Fritos" },
+    ],
+  },
+  {
+    title: "Soup",
+    items: [
+      { name: "Gazpacho", price: "9.00€", description: "Cold Andalusian tomato soup", image: imageLibrary.main, imageAlt: "Gazpacho" },
+      { name: "Salmorejo", price: "9.00€", description: "Cold Spanish vegetable soup", image: imageLibrary.main, imageAlt: "Salmorejo" },
+    ],
+  },
+  {
+    title: "Side Dishes",
+    items: [
+      { name: "Patatas Fritas", price: "5.50€", description: "French fries", image: imageLibrary.main, imageAlt: "Patatas Fritas" },
+      { name: "Patatas Steakhouse", price: "5.50€", description: "Steak potatoes", image: imageLibrary.main, imageAlt: "Patatas Steakhouse" },
+      { name: "Boniato Frito", price: "6.90€", description: "Sweet potato fries", image: imageLibrary.main, imageAlt: "Boniato Frito" },
+      { name: "Salsas · Sauces", price: "2.50€", description: "Ketchup, mayo, garlic mayo, BBQ, chipotle mayo, roasted jalapeno mayo", image: imageLibrary.main, imageAlt: "Salsas Sauces" },
+    ],
+  },
+  {
     title: "Main Courses",
     items: [
       { name: "Gambas Pil Pil", price: "17.50€", image: imageLibrary.main, imageAlt: "Gambas Pil Pil" },
