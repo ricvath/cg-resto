@@ -71,7 +71,7 @@ const menuSections: MenuSection[] = [
       { name: "Ensalada Kalamata", price: "16.00€", description: "Cherry tomato, feta, bell pepper, cucumber, red onion, kalamata olives, oregano, caper, kalamata dressing", image: saladImage("ensalada-kalamata.jpg"), imageAlt: "Ensalada Kalamata" },
       { name: "Aztec", price: "18.00€", description: "Iceberg lettuce, cherry tomato, pulled BBQ chicken, baby spinach, sweetcorn, avocado, bell pepper, red onion, pumpkin seeds, chipotle mayo", image: saladImage("aztec.jpg"), imageAlt: "Aztec salad" },
       { name: "Ensalada BBQ Pulled Pork", price: "18.50€", description: "Lettuce, pulled BBQ pork, jalapeno, bell pepper, red onion, shredded carrot, pickles, cheddar, croutons, crispy fried onion, walnut, honey BBQ dressing", image: saladImage("ensalada-bbq-pulled-pork.jpg"), imageAlt: "Ensalada BBQ Pulled Pork" },
-      { name: "Satay King Prawn", price: "18.50€", description: "Quinoa, king prawns, shredded carrot, edamame beans, soybean sprouts, Chinese salad mix, bell pepper, avocado, toasted cashew, satay peanut sauce", image: imageLibrary.salad, imageAlt: "Satay King Prawn salad" },
+      { name: "Satay King Prawn", price: "18.50€", description: "Quinoa, king prawns, shredded carrot, edamame beans, soybean sprouts, Chinese salad mix, bell pepper, avocado, toasted cashew, satay peanut sauce", image: saladImage("satay-king-prawn.jpg"), imageAlt: "Satay King Prawn salad" },
     ],
   },
   {
