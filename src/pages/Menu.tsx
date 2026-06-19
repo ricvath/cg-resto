@@ -28,8 +28,10 @@ const imageLibrary = {
     "https://cortesgardenmarbella.com/wp-content/uploads/2025/11/DirtyCroissant-1024x1024.jpg",
   main:
     "https://cortesgardenmarbella.com/wp-content/uploads/2025/11/codillo-copy-867x1024.jpg",
-  pizza: "/food.jpg",
+  pizza: "/menu/pizza/margherita.jpg",
 };
+
+const pizzaImage = (fileName: string) => `/menu/pizza/${fileName}`;
 
 const menuSections: MenuSection[] = [
   {
@@ -67,17 +69,17 @@ const menuSections: MenuSection[] = [
   {
     title: "Pizza",
     image: imageLibrary.pizza,
-    imageAlt: "Cortes Garden table dish",
+    imageAlt: "Cortes Garden Margherita pizza",
     items: [
-      { name: "Margherita", price: "12.50€", image: imageLibrary.pizza, imageAlt: "Margherita pizza" },
-      { name: "Napolitana", price: "13.50€", image: imageLibrary.pizza, imageAlt: "Napolitana pizza" },
-      { name: "Prosciutto", price: "16.00€", image: imageLibrary.pizza, imageAlt: "Prosciutto pizza" },
-      { name: "Salami Picante", price: "16.00€", image: imageLibrary.pizza, imageAlt: "Salami Picante pizza" },
-      { name: "Quatro Formaggi", price: "16.50€", image: imageLibrary.pizza, imageAlt: "Quatro Formaggi pizza" },
-      { name: "Bolognese", price: "17.20€", image: imageLibrary.pizza, imageAlt: "Bolognese pizza" },
-      { name: "Gambas Pil Pil", price: "17.50€", image: imageLibrary.pizza, imageAlt: "Gambas Pil Pil pizza" },
-      { name: "Frutti di Mare", price: "17.50€", image: imageLibrary.pizza, imageAlt: "Frutti di Mare pizza" },
-      { name: "Trufa", price: "17.50€", image: imageLibrary.pizza, imageAlt: "Trufa pizza" },
+      { name: "Margherita", price: "12.50€", image: pizzaImage("margherita.jpg"), imageAlt: "Margherita pizza" },
+      { name: "Napolitana", price: "13.50€", image: pizzaImage("margherita.jpg"), imageAlt: "Napolitana pizza" },
+      { name: "Prosciutto", price: "16.00€", image: pizzaImage("prosciutto.jpg"), imageAlt: "Prosciutto pizza" },
+      { name: "Salami Picante", price: "16.00€", image: pizzaImage("salami-picante.jpg"), imageAlt: "Salami Picante pizza" },
+      { name: "Quatro Formaggi", price: "16.50€", image: pizzaImage("quatro-formaggi.jpg"), imageAlt: "Quatro Formaggi pizza" },
+      { name: "Bolognese", price: "17.20€", image: pizzaImage("bolognese.jpg"), imageAlt: "Bolognese pizza" },
+      { name: "Gambas Pil Pil", price: "17.50€", image: pizzaImage("gambas-pil-pil.jpg"), imageAlt: "Gambas Pil Pil pizza" },
+      { name: "Frutti di Mare", price: "17.50€", image: pizzaImage("frutti-di-mare.jpg"), imageAlt: "Frutti di Mare pizza" },
+      { name: "Trufa", price: "17.50€", image: pizzaImage("trufa.jpg"), imageAlt: "Trufa pizza" },
     ],
   },
 ];
