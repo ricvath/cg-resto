@@ -12,6 +12,7 @@ import {
 type MenuItem = {
   name: string;
   price?: string;
+  priceOptions?: string[];
   description?: string;
   image: string;
   imageAlt: string;
@@ -59,7 +60,7 @@ const menuSections: MenuSection[] = [
       { name: "Mini Focaccia with Allioli", price: "2.50€", description: "Mini focaccia with garlic mayonnaise & home made tomato sauce", image: imageLibrary.main, imageAlt: "Mini Focaccia with Allioli" },
       { name: "Tabla de Jamon y Queso", price: "19.50€", description: "Serrano ham and cheese selection board", image: imageLibrary.main, imageAlt: "Tabla de Jamon y Queso" },
       { name: "Basket 3x3", price: "15.00€", description: "3x tempura king prawns, 3x Kentucky style chicken, 3x BBQ chicken wings, cocktail sauce, garlic mayo, BBQ sauce", image: starterImage("basket-3x3.jpg"), imageAlt: "Basket 3x3" },
-      { name: "Lumpia", price: "vegetarian 8.90€ / pork 9.90€", description: "Traditional Filipino fried spring rolls (4pcs)", image: starterImage("lumpia.jpg"), imageAlt: "Lumpia" },
+      { name: "Lumpia", priceOptions: ["vegetarian 8.90€", "pork 9.90€"], description: "Traditional Filipino fried spring rolls (4pcs)", image: starterImage("lumpia.jpg"), imageAlt: "Lumpia" },
       { name: "Langostino en Tempura", price: "11.50€", description: "Tempura king prawns with kimchi mayo (5pcs)", image: starterImage("langostino-tempura.jpg"), imageAlt: "Langostino en Tempura" },
       { name: "Tiras de Pollo", price: "12.00€", description: "Kentucky style chicken with chips (5pcs) + 1 sauce", image: starterImage("tiras-de-pollo.jpg"), imageAlt: "Tiras de Pollo" },
       { name: "Edamames Fritos", price: "5.50€", description: "Fried edamame beans salted and spicy", image: imageLibrary.main, imageAlt: "Edamames Fritos" },
@@ -88,7 +89,7 @@ const menuSections: MenuSection[] = [
       { name: "Alitas de Pollo BBQ con Patatas Fritas", price: "19.50€", description: "Sriracha chicken wings in honey-based BBQ sauce with coleslaw & chips", image: imageLibrary.main, imageAlt: "Alitas de Pollo BBQ con Patatas Fritas" },
       { name: "Espagueti Gamba Scampi", price: "20.00€", description: "King prawns spaghetti", image: imageLibrary.main, imageAlt: "Espagueti Gamba Scampi" },
       { name: "Espagueti Bolonesa", price: "18.00€", description: "Bologna style spaghetti", image: imageLibrary.main, imageAlt: "Espagueti Bolonesa" },
-      { name: "Sinangag", price: "beef 14.50€ / king prawns 15.50€ / beef & prawns 16.90€", description: "Traditional Filipino garlic fried rice", image: imageLibrary.main, imageAlt: "Sinangag" },
+      { name: "Sinangag", priceOptions: ["beef 14.50€", "king prawns 15.50€", "beef & prawns 16.90€"], description: "Traditional Filipino garlic fried rice", image: imageLibrary.main, imageAlt: "Sinangag" },
       { name: "Filete de Salmon Ahumado (350g)", price: "30.00€", description: "Jasmine rice, wine-orange sauce, grill vegetables and smoked grilled salmon steak", image: imageLibrary.main, imageAlt: "Filete de Salmon Ahumado" },
       { name: "Salmon al Horno con Gambones", price: "31.00€", description: "Oven baked salmon with king prawns, jasmine rice and grilled vegetables", image: imageLibrary.main, imageAlt: "Salmon al Horno con Gambones" },
       { name: "Sesamo Tataki Atun", price: "22.00€", description: "Gently-seared red tuna with citrus-soy sauce, wasabi and hiyashi wakame seaweed", image: imageLibrary.main, imageAlt: "Sesamo Tataki Atun" },
@@ -224,10 +225,21 @@ const Menu = () => {
                           {item.description}
                         </p>
                       )}
+                      {item.priceOptions && (
+                        <div className="mt-3 grid max-w-sm gap-1 text-sm text-primary md:text-base">
+                          {item.priceOptions.map((option) => (
+                            <span key={`${item.name}-${option}`} className="font-myanmar tracking-[0.12em]">
+                              {option}
+                            </span>
+                          ))}
+                        </div>
+                      )}
                     </div>
-                    <p className="font-myanmar pt-1 text-base text-primary md:text-lg">
-                      {item.price}
-                    </p>
+                    {item.price && (
+                      <p className="font-myanmar pt-1 text-base text-primary md:text-lg">
+                        {item.price}
+                      </p>
+                    )}
                   </div>
                 ))}
               </div>
