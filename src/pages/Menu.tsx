@@ -154,7 +154,7 @@ const Menu = () => {
           {menuSections.map((section) => (
             <article
               key={section.title}
-              className="grid gap-6 border-t border-primary/20 pt-8 md:grid-cols-[180px_1fr]"
+              className="grid gap-6 border-t border-primary/20 pt-8 md:grid-cols-[300px_1fr]"
             >
               <div className="md:sticky md:top-8 md:self-start">
                 <h2 className="font-myanmar text-3xl md:text-4xl">{section.title}</h2>
@@ -167,7 +167,7 @@ const Menu = () => {
                     className="grid grid-cols-[56px_1fr_auto] items-start gap-4 py-4"
                   >
                     <MenuImageDialog item={item} />
-                    <div>
+                    <div className="min-w-0">
                       <h3 className="font-myanmar text-lg font-normal leading-snug tracking-[0.16em] md:text-xl">
                         {item.name}
                       </h3>
