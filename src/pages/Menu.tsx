@@ -64,7 +64,7 @@ const menuSections: MenuSection[] = [
       { name: "Lumpia", priceOptions: ["vegetarian 8.90€", "pork 9.90€"], description: "Traditional Filipino fried spring rolls (4pcs)", image: starterImage("lumpia.jpg"), imageAlt: "Lumpia" },
       { name: "Langostino en Tempura", price: "11.50€", description: "Tempura king prawns with kimchi mayo (5pcs)", image: starterImage("langostino-tempura.jpg"), imageAlt: "Langostino en Tempura" },
       { name: "Tiras de Pollo", price: "12.00€", description: "Kentucky style chicken with chips (5pcs) + 1 sauce", image: starterImage("tiras-de-pollo.jpg"), imageAlt: "Tiras de Pollo" },
-      { name: "Edamames Fritos", price: "5.50€", description: "Fried edamame beans salted and spicy", image: imageLibrary.main, imageAlt: "Edamames Fritos" },
+      { name: "Edamames Fritos", price: "5.50€", description: "Fried edamame beans salted and spicy", image: starterImage("edamames-fritos.jpg"), imageAlt: "Edamames Fritos" },
     ],
   },
   {
