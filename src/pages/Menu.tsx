@@ -91,7 +91,7 @@ const menuSections: MenuSection[] = [
       { name: "Espagueti Gamba Scampi", price: "20.00€", description: "King prawns spaghetti", image: principalImage("espagueti-gamba-scampi.jpg"), imageAlt: "Espagueti Gamba Scampi" },
       { name: "Espagueti Bolonesa", price: "18.00€", description: "Bologna style spaghetti", image: principalImage("espagueti-bolonesa.jpg"), imageAlt: "Espagueti Bolonesa" },
       { name: "Sinangag", priceOptions: ["beef 14.50€", "king prawns 15.50€", "beef & prawns 16.90€"], description: "Traditional Filipino garlic fried rice", image: principalImage("sinangag-beef.jpg"), imageAlt: "Sinangag" },
-      { name: "Filete de Salmon Ahumado (350g)", price: "30.00€", description: "Jasmine rice, wine-orange sauce, grill vegetables and smoked grilled salmon steak", image: imageLibrary.main, imageAlt: "Filete de Salmon Ahumado" },
+      { name: "Filete de Salmon Ahumado (350g)", price: "30.00€", description: "Jasmine rice, wine-orange sauce, grill vegetables and smoked grilled salmon steak", image: principalImage("filete-de-salmon-ahumado.jpg"), imageAlt: "Filete de Salmon Ahumado" },
       { name: "Salmon al Horno con Gambones", price: "31.00€", description: "Oven baked salmon with king prawns, jasmine rice and grilled vegetables", image: imageLibrary.main, imageAlt: "Salmon al Horno con Gambones" },
       { name: "Sesamo Tataki Atun", price: "22.00€", description: "Gently-seared red tuna with citrus-soy sauce, wasabi and hiyashi wakame seaweed", image: principalImage("sesamo-tataki-atun.jpg"), imageAlt: "Sesamo Tataki Atun" },
       { name: "Calamar Frito Entero", price: "22.00€", description: "Whole fried calamari in onion-tomato based marinara sauce", image: imageLibrary.main, imageAlt: "Calamar Frito Entero" },
