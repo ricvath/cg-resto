@@ -49,7 +49,7 @@ const menuSections: MenuSection[] = [
       { name: "Mediterran Breakfast", price: "11.50€", image: imageLibrary.breakfast, imageAlt: "Mediterran Breakfast" },
       { name: "Croissant Maxi", price: "2.80€", image: imageLibrary.breakfast, imageAlt: "Croissant Maxi" },
       { name: "Croissant with butter and jam", price: "3.70€", image: breakfastImage("croissant-butter-jam.jpg"), imageAlt: "Croissant with butter and jam" },
-      { name: "Dirty Croissant", price: "10.90€", image: imageLibrary.breakfast, imageAlt: "Dirty Croissant" },
+      { name: "Dirty Croissant", price: "10.90€", image: breakfastImage("dirty-croissant.jpg"), imageAlt: "Dirty Croissant" },
       { name: "Syrniki", price: "10.90€", image: breakfastImage("syrniki.jpg"), imageAlt: "Syrniki" },
       { name: "Mediterran Benedict Egg", price: "10.90€", image: imageLibrary.breakfast, imageAlt: "Mediterran Benedict Egg" },
     ],
