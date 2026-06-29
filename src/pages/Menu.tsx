@@ -45,7 +45,7 @@ const menuSections: MenuSection[] = [
     items: [
       { name: "Andalusian Breakfast", price: "12.90€", image: imageLibrary.breakfast, imageAlt: "Andalusian Breakfast" },
       { name: "Catalan Breakfast", price: "5.50€", image: imageLibrary.breakfast, imageAlt: "Catalan Breakfast" },
-      { name: "English Breakfast", price: "14.90€", image: imageLibrary.breakfast, imageAlt: "English Breakfast" },
+      { name: "English Breakfast", price: "14.90€", image: breakfastImage("english-breakfast.jpg"), imageAlt: "English Breakfast" },
       { name: "Mediterran Breakfast", price: "11.50€", image: imageLibrary.breakfast, imageAlt: "Mediterran Breakfast" },
       { name: "Croissant Maxi", price: "2.80€", image: imageLibrary.breakfast, imageAlt: "Croissant Maxi" },
       { name: "Croissant with butter and jam", price: "3.70€", image: breakfastImage("croissant-butter-jam.jpg"), imageAlt: "Croissant with butter and jam" },
