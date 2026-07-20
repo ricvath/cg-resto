@@ -1,5 +1,11 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -41,7 +47,7 @@ const principalImage = (fileName: string) => `/menu/principal/${fileName}`;
 
 const menuSections: MenuSection[] = [
   {
-    title: "Breakfasts",
+    title: "Breakfast",
     items: [
       { name: "Andalusian Breakfast", price: "12.90€", image: imageLibrary.breakfast, imageAlt: "Andalusian Breakfast" },
       { name: "Catalan Breakfast", price: "5.50€", image: imageLibrary.breakfast, imageAlt: "Catalan Breakfast" },
@@ -200,53 +206,65 @@ const Menu = () => {
       </section>
 
       <section className="px-4 pb-20">
-        <div className="mx-auto grid max-w-5xl gap-10">
+        <Accordion
+          type="multiple"
+          className="mx-auto max-w-5xl border-t border-primary/20"
+        >
           {menuSections.map((section) => (
-            <article
+            <AccordionItem
               key={section.title}
-              className="grid gap-6 border-t border-primary/20 pt-8 md:grid-cols-[300px_1fr]"
+              value={section.title}
+              className="border-primary/20"
             >
-              <div className="md:sticky md:top-8 md:self-start">
-                <h2 className="font-myanmar text-3xl md:text-4xl">{section.title}</h2>
-              </div>
-
-              <div className="divide-y divide-primary/15">
-                {section.items.map((item) => (
-                  <div
-                    key={`${section.title}-${item.name}`}
-                    className="grid grid-cols-[56px_1fr_auto] items-start gap-4 py-4"
-                  >
-                    <MenuImageDialog item={item} />
-                    <div className="min-w-0">
-                      <h3 className="font-myanmar text-lg font-normal leading-snug tracking-[0.16em] md:text-xl">
-                        {item.name}
-                      </h3>
-                      {item.description && (
-                        <p className="mt-1 max-w-xl text-sm leading-5 text-muted-foreground md:text-base">
-                          {item.description}
+              <AccordionTrigger className="group py-6 text-left hover:no-underline md:py-8">
+                <div className="flex w-full items-center justify-between gap-4 pr-4">
+                  <h2 className="font-myanmar text-3xl leading-none tracking-[0.16em] md:text-5xl">
+                    {section.title}
+                  </h2>
+                  <span className="shrink-0 text-xs uppercase tracking-[0.28em] text-muted-foreground md:text-sm">
+                    {section.items.length} items
+                  </span>
+                </div>
+              </AccordionTrigger>
+              <AccordionContent className="pb-8">
+                <div className="divide-y divide-primary/15">
+                  {section.items.map((item) => (
+                    <div
+                      key={`${section.title}-${item.name}`}
+                      className="grid grid-cols-[56px_1fr_auto] items-start gap-4 py-4"
+                    >
+                      <MenuImageDialog item={item} />
+                      <div className="min-w-0">
+                        <h3 className="font-myanmar text-lg font-normal leading-snug tracking-[0.16em] md:text-xl">
+                          {item.name}
+                        </h3>
+                        {item.description && (
+                          <p className="mt-1 max-w-xl text-sm leading-5 text-muted-foreground md:text-base">
+                            {item.description}
+                          </p>
+                        )}
+                        {item.priceOptions && (
+                          <div className="mt-3 grid max-w-sm gap-1 text-sm text-primary md:text-base">
+                            {item.priceOptions.map((option) => (
+                              <span key={`${item.name}-${option}`} className="font-myanmar tracking-[0.12em]">
+                                {option}
+                              </span>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                      {item.price && (
+                        <p className="font-myanmar pt-1 text-base text-primary md:text-lg">
+                          {item.price}
                         </p>
                       )}
-                      {item.priceOptions && (
-                        <div className="mt-3 grid max-w-sm gap-1 text-sm text-primary md:text-base">
-                          {item.priceOptions.map((option) => (
-                            <span key={`${item.name}-${option}`} className="font-myanmar tracking-[0.12em]">
-                              {option}
-                            </span>
-                          ))}
-                        </div>
-                      )}
                     </div>
-                    {item.price && (
-                      <p className="font-myanmar pt-1 text-base text-primary md:text-lg">
-                        {item.price}
-                      </p>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </article>
+                  ))}
+                </div>
+              </AccordionContent>
+            </AccordionItem>
           ))}
-        </div>
+        </Accordion>
       </section>
     </main>
   );
