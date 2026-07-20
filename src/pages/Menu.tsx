@@ -20,8 +20,8 @@ type MenuItem = {
   price?: string;
   priceOptions?: string[];
   description?: string;
-  image: string;
-  imageAlt: string;
+  image?: string;
+  imageAlt?: string;
 };
 
 type MenuSection = {
@@ -44,6 +44,7 @@ const saladImage = (fileName: string) => `/menu/salad/${fileName}`;
 const starterImage = (fileName: string) => `/menu/starter/${fileName}`;
 const sideImage = (fileName: string) => `/menu/side/${fileName}`;
 const principalImage = (fileName: string) => `/menu/principal/${fileName}`;
+const steakImage = (fileName: string) => `/menu/steak/${fileName}`;
 
 const menuSections: MenuSection[] = [
   {
@@ -107,6 +108,14 @@ const menuSections: MenuSection[] = [
     ],
   },
   {
+    title: "Steak",
+    items: [
+      { name: "Tomahawk", priceOptions: ["19oz (500g) 36.00€", "35.5oz (1 kg) 69.00€"], description: "Dry-aged for 35 days, cooked on the bone for a rich smoky flavour." },
+      { name: "Ribeye", priceOptions: ["8oz (226g) 27.00€", "12oz (340g) 35.00€"], description: "Cut from the rib section, the ribeye is the most tender and juicy of all the steaks." },
+      { name: "Filet Steak", priceOptions: ["8oz (226g) 29.00€", "12oz (340g) 37.00€"], description: "Lean, tender cut from the center of the tenderloin. It's virtually fat-free and the finest of all the steaks.", image: steakImage("filet-steak.jpg"), imageAlt: "Filet Steak" },
+    ],
+  },
+  {
     title: "Salad",
     items: [
       { name: "Ensalada Cortes", price: "14.00€", description: "Iceberg lettuce, cherry tomato, cucumber, sweetcorn, red onion, goat cheese, raisin, nut mix, balsamic vinegar", image: saladImage("ensalada-cortes.jpg"), imageAlt: "Ensalada Cortes" },
@@ -143,7 +152,11 @@ const menuSections: MenuSection[] = [
   },
 ];
 
-const MenuImageDialog = ({ item }: { item: MenuItem }) => (
+const MenuImageDialog = ({
+  item,
+}: {
+  item: MenuItem & Required<Pick<MenuItem, "image" | "imageAlt">>;
+}) => (
   <Dialog>
     <DialogTrigger asChild>
       <button
@@ -231,9 +244,21 @@ const Menu = () => {
                   {section.items.map((item) => (
                     <div
                       key={`${section.title}-${item.name}`}
-                      className="grid grid-cols-[56px_1fr_auto] items-start gap-4 py-4"
+                      className={`grid items-start gap-4 py-4 ${
+                        item.image
+                          ? "grid-cols-[56px_1fr_auto]"
+                          : "grid-cols-[1fr_auto] md:pl-[72px]"
+                      }`}
                     >
-                      <MenuImageDialog item={item} />
+                      {item.image && item.imageAlt && (
+                        <MenuImageDialog
+                          item={{
+                            ...item,
+                            image: item.image,
+                            imageAlt: item.imageAlt,
+                          }}
+                        />
+                      )}
                       <div className="min-w-0">
                         <h3 className="font-myanmar text-lg font-normal leading-snug tracking-[0.16em] md:text-xl">
                           {item.name}
