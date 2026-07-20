@@ -45,6 +45,7 @@ const starterImage = (fileName: string) => `/menu/starter/${fileName}`;
 const sideImage = (fileName: string) => `/menu/side/${fileName}`;
 const principalImage = (fileName: string) => `/menu/principal/${fileName}`;
 const steakImage = (fileName: string) => `/menu/steak/${fileName}`;
+const batidoImage = (fileName: string) => `/menu/batidos/${fileName}`;
 
 const foodSections: MenuSection[] = [
   {
@@ -325,6 +326,35 @@ const drinkSections: MenuSection[] = [
   },
 ];
 
+const batidoSections: MenuSection[] = [
+  {
+    title: "Batidos Naturales",
+    items: [
+      { name: "Caribbean Passion", price: "5.90€", description: "Mango, papaya, pineapple", image: batidoImage("caribbean-passion.jpg"), imageAlt: "Caribbean Passion smoothie" },
+      { name: "Vitality", price: "5.90€", description: "Banana, strawberry", image: batidoImage("vitality.jpg"), imageAlt: "Vitality smoothie" },
+      { name: "Tropical Heaven", price: "5.90€", description: "Melon, mango, kiwi, pineapple", image: batidoImage("tropical-heaven.jpg"), imageAlt: "Tropical Heaven smoothie" },
+      { name: "Dragon Fruit Mix", price: "5.90€", description: "Mango, strawberry, dragon fruit", image: batidoImage("dragon-fruit-mix.jpg"), imageAlt: "Dragon Fruit Mix smoothie" },
+      { name: "Berries Paradise", price: "5.90€", description: "Mango, cherry, blueberry, strawberry", image: batidoImage("berries-paradise.jpg"), imageAlt: "Berries Paradise smoothie" },
+      { name: "Delightful", price: "5.90€", description: "Banana, blueberry, mango, acai", image: batidoImage("delightful.jpg"), imageAlt: "Delightful smoothie" },
+      { name: "Colada Jungle", price: "5.90€", description: "Banana, coconut, pineapple", image: batidoImage("colada-jungle.jpg"), imageAlt: "Colada Jungle smoothie" },
+      { name: "Green Power", price: "5.90€", description: "Cucumber, kale, pineapple, spinach", image: batidoImage("green-power.jpg"), imageAlt: "Green Power smoothie" },
+    ],
+  },
+  {
+    title: "Batidos con Leche",
+    items: [
+      { name: "Cookies & Cream", price: "5.90€", description: "Vanilla ice cream with chunks of dark chocolate biscuit", image: batidoImage("cookies-cream.jpg"), imageAlt: "Cookies and Cream milkshake" },
+      { name: "Strawberry Fantasy", price: "5.90€", description: "Vanilla ice cream combined with strawberries", image: batidoImage("strawberry-fantasy.jpg"), imageAlt: "Strawberry Fantasy milkshake" },
+      { name: "Salted Caramel Dream", price: "5.90€", description: "Vanilla ice cream with salted caramel", image: batidoImage("salted-caramel-dream.jpg"), imageAlt: "Salted Caramel Dream milkshake" },
+      { name: "Bananalicious", price: "5.90€", description: "Sweet banana and vanilla ice cream", image: batidoImage("bananalicious.jpg"), imageAlt: "Bananalicious milkshake" },
+      { name: "Vanilla Dream", price: "5.90€", description: "Creamy vanilla ice cream", image: batidoImage("vanilla-dream.jpg"), imageAlt: "Vanilla Dream milkshake" },
+      { name: "Pure Chocolate", price: "5.90€", description: "Vanilla ice cream and 60% chocolate", image: batidoImage("pure-chocolate.jpg"), imageAlt: "Pure Chocolate milkshake" },
+      { name: "Royal Vanilla Proteinshake", price: "6.50€", description: "+25gr protein, sugar & fat free, 272 kcal", image: batidoImage("royal-vanilla-proteinshake.jpg"), imageAlt: "Royal Vanilla protein shake" },
+      { name: "Choco-Coco Proteinshake", price: "6.50€", description: "+25gr protein, sugar & fat free, 272 kcal", image: batidoImage("choco-coco-proteinshake.jpg"), imageAlt: "Choco-Coco protein shake" },
+    ],
+  },
+];
+
 const MenuImageDialog = ({
   item,
 }: {
@@ -494,8 +524,8 @@ const Menu = () => {
               </h1>
             </div>
             <p className="max-w-md text-sm leading-7 md:justify-self-end">
-              A la carte dishes and drinks from the garden table. Tap any dish
-              photo to see it larger, then close it to return here.
+              A la carte dishes, drinks and batidos from the garden table. Tap
+              any photo to see it larger, then close it to return here.
             </p>
           </div>
         </div>
@@ -538,6 +568,25 @@ const Menu = () => {
               <MenuSectionAccordion
                 sections={drinkSections}
                 priceOptionsInPriceColumn
+              />
+            </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem value="Batidos" className="border-primary/20">
+            <AccordionTrigger className="group py-7 text-left hover:no-underline md:py-9">
+              <div className="flex w-full items-center justify-between gap-4 pr-4">
+                <h2 className="font-myanmar text-3xl leading-none tracking-[0.12em] md:text-6xl md:tracking-[0.18em]">
+                  Batidos
+                </h2>
+                <span className="shrink-0 text-xs uppercase tracking-[0.28em] text-muted-foreground md:text-sm">
+                  {batidoSections.length} sections
+                </span>
+              </div>
+            </AccordionTrigger>
+            <AccordionContent className="pb-10">
+              <MenuSectionAccordion
+                sections={batidoSections}
+                reserveImageSpace
               />
             </AccordionContent>
           </AccordionItem>
