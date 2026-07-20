@@ -46,7 +46,7 @@ const sideImage = (fileName: string) => `/menu/side/${fileName}`;
 const principalImage = (fileName: string) => `/menu/principal/${fileName}`;
 const steakImage = (fileName: string) => `/menu/steak/${fileName}`;
 
-const menuSections: MenuSection[] = [
+const foodSections: MenuSection[] = [
   {
     title: "Breakfast",
     items: [
@@ -152,6 +152,179 @@ const menuSections: MenuSection[] = [
   },
 ];
 
+const drinkSections: MenuSection[] = [
+  {
+    title: "Refrescos",
+    items: [
+      { name: "Refrescos", price: "(0.25l) 3.20€", description: "Coca Cola, Zero, Fanta, Tonic, Ginger Ale" },
+      { name: "Aquarius, Nestea", price: "(0.33l) 3.60€" },
+      { name: "Agua sin Gas", price: "(0.33l) 3.30€", description: "Mineral water still" },
+      { name: "Agua con Gas", price: "(0.33l) 3.50€", description: "Mineral water sparkling" },
+      { name: "Red Bull", price: "(0.33l) 4.20€" },
+      { name: "Zumo de Naranja", price: "(0.33l) 4.20€", description: "Fresh orange juice" },
+      { name: "Zumos", price: "(0.33l) 3.20€", description: "Apple, peach, pineapple, orange" },
+    ],
+  },
+  {
+    title: "Cerveza",
+    items: [
+      { name: "Victoria · Shandy · Clara", priceOptions: ["Caña (0.26l) 3.00€", "Doble (0.36l) 4.00€", "Jarra (0.5l) 5.00€"] },
+      { name: "Heineken", price: "(0.25l) 3.20€" },
+      { name: "San Miguel", price: "(0.25l) 3.20€" },
+      { name: "Victoria 0.0%", price: "(0.33l) 4.00€" },
+      { name: "Estrella Damm", price: "(0.33l) 4.00€" },
+      { name: "Coronita", price: "(0.33l) 4.50€" },
+      { name: "Guinness", price: "(0.50l) 5.00€" },
+      { name: "Strongbow", price: "(0.50l) 5.00€" },
+      { name: "Kopparberg", price: "(0.50l) 5.00€", description: "Forest fruit, lime-strawberry" },
+    ],
+  },
+  {
+    title: "Vino Blanco",
+    items: [
+      { name: "Blanco de la Casa", priceOptions: ["copa 4.60€", "botella 21.00€"], description: "Blanco joven, verdejo. Abadia Mercier Blanco, España" },
+      { name: "El Coto", priceOptions: ["copa 4.90€", "botella 23.00€"], description: "Rioja, España" },
+      { name: "Montespina", priceOptions: ["copa 5.50€", "botella 27.00€"], description: "Blanco joven, sauvignon blanc. Rueda, España" },
+      { name: "Viñasol", priceOptions: ["copa 5.90€", "botella 28.00€"], description: "Parellada y garnacha. DO Catalunya, España" },
+      { name: "V.Vero", priceOptions: ["copa 5.90€", "botella 28.00€"], description: "Chardonnay, España" },
+      { name: "Villanueva Albariño", priceOptions: ["copa 5.90€", "botella 29.00€"], description: "Blanco seco, cosecha Galicia, España" },
+      { name: "La Mona", priceOptions: ["copa 5.90€", "botella 29.00€"], description: "Moscatel, semidulce" },
+      { name: "Lusco Albariño", price: "botella 65.00€", description: "Afrutado, Galicia, España" },
+    ],
+  },
+  {
+    title: "Vino Tinto",
+    items: [
+      { name: "Tinto de la Casa", priceOptions: ["copa 4.60€", "botella 21.00€"], description: "Tinto seco, tempranillo. Abadia Mercier Tinto, España" },
+      { name: "Pata Negra", priceOptions: ["copa 5.00€", "botella 25.00€"], description: "Reserva, Valdepeñas" },
+      { name: "Abadia Mantrus", priceOptions: ["copa 5.10€", "botella 25.50€"], description: "Tinto crianza. Rioja, España" },
+      { name: "Monte Lagares", priceOptions: ["copa 6.30€", "botella 32.00€"], description: "Tinto crianza. Rioja, España" },
+      { name: "Beronia", priceOptions: ["copa 6.50€", "botella 34.00€"], description: "Tinto crianza, tempranillo. España" },
+      { name: "Fuentespina", priceOptions: ["copa 6.50€", "botella 34.00€"], description: "Tempranillo. Ribera del Duero, España" },
+      { name: "D-12", priceOptions: ["copa 6.50€", "botella 34.00€"], description: "Tinto crianza" },
+      { name: "Lambrusco Tinto", price: "botella 22.00€", description: "Italia" },
+    ],
+  },
+  {
+    title: "Rosado",
+    items: [
+      { name: "Rosé de la Casa", priceOptions: ["copa 4.60€", "botella 21.00€"], description: "Rosado seco, syrah. Abadia Mercier Rosado, España" },
+      { name: "Beronia Rosé", priceOptions: ["copa 5.20€", "botella 26.00€"], description: "Rosado seco frutado. Rioja, España" },
+      { name: "Lambrusco Rosado", price: "botella 22.00€", description: "Italia" },
+    ],
+  },
+  {
+    title: "Vinos Dulces",
+    items: [
+      { name: "Málaga Virgen", priceOptions: ["copa 4.70€", "botella 35.00€"] },
+      { name: "Sangria", priceOptions: ["copa 5.00€", "botella 20.00€"] },
+      { name: "Sangria Blanca", priceOptions: ["copa 5.00€", "botella 20.00€"] },
+      { name: "Tinto de Verano", priceOptions: ["copa 4.70€", "botella 21.00€"] },
+      { name: "Manzanilla, Tio Pepe, Osborne", priceOptions: ["copa 3.70€", "botella 29.00€"] },
+    ],
+  },
+  {
+    title: "Champán y Cava",
+    items: [
+      { name: "Cava de la Casa", priceOptions: ["copa 6.50€", "botella 28.00€"] },
+      { name: "Freixenet Blanco", priceOptions: ["copa 8.00€", "botella 32.00€"] },
+      { name: "Freixenet Negro", priceOptions: ["copa 8.00€", "botella 32.00€"] },
+      { name: "Mumm Rouge Brut", price: "botella 129.00€" },
+      { name: "Mumm Rosé", price: "botella 149.00€" },
+      { name: "MOËT Brut", price: "botella 119.00€" },
+      { name: "MOËT Rosé", price: "botella 149.00€" },
+      { name: "Dom Perignon", price: "botella 299.00€" },
+    ],
+  },
+  {
+    title: "Cócteles",
+    items: [
+      { name: "Caipirinha", price: "12.00€" },
+      { name: "Porn Star Martini", price: "14.00€" },
+      { name: "Espresso Martini", price: "12.00€" },
+      { name: "Mojito", price: "12.00€" },
+      { name: "Mojito Strawberry", price: "12.00€" },
+      { name: "Mojito Passion Fruit", price: "12.00€" },
+      { name: "Sex on the Beach", price: "12.00€" },
+      { name: "Piña Colada", price: "12.00€" },
+      { name: "Cameleon Statik", price: "13.00€" },
+      { name: "Pink Lady", price: "12.00€" },
+      { name: "Frozen Mango Aperol Spritz", price: "12.50€" },
+      { name: "Negroni", price: "12.00€" },
+      { name: "Hurricane", price: "13.00€" },
+      { name: "Aperol Passion Fruit Margarita", price: "12.00€" },
+      { name: "Malibu Breeze", price: "12.00€" },
+      { name: "Frozen Fresa Daiquiri", price: "12.00€" },
+    ],
+  },
+  {
+    title: "Copas",
+    items: [
+      { name: "Gin Tonic", price: "12.00€" },
+      { name: "Cuba Libre", price: "12.00€" },
+      { name: "Vodka & Coke", price: "12.00€" },
+      { name: "Aperol Spritz", price: "11.00€" },
+      { name: "Limoncello Spritz", price: "11.00€" },
+    ],
+  },
+  {
+    title: "Ron",
+    items: [
+      { name: "Bacardi, Cacique, Brugal, Ron Barceló, Havana Club 3", priceOptions: ["45 ml 3.50€", "90 ml 7.00€"] },
+      { name: "Havana Club 5, Havana Club 7 Legendario, Captain Morgan", priceOptions: ["45 ml 4.00€", "90 ml 8.00€"] },
+      { name: "Diplomatico, Zacapa", priceOptions: ["45 ml 7.00€", "90 ml 14.00€"] },
+      { name: "Zacapa XO", priceOptions: ["45 ml 20.00€", "90 ml 48.00€"] },
+    ],
+  },
+  {
+    title: "Whiskey",
+    items: [
+      { name: "Jim Beam, J&B, Dewar's, Jameson, Ballantine's, DYC, Johnnie Walker Red, Johnnie Walker Black, Cutty Sark, Jack Daniel's", priceOptions: ["45 ml 3.50€", "90 ml 7.00€"] },
+      { name: "Cardhu 12, Chivas Regal, Macallan", priceOptions: ["45 ml 6.00€", "90 ml 12.00€"] },
+    ],
+  },
+  {
+    title: "Gin",
+    items: [
+      { name: "Larios/Rosé, Gordons/Rosé, Bombay, Beefeater/Rosé", priceOptions: ["45 ml 3.50€", "90 ml 7.00€"] },
+      { name: "Bombay Sapphire, Puerto de India/Rosé", priceOptions: ["45 ml 4.00€", "90 ml 8.00€"] },
+      { name: "Tanqueray, Seagram's, Wint, Nordés", priceOptions: ["45 ml 5.00€", "90 ml 10.00€"] },
+      { name: "Hendrick's, Roku, Citadelle, Monkey 47, Beefeater 24/Black", priceOptions: ["45 ml 5.50€", "90 ml 11.00€"] },
+      { name: "The London, Bulldog", priceOptions: ["45 ml 6.00€", "90 ml 12.00€"] },
+    ],
+  },
+  {
+    title: "Vodka",
+    items: [
+      { name: "Smirnoff, Stolichnaya, Eristoff", priceOptions: ["45 ml 3.50€", "90 ml 7.00€"] },
+      { name: "Absolut", priceOptions: ["45 ml 4.00€", "90 ml 8.00€"] },
+      { name: "Grey Goose, Belvedere, Finlandia", priceOptions: ["45 ml 6.50€", "90 ml 13.00€"] },
+      { name: "Beluga, Ciroc, Haku", priceOptions: ["45 ml 7.00€", "90 ml 14.00€"] },
+    ],
+  },
+  {
+    title: "Tequila",
+    items: [
+      { name: "Jose Cuervo Silver, Gold", priceOptions: ["45 ml 4.00€", "90 ml 8.00€"] },
+      { name: "Patron Silver, Don Julio", priceOptions: ["45 ml 7.00€", "90 ml 14.00€"] },
+    ],
+  },
+  {
+    title: "Cognac",
+    items: [
+      { name: "Soberano, 103, Magno", priceOptions: ["45 ml 3.50€", "90 ml 7.00€"] },
+      { name: "Carlos I", priceOptions: ["45 ml 4.50€", "90 ml 9.00€"] },
+      { name: "Hennessy, Remy Martin, Grand Marnier", priceOptions: ["45 ml 5.50€", "90 ml 11.00€"] },
+    ],
+  },
+  {
+    title: "Licores",
+    items: [
+      { name: "Limoncello, Cointreau, Licor 43, Pacharán, Malibu, Baileys, Ricard, Disaronno Amaretto, Ruavieja Hierbas, Tia Maria, Triple Sec, Sambuca, Jägermeister, Martini Dry/Blanco/Rosso, Vodka Caramel, Campari", priceOptions: ["45 ml 3.50€", "90 ml 7.00€"] },
+    ],
+  },
+];
+
 const MenuImageDialog = ({
   item,
 }: {
@@ -188,6 +361,102 @@ const MenuImageDialog = ({
   </Dialog>
 );
 
+const MenuItemRow = ({
+  item,
+  sectionTitle,
+  reserveImageSpace = false,
+}: {
+  item: MenuItem;
+  sectionTitle: string;
+  reserveImageSpace?: boolean;
+}) => (
+  <div
+    className={`grid items-start gap-4 py-4 ${
+      item.image
+        ? "grid-cols-[56px_1fr_auto]"
+        : `grid-cols-[1fr_auto] ${reserveImageSpace ? "md:pl-[72px]" : ""}`
+    }`}
+  >
+    {item.image && item.imageAlt && (
+      <MenuImageDialog
+        item={{
+          ...item,
+          image: item.image,
+          imageAlt: item.imageAlt,
+        }}
+      />
+    )}
+    <div className="min-w-0">
+      <h3 className="font-myanmar text-lg font-normal leading-snug tracking-[0.16em] md:text-xl">
+        {item.name}
+      </h3>
+      {item.description && (
+        <p className="mt-1 max-w-xl text-sm leading-5 text-muted-foreground md:text-base">
+          {item.description}
+        </p>
+      )}
+      {item.priceOptions && (
+        <div className="mt-3 grid max-w-sm gap-1 text-sm text-primary md:text-base">
+          {item.priceOptions.map((option) => (
+            <span
+              key={`${sectionTitle}-${item.name}-${option}`}
+              className="font-myanmar tracking-[0.12em]"
+            >
+              {option}
+            </span>
+          ))}
+        </div>
+      )}
+    </div>
+    {item.price && (
+      <p className="font-myanmar pt-1 text-right text-base text-primary md:text-lg">
+        {item.price}
+      </p>
+    )}
+  </div>
+);
+
+const MenuSectionAccordion = ({
+  sections,
+  reserveImageSpace = false,
+}: {
+  sections: MenuSection[];
+  reserveImageSpace?: boolean;
+}) => (
+  <Accordion type="multiple" className="border-t border-primary/20">
+    {sections.map((section) => (
+      <AccordionItem
+        key={section.title}
+        value={section.title}
+        className="border-primary/20"
+      >
+        <AccordionTrigger className="group py-6 text-left hover:no-underline md:py-8">
+          <div className="flex w-full items-center justify-between gap-4 pr-4">
+            <h2 className="font-myanmar text-3xl leading-none tracking-[0.16em] md:text-5xl">
+              {section.title}
+            </h2>
+            <span className="shrink-0 text-xs uppercase tracking-[0.28em] text-muted-foreground md:text-sm">
+              {section.items.length} items
+            </span>
+          </div>
+        </AccordionTrigger>
+        <AccordionContent className="pb-8">
+          <div className="divide-y divide-primary/15">
+            {section.items.map((item) => (
+              <MenuItemRow
+                key={`${section.title}-${item.name}`}
+                item={item}
+                sectionTitle={section.title}
+                reserveImageSpace={reserveImageSpace}
+              />
+            ))}
+          </div>
+        </AccordionContent>
+      </AccordionItem>
+    ))}
+  </Accordion>
+);
+
 const Menu = () => {
   return (
     <main className="min-h-screen bg-background text-foreground">
@@ -211,8 +480,8 @@ const Menu = () => {
               </h1>
             </div>
             <p className="max-w-md text-sm leading-7 md:justify-self-end">
-              Breakfasts, main courses and pizzas from the garden table. Tap any
-              dish photo to see it larger, then close it to return here.
+              A la carte dishes and drinks from the garden table. Tap any dish
+              photo to see it larger, then close it to return here.
             </p>
           </div>
         </div>
@@ -220,75 +489,42 @@ const Menu = () => {
 
       <section className="px-4 pb-20">
         <Accordion
-          type="multiple"
+          type="single"
+          collapsible
+          defaultValue="A la Carte"
           className="mx-auto max-w-5xl border-t border-primary/20"
         >
-          {menuSections.map((section) => (
-            <AccordionItem
-              key={section.title}
-              value={section.title}
-              className="border-primary/20"
-            >
-              <AccordionTrigger className="group py-6 text-left hover:no-underline md:py-8">
-                <div className="flex w-full items-center justify-between gap-4 pr-4">
-                  <h2 className="font-myanmar text-3xl leading-none tracking-[0.16em] md:text-5xl">
-                    {section.title}
-                  </h2>
-                  <span className="shrink-0 text-xs uppercase tracking-[0.28em] text-muted-foreground md:text-sm">
-                    {section.items.length} items
-                  </span>
-                </div>
-              </AccordionTrigger>
-              <AccordionContent className="pb-8">
-                <div className="divide-y divide-primary/15">
-                  {section.items.map((item) => (
-                    <div
-                      key={`${section.title}-${item.name}`}
-                      className={`grid items-start gap-4 py-4 ${
-                        item.image
-                          ? "grid-cols-[56px_1fr_auto]"
-                          : "grid-cols-[1fr_auto] md:pl-[72px]"
-                      }`}
-                    >
-                      {item.image && item.imageAlt && (
-                        <MenuImageDialog
-                          item={{
-                            ...item,
-                            image: item.image,
-                            imageAlt: item.imageAlt,
-                          }}
-                        />
-                      )}
-                      <div className="min-w-0">
-                        <h3 className="font-myanmar text-lg font-normal leading-snug tracking-[0.16em] md:text-xl">
-                          {item.name}
-                        </h3>
-                        {item.description && (
-                          <p className="mt-1 max-w-xl text-sm leading-5 text-muted-foreground md:text-base">
-                            {item.description}
-                          </p>
-                        )}
-                        {item.priceOptions && (
-                          <div className="mt-3 grid max-w-sm gap-1 text-sm text-primary md:text-base">
-                            {item.priceOptions.map((option) => (
-                              <span key={`${item.name}-${option}`} className="font-myanmar tracking-[0.12em]">
-                                {option}
-                              </span>
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                      {item.price && (
-                        <p className="font-myanmar pt-1 text-base text-primary md:text-lg">
-                          {item.price}
-                        </p>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              </AccordionContent>
-            </AccordionItem>
-          ))}
+          <AccordionItem value="A la Carte" className="border-primary/20">
+            <AccordionTrigger className="group py-7 text-left hover:no-underline md:py-9">
+              <div className="flex w-full items-center justify-between gap-4 pr-4">
+                <h2 className="font-myanmar text-3xl leading-none tracking-[0.12em] md:text-6xl md:tracking-[0.18em]">
+                  A la Carte
+                </h2>
+                <span className="shrink-0 text-xs uppercase tracking-[0.28em] text-muted-foreground md:text-sm">
+                  {foodSections.length} sections
+                </span>
+              </div>
+            </AccordionTrigger>
+            <AccordionContent className="pb-10">
+              <MenuSectionAccordion sections={foodSections} reserveImageSpace />
+            </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem value="Bebidas" className="border-primary/20">
+            <AccordionTrigger className="group py-7 text-left hover:no-underline md:py-9">
+              <div className="flex w-full items-center justify-between gap-4 pr-4">
+                <h2 className="font-myanmar text-3xl leading-none tracking-[0.12em] md:text-6xl md:tracking-[0.18em]">
+                  Bebidas
+                </h2>
+                <span className="shrink-0 text-xs uppercase tracking-[0.28em] text-muted-foreground md:text-sm">
+                  {drinkSections.length} sections
+                </span>
+              </div>
+            </AccordionTrigger>
+            <AccordionContent className="pb-10">
+              <MenuSectionAccordion sections={drinkSections} />
+            </AccordionContent>
+          </AccordionItem>
         </Accordion>
       </section>
     </main>
