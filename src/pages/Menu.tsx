@@ -365,10 +365,12 @@ const MenuItemRow = ({
   item,
   sectionTitle,
   reserveImageSpace = false,
+  priceOptionsInPriceColumn = false,
 }: {
   item: MenuItem;
   sectionTitle: string;
   reserveImageSpace?: boolean;
+  priceOptionsInPriceColumn?: boolean;
 }) => (
   <div
     className={`grid items-start gap-4 py-4 ${
@@ -395,7 +397,7 @@ const MenuItemRow = ({
           {item.description}
         </p>
       )}
-      {item.priceOptions && (
+      {item.priceOptions && !priceOptionsInPriceColumn && (
         <div className="mt-3 grid max-w-sm gap-1 text-sm text-primary md:text-base">
           {item.priceOptions.map((option) => (
             <span
@@ -408,10 +410,19 @@ const MenuItemRow = ({
         </div>
       )}
     </div>
-    {item.price && (
-      <p className="font-myanmar pt-1 text-right text-base text-primary md:text-lg">
-        {item.price}
-      </p>
+    {(item.price || (item.priceOptions && priceOptionsInPriceColumn)) && (
+      <div className="font-myanmar grid min-w-[96px] gap-1 pt-1 text-right text-base text-primary md:min-w-[150px] md:text-lg">
+        {item.price && <span>{item.price}</span>}
+        {item.priceOptions && priceOptionsInPriceColumn && (
+          <>
+            {item.priceOptions.map((option) => (
+              <span key={`${sectionTitle}-${item.name}-${option}`}>
+                {option}
+              </span>
+            ))}
+          </>
+        )}
+      </div>
     )}
   </div>
 );
@@ -419,9 +430,11 @@ const MenuItemRow = ({
 const MenuSectionAccordion = ({
   sections,
   reserveImageSpace = false,
+  priceOptionsInPriceColumn = false,
 }: {
   sections: MenuSection[];
   reserveImageSpace?: boolean;
+  priceOptionsInPriceColumn?: boolean;
 }) => (
   <Accordion type="multiple" className="border-t border-primary/20">
     {sections.map((section) => (
@@ -448,6 +461,7 @@ const MenuSectionAccordion = ({
                 item={item}
                 sectionTitle={section.title}
                 reserveImageSpace={reserveImageSpace}
+                priceOptionsInPriceColumn={priceOptionsInPriceColumn}
               />
             ))}
           </div>
@@ -491,7 +505,6 @@ const Menu = () => {
         <Accordion
           type="single"
           collapsible
-          defaultValue="A la Carte"
           className="mx-auto max-w-5xl border-t border-primary/20"
         >
           <AccordionItem value="A la Carte" className="border-primary/20">
@@ -522,7 +535,10 @@ const Menu = () => {
               </div>
             </AccordionTrigger>
             <AccordionContent className="pb-10">
-              <MenuSectionAccordion sections={drinkSections} />
+              <MenuSectionAccordion
+                sections={drinkSections}
+                priceOptionsInPriceColumn
+              />
             </AccordionContent>
           </AccordionItem>
         </Accordion>
