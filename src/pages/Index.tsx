@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Facebook, Instagram } from "lucide-react";
 import Map from "@/components/Map";
 import { useNavigate } from "react-router-dom";
+import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -24,7 +25,7 @@ const Index = () => {
   }, []);
 
   const handleMenuClick = () => {
-    navigate("/menu");
+    navigate("/morning-menu");
   };
 
   const content = {
@@ -106,6 +107,7 @@ const Index = () => {
 
   return (
     <div className="relative">
+      <SiteHeader />
       <Hero language={language} />
 
       {/* Floating CTA Button */}
@@ -115,7 +117,7 @@ const Index = () => {
           size="lg"
           onClick={() =>
             window.open(
-              "https://www.opentable.es/r/cortes-garden-marbella-reservations-marbella?restref=443829&lang=en-GB&ot_source=Restaurant%20website",
+              "https://widget.thefork.com/en-GB/a268eafa-2b04-408f-873e-f54390fb3fdd?step=date&utm_source=cortesgarden.com",
               "_blank"
             )
           }
@@ -202,7 +204,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-4 bg-primary text-secondary">
+      <footer className="hidden">
         <div className="max-w-4xl mx-auto space-y-12">
           {/* Top row with language switcher and social icons */}
           <div className="flex justify-between items-center">
@@ -289,6 +291,7 @@ const Index = () => {
           </div>
         </div>
       </footer>
+      <SiteFooter />
     </div>
   );
 };

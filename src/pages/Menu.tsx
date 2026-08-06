@@ -15,7 +15,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 
-type MenuItem = {
+export type MenuItem = {
   name: string;
   price?: string;
   priceOptions?: string[];
@@ -24,7 +24,7 @@ type MenuItem = {
   imageAlt?: string;
 };
 
-type MenuSection = {
+export type MenuSection = {
   title: string;
   items: MenuItem[];
 };
@@ -47,7 +47,7 @@ const principalImage = (fileName: string) => `/menu/principal/${fileName}`;
 const steakImage = (fileName: string) => `/menu/steak/${fileName}`;
 const batidoImage = (fileName: string) => `/menu/batidos/${fileName}`;
 
-const foodSections: MenuSection[] = [
+export const foodSections: MenuSection[] = [
   {
     title: "Breakfast",
     items: [
@@ -153,7 +153,7 @@ const foodSections: MenuSection[] = [
   },
 ];
 
-const drinkSections: MenuSection[] = [
+export const drinkSections: MenuSection[] = [
   {
     title: "Refrescos",
     items: [
@@ -326,7 +326,7 @@ const drinkSections: MenuSection[] = [
   },
 ];
 
-const batidoSections: MenuSection[] = [
+export const batidoSections: MenuSection[] = [
   {
     title: "Batidos Naturales",
     items: [
@@ -364,13 +364,13 @@ const MenuImageDialog = ({
     <DialogTrigger asChild>
       <button
         type="button"
-        className="h-14 w-14 shrink-0 overflow-hidden rounded-full border border-primary/15 bg-[#e8dfcd] p-1 shadow-sm transition hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background"
+        className="h-[72px] w-[72px] shrink-0 overflow-hidden rounded-md focus:outline-none focus:ring-2 focus:ring-[#635b4f]"
         aria-label={`Show larger photo for ${item.name}`}
       >
         <img
           src={item.image}
           alt={item.imageAlt}
-          className="h-full w-full rounded-full object-cover mix-blend-multiply"
+          className="h-full w-full object-cover transition hover:scale-105"
           loading="lazy"
         />
       </button>
@@ -403,10 +403,10 @@ const MenuItemRow = ({
   priceOptionsInPriceColumn?: boolean;
 }) => (
   <div
-    className={`grid items-start gap-4 py-4 ${
+    className={`grid items-center gap-4 border-b border-dotted border-[#635b4f] px-4 py-2 ${
       item.image
-        ? "grid-cols-[56px_1fr_auto]"
-        : `grid-cols-[1fr_auto] ${reserveImageSpace ? "md:pl-[72px]" : ""}`
+        ? "grid-cols-[72px_1fr_auto]"
+        : `grid-cols-[1fr_auto] ${reserveImageSpace ? "md:pl-[88px]" : ""}`
     }`}
   >
     {item.image && item.imageAlt && (
@@ -419,11 +419,11 @@ const MenuItemRow = ({
       />
     )}
     <div className="min-w-0">
-      <h3 className="font-myanmar text-lg font-normal leading-snug tracking-[0.16em] md:text-xl">
+      <h3 className="text-base font-bold leading-snug">
         {item.name}
       </h3>
       {item.description && (
-        <p className="mt-1 max-w-xl text-sm leading-5 text-muted-foreground md:text-base">
+        <p className="mt-1 max-w-xl text-sm leading-5 text-[#635b4f]">
           {item.description}
         </p>
       )}
@@ -432,7 +432,7 @@ const MenuItemRow = ({
           {item.priceOptions.map((option) => (
             <span
               key={`${sectionTitle}-${item.name}-${option}`}
-              className="font-myanmar tracking-[0.12em]"
+            className="font-bold"
             >
               {option}
             </span>
@@ -441,7 +441,7 @@ const MenuItemRow = ({
       )}
     </div>
     {(item.price || (item.priceOptions && priceOptionsInPriceColumn)) && (
-      <div className="font-myanmar grid min-w-[96px] gap-1 pt-1 text-right text-base text-primary md:min-w-[150px] md:text-lg">
+      <div className="grid min-w-[96px] gap-1 text-right text-base font-bold text-[#635b4f] md:min-w-[150px]">
         {item.price && <span>{item.price}</span>}
         {item.priceOptions && priceOptionsInPriceColumn && (
           <>
@@ -457,7 +457,7 @@ const MenuItemRow = ({
   </div>
 );
 
-const MenuSectionAccordion = ({
+export const MenuSectionAccordion = ({
   sections,
   reserveImageSpace = false,
   priceOptionsInPriceColumn = false,
@@ -466,25 +466,23 @@ const MenuSectionAccordion = ({
   reserveImageSpace?: boolean;
   priceOptionsInPriceColumn?: boolean;
 }) => (
-  <Accordion type="multiple" className="border-t border-primary/20">
-    {sections.map((section) => (
+  <Accordion type="multiple" defaultValue={sections[0] ? [sections[0].title] : []}>
+    {sections.map((section, sectionIndex) => (
       <AccordionItem
         key={section.title}
         value={section.title}
-        className="border-primary/20"
+        className="border-0 pb-12"
       >
-        <AccordionTrigger className="group py-6 text-left hover:no-underline md:py-8">
-          <div className="flex w-full items-center justify-between gap-4 pr-4">
-            <h2 className="font-myanmar text-3xl leading-none tracking-[0.16em] md:text-5xl">
+        <AccordionTrigger className="group justify-center py-0 text-center hover:no-underline [&>svg]:ml-3 [&>svg]:h-4 [&>svg]:w-4">
+          <div className="flex flex-col items-center">
+            <img src={sectionIndex === 0 ? "/leaf-2.svg" : sectionIndex === 1 ? "/leaf-1.svg" : "/leaf-4.svg"} alt="" className="mb-6 h-auto w-12" />
+            <h2 className="font-myanmar mb-0 text-[36px] uppercase leading-none tracking-[0.4375rem]">
               {section.title}
             </h2>
-            <span className="shrink-0 text-xs uppercase tracking-[0.28em] text-muted-foreground md:text-sm">
-              {section.items.length} items
-            </span>
           </div>
         </AccordionTrigger>
-        <AccordionContent className="pb-8">
-          <div className="divide-y divide-primary/15">
+        <AccordionContent className="pt-6">
+          <div className="border-t border-dotted border-[#635b4f]">
             {section.items.map((item) => (
               <MenuItemRow
                 key={`${section.title}-${item.name}`}

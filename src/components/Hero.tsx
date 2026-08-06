@@ -22,7 +22,7 @@ export const Hero = ({ language }: HeroProps) => {
   };
 
   const handleMenuClick = () => {
-    navigate("/menu");
+    navigate("/morning-menu");
   };
 
   return (
@@ -59,7 +59,7 @@ export const Hero = ({ language }: HeroProps) => {
             className="bg-secondary text-secondary-foreground hover:text-muted-foreground font-medium text-md"
             onClick={() =>
               window.open(
-                "https://widget.thefork.com/a268eafa-2b04-408f-873e-f54390fb3fdd",
+                "https://widget.thefork.com/en-GB/a268eafa-2b04-408f-873e-f54390fb3fdd?step=date&utm_source=cortesgarden.com",
                 "_blank",
               )
             }
