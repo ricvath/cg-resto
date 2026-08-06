@@ -118,7 +118,7 @@ const Index = () => {
           onClick={() =>
             window.open(
               "https://widget.thefork.com/en-GB/a268eafa-2b04-408f-873e-f54390fb3fdd?step=date&utm_source=cortesgarden.com",
-              "_blank"
+              "_blank",
             )
           }
         >
@@ -231,7 +231,8 @@ const Index = () => {
             {/* Social icons */}
             <div className="flex space-x-6">
               <a
-                href="https://www.tiktok.com/@cortesgarden" target="_blank"
+                href="https://www.tiktok.com/@cortesgarden"
+                target="_blank"
                 className="hover:text-muted-foreground"
               >
                 <svg
@@ -244,19 +245,22 @@ const Index = () => {
                 </svg>
               </a>
               <a
-                href="https://www.facebook.com/cortesgarden" target="_blank"
+                href="https://www.facebook.com/cortesgarden"
+                target="_blank"
                 className="hover:text-muted-foreground"
               >
                 <Facebook className="w-6 h-6" />
               </a>
               <a
-                href="https://www.instagram.com/cortesgarden" target="_blank"
+                href="https://www.instagram.com/cortesgarden"
+                target="_blank"
                 className="hover:text-muted-foreground"
               >
                 <Instagram className="w-6 h-6" />
               </a>
               <a
-                href="https://wa.me/34622829980" target="_blank"
+                href="https://wa.me/34622829980"
+                target="_blank"
                 className="hover:text-muted-foreground"
               >
                 <svg
