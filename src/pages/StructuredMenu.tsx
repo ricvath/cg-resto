@@ -54,13 +54,8 @@ const desserts: MenuSection = {
 };
 
 const byTitle = (title: string) => foodSections.find((section) => section.title === title)!;
-const drinkByTitle = (title: string) => drinkSections.find((section) => section.title === title)!;
 
 export const morningSections: MenuSection[] = [
-  coffee,
-  tea,
-  { ...drinkByTitle("Refrescos"), title: "Soft Drinks" },
-  { ...drinkByTitle("Cerveza"), title: "Beer" },
   byTitle("Breakfast"),
   desserts,
   byTitle("Starter"),
@@ -83,7 +78,7 @@ export const eveningSections: MenuSection[] = [
   desserts,
 ];
 
-export const drinksSections: MenuSection[] = [...drinkSections, ...batidoSections];
+export const drinksSections: MenuSection[] = [coffee, tea, ...drinkSections, ...batidoSections];
 
 const allergens = ["Celery", "Gluten", "Crustaceans", "Eggs", "Fish", "Lupin", "Lactose", "Molluscs", "Mustard", "Nuts", "Peanuts", "Sesame", "Soya", "Sulphur dioxide"];
 
