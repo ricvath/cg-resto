@@ -59,7 +59,7 @@ export const foodSections: MenuSection[] = [
       { name: "Croissant with butter and jam", price: "3.70€", image: breakfastImage("croissant-butter-jam.jpg"), imageAlt: "Croissant with butter and jam" },
       { name: "Dirty Croissant", price: "10.90€", image: breakfastImage("dirty-croissant.jpg"), imageAlt: "Dirty Croissant" },
       { name: "Syrniki", price: "10.90€", image: breakfastImage("syrniki.jpg"), imageAlt: "Syrniki" },
-      { name: "Mediterran Benedict Egg", price: "10.90€", image: imageLibrary.breakfast, imageAlt: "Mediterran Benedict Egg" },
+      { name: "Mediterran Benedict Egg", price: "10.90€", image: breakfastImage("mediterran-benedict-egg.png"), imageAlt: "Mediterran Benedict Egg" },
     ],
   },
   {
