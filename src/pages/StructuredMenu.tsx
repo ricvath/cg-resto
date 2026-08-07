@@ -66,7 +66,9 @@ export const morningSections: MenuSection[] = [
   byTitle("Starter"),
   { ...byTitle("Soup"), title: "Soups" },
   byTitle("Side Dishes"),
-  { title: "Main", items: [...byTitle("Principal").items, ...byTitle("Steak").items, ...byTitle("Salad").items] },
+  { ...byTitle("Principal"), title: "Main" },
+  byTitle("Steak"),
+  { ...byTitle("Salad"), title: "Salads" },
   byTitle("Pizza"),
 ];
 
