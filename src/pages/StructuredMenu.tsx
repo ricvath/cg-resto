@@ -4,8 +4,8 @@ import { MenuSectionAccordion, batidoSections, drinkSections, foodSections, type
 const coffee: MenuSection = {
   title: "Coffee",
   items: [
-    { name: "Espresso", price: "2.60€", image: "https://cg.diff.hu/wp-content/uploads/2026/08/espresso.webp", imageAlt: "Espresso" },
-    { name: "Café Sólo", price: "2.60€", image: "https://cg.diff.hu/wp-content/uploads/2026/08/caf__solo.webp", imageAlt: "Café Sólo" },
+    { name: "Espresso", price: "2.60€" },
+    { name: "Café Sólo", price: "2.60€" },
     { name: "Cortado", price: "2.60€" },
     { name: "Café con Leche", priceOptions: ["M 2.90€", "L 3.60€"] },
     { name: "Matcha Latte", price: "4.50€" },
