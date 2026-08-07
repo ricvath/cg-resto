@@ -5,10 +5,11 @@ import { Facebook, Instagram } from "lucide-react";
 import Map from "@/components/Map";
 import { useNavigate } from "react-router-dom";
 import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Index = () => {
   const navigate = useNavigate();
-  const [language, setLanguage] = useState<"en" | "es">("en");
+  const { language, setLanguage } = useLanguage();
   const [showFloatingCta, setShowFloatingCta] = useState(false);
 
   useEffect(() => {

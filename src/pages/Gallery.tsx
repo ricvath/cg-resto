@@ -1,4 +1,5 @@
 import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const galleries = [
   { title: "Fun Dining", image: "/family.jpg" },
@@ -6,11 +7,13 @@ const galleries = [
   { title: "Wines & Cocktails", image: "/wine.jpg" },
 ];
 
-const Gallery = () => (
+const Gallery = () => {
+  const { language } = useLanguage();
+  return (
   <div className="min-h-screen bg-background text-foreground">
     <SiteHeader />
     <header className="relative isolate overflow-hidden bg-[url('https://cg.diff.hu/wp-content/themes/cortesgarden/img/header-bg.jpg')] bg-cover bg-center px-4 pb-4 pt-[106px] text-center text-[#e9e1d2] before:absolute before:inset-0 before:-z-10 before:bg-[#0e0d0b]/65 md:pb-8 md:pt-[122px]">
-      <h1 className="font-myanmar mb-0 text-[36px] uppercase leading-none md:text-[46px]">Gallery</h1>
+      <h1 className="font-myanmar mb-0 text-[36px] uppercase leading-none md:text-[46px]">{language === "en" ? "Gallery" : "Galería"}</h1>
     </header>
     <main className="mx-auto grid max-w-[1024px] gap-4 px-4 py-12 md:grid-cols-3 md:py-20">
       {galleries.map((gallery) => (
@@ -23,6 +26,7 @@ const Gallery = () => (
     </main>
     <SiteFooter />
   </div>
-);
+  );
+};
 
 export default Gallery;

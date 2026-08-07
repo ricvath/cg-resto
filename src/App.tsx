@@ -10,6 +10,7 @@ import { DrinksMenu, EveningMenu, MorningMenu } from "./pages/StructuredMenu";
 import Events from "./pages/Events";
 import Gallery from "./pages/Gallery";
 import { Navigate } from "react-router-dom";
+import { LanguageProvider } from "./contexts/LanguageContext";
 
 const queryClient = new QueryClient();
 
@@ -18,8 +19,9 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
-        <Routes>
+      <LanguageProvider>
+        <BrowserRouter>
+          <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/menu" element={<Navigate to="/morning-menu" replace />} />
           <Route path="/legacy-menu" element={<Menu />} />
@@ -30,8 +32,9 @@ const App = () => (
           <Route path="/gallery" element={<Gallery />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
+          </Routes>
+        </BrowserRouter>
+      </LanguageProvider>
     </TooltipProvider>
   </QueryClientProvider>
 );

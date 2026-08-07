@@ -1,11 +1,14 @@
 import { CalendarDays, Clock3, Music2 } from "lucide-react";
 import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
+import { useLanguage } from "@/contexts/LanguageContext";
 
-const Events = () => (
+const Events = () => {
+  const { language } = useLanguage();
+  return (
   <div className="min-h-screen bg-background text-foreground">
     <SiteHeader />
     <header className="relative isolate overflow-hidden bg-[url('https://cg.diff.hu/wp-content/themes/cortesgarden/img/header-bg.jpg')] bg-cover bg-center px-4 pb-4 pt-[106px] text-center text-[#e9e1d2] before:absolute before:inset-0 before:-z-10 before:bg-[#0e0d0b]/65 md:pb-8 md:pt-[122px]">
-      <h1 className="font-myanmar mb-0 text-[36px] uppercase leading-none md:text-[46px]">Events</h1>
+      <h1 className="font-myanmar mb-0 text-[36px] uppercase leading-none md:text-[46px]">{language === "en" ? "Events" : "Eventos"}</h1>
     </header>
     <main className="mx-auto max-w-[1024px] px-4 py-12 md:py-20">
       <article className="relative mx-auto max-w-md overflow-hidden bg-[url('https://cg.diff.hu/wp-content/themes/cortesgarden/img/event-bg.jpg')] bg-cover bg-center p-6 text-center">
@@ -19,6 +22,7 @@ const Events = () => (
     </main>
     <SiteFooter />
   </div>
-);
+  );
+};
 
 export default Events;
