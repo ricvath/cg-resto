@@ -23,12 +23,12 @@ const coffee: MenuSection = {
 const tea: MenuSection = {
   title: "Tea",
   items: [
-    { name: "Té Verde / Green Tea", price: "3.50€", description: "China gunpowder, Pai Mu Tan" },
-    { name: "Té Rojo / Red Tea", price: "3.50€", description: "Esbetic, Pu-erh" },
-    { name: "Fruit & Herbal Tea", price: "3.50€", description: "Rooibos, mint, strawberry cream, forest fruits, chamomile, lime blossom" },
-    { name: "Black Tea", price: "3.50€", description: "Indian Darjeeling, English Breakfast" },
+    { name: "Té Verde · Green Tea", price: "3.50€", description: "China gunpowder, Pai Mu Tan" },
+    { name: "Té Rojo · Red Tea", price: "3.50€", description: "Esbetic, Pu-erh" },
+    { name: "Té Fruta/Herbal · Fruit/Herbal", price: "3.50€", description: "Rooibos, poleo-menta, strawberry cream, forest fruits, camomile, lime blossom" },
+    { name: "Té Negro · Black Tea", price: "3.50€", description: "Indian Darjeeling, English Breakfast" },
     { name: "Chai Latte", price: "4.50€" },
-    { name: "Ice Tea", priceOptions: ["0.4l 3.90€", "0.6l 5.50€", "1l 9.00€"], description: "Classic lemon or passion fruit" },
+    { name: "Té Helado · Iced Tea", priceOptions: ["0.4l 3.90€", "0.6l 5.50€", "1l 9.00€"], description: "Classic lemon or passion fruit" },
     { name: "Lemonade", priceOptions: ["0.4l 3.90€", "0.6l 5.50€", "1l 9.00€"], description: "Classic lemon, mint, strawberry, blackcurrant, ginger, lavender or elderflower" },
   ],
 };
