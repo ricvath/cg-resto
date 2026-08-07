@@ -55,15 +55,9 @@ jobs:
           DISPLAY=:0 SSH_ASKPASS="$RUNNER_TEMP/ssh-askpass" SSH_ASKPASS_REQUIRE=force \
             setsid ssh-add ~/.ssh/siteground_deploy </dev/null
 
-          for attempt in 1 2 3; do
-            if ssh-keyscan -T 20 -p 18765 ssh.cortesgardenmarbella.com >> ~/.ssh/known_hosts; then
-              break
-            fi
-            if [ "$attempt" -eq 3 ]; then
-              echo "Could not retrieve the SiteGround SSH host key." >&2
-              exit 1
-            fi
-          done
+          cat > ~/.ssh/known_hosts <<'EOF'
+          [ssh.cortesgardenmarbella.com]:18765 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBujaDiiP3nOlJCz+E+1+M0ykTNF/lfqPoo8q2SlFoNR
+          EOF
           chmod 600 ~/.ssh/known_hosts
 
       - name: Upload build to SiteGround
