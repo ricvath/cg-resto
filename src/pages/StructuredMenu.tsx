@@ -1,6 +1,7 @@
 import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
 import { MenuSectionAccordion, batidoSections, drinkSections, foodSections, type MenuSection } from "@/pages/Menu";
 import { useLanguage, type Language } from "@/contexts/LanguageContext";
+import { Flame, Leaf, WheatOff } from "lucide-react";
 
 const coffee: MenuSection = {
   title: "Coffee",
@@ -117,7 +118,11 @@ const StructuredMenu = ({ title, titleEs, eyebrow, intro, sections }: { title: s
         <ol className="mt-6 grid grid-cols-2 gap-x-4 gap-y-2 text-sm lg:grid-cols-1">
           {localizedAllergens.map((item, index) => <li key={item} className="flex items-center gap-3"><span className="grid h-6 w-6 shrink-0 place-items-center bg-[#e9e1d2] text-xs text-[#635b4f]">{index + 1}</span>{item}</li>)}
         </ol>
-        <div className="mt-7 border-t border-white/15 pt-5 text-sm">{language === "en" ? "Ask our team about gluten-free, spicy and vegetarian options." : "Consulta a nuestro equipo sobre opciones sin gluten, picantes y vegetarianas."}</div>
+        <div className="mt-7 space-y-3 border-t border-white/15 pt-5 text-base">
+          <div className="flex items-center gap-4"><WheatOff className="h-6 w-6 text-[#d4ae48]" aria-hidden="true" /><span>{language === "en" ? "Gluten-free" : "Sin gluten"}</span></div>
+          <div className="flex items-center gap-4"><Flame className="h-6 w-6 text-[#d77a72]" aria-hidden="true" /><span>{language === "en" ? "Spicy" : "Picante"}</span></div>
+          <div className="flex items-center gap-4"><Leaf className="h-6 w-6 text-[#65a87d]" aria-hidden="true" /><span>{language === "en" ? "Vegetarian" : "Vegetariano"}</span></div>
+        </div>
       </aside>
     </main>
     <SiteFooter />
