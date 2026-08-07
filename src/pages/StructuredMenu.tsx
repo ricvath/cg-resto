@@ -58,7 +58,6 @@ const byTitle = (title: string) => foodSections.find((section) => section.title 
 
 export const morningSections: MenuSection[] = [
   byTitle("Breakfast"),
-  desserts,
   byTitle("Starter"),
   { ...byTitle("Soup"), title: "Soups" },
   byTitle("Side Dishes"),
@@ -66,6 +65,7 @@ export const morningSections: MenuSection[] = [
   byTitle("Steak"),
   { ...byTitle("Salad"), title: "Salads" },
   byTitle("Pizza"),
+  desserts,
 ];
 
 export const eveningSections: MenuSection[] = [
