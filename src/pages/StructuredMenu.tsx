@@ -7,7 +7,16 @@ const coffee: MenuSection = {
     { name: "Espresso", price: "2.60€", image: "https://cg.diff.hu/wp-content/uploads/2026/08/espresso.webp", imageAlt: "Espresso" },
     { name: "Café Sólo", price: "2.60€", image: "https://cg.diff.hu/wp-content/uploads/2026/08/caf__solo.webp", imageAlt: "Café Sólo" },
     { name: "Cortado", price: "2.60€" },
-    { name: "Café con Leche", price: "2.60€" },
+    { name: "Café con Leche", priceOptions: ["M 2.90€", "L 3.60€"] },
+    { name: "Matcha Latte", price: "4.50€" },
+    { name: "Matcha Iced Latte", price: "5.00€" },
+    { name: "Americano", priceOptions: ["M 2.60€", "L 3.20€"] },
+    { name: "Cappuccino · Special Latte", price: "4.50€", description: "Caramel, vanilla or hazelnut" },
+    { name: "Latte Macchiato", price: "3.00€" },
+    { name: "Café Irlandés", price: "6.70€" },
+    { name: "Frappé Griego", price: "5.00€" },
+    { name: "Chocolate Caliente", price: "3.90€" },
+    { name: "Colacao", price: "3.70€" },
   ],
 };
 
