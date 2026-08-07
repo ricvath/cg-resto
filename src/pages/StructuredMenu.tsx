@@ -29,6 +29,18 @@ const desserts: MenuSection = {
   items: [
     { name: "Tarta de Manzana", price: "7.50€", description: "Apple cake" },
     { name: "Tarta de Chocolate", price: "7.50€", description: "Chocolate cake" },
+    { name: "Tarta de Queso Fresa", price: "7.50€", description: "Strawberry cheesecake" },
+    { name: "Tarta de Zanahoria", price: "7.50€", description: "Carrot cake" },
+    { name: "Tarta Sueca de Almendras", price: "7.50€", description: "Swedish almond cake" },
+    { name: "Muffin Chocolate", price: "3.00€" },
+    { name: "Churros con Chocolate", price: "7.50€", description: "Churros with chocolate" },
+    { name: "Croissant con Crema de Pistacho", price: "6.50€", description: "Croissant with pistachio cream" },
+    { name: "Coulant de Chocolate con Helado", price: "7.50€", description: "Lava cake with vanilla ice cream" },
+    {
+      name: "Helado · Ice Cream",
+      price: "5.50€",
+      description: "Royal vanilla ice cream base in four flavours: strawberry biscuit cake with marshmallows; passion fruit with pineapple bits; Oreo chocolate combo; or toffee caramel with crushed almond.",
+    },
   ],
 };
 
