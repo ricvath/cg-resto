@@ -111,8 +111,8 @@ export const foodSections: MenuSection[] = [
   {
     title: "Steak",
     items: [
-      { name: "Tomahawk", priceOptions: ["19oz (500g) 36.00€", "35.5oz (1 kg) 69.00€"], description: "Dry-aged for 35 days, cooked on the bone for a rich smoky flavour." },
-      { name: "Ribeye", priceOptions: ["8oz (226g) 27.00€", "12oz (340g) 35.00€"], description: "Cut from the rib section, the ribeye is the most tender and juicy of all the steaks." },
+      { name: "Tomahawk", priceOptions: ["19oz (500g) 36.00€", "35.5oz (1 kg) 69.00€"], description: "Dry-aged for 35 days, cooked on the bone for a rich smoky flavour.", image: steakImage("tomahawk.jpg"), imageAlt: "Tomahawk steak" },
+      { name: "Ribeye", priceOptions: ["8oz (226g) 27.00€", "12oz (340g) 35.00€"], description: "Cut from the rib section, the ribeye is the most tender and juicy of all the steaks.", image: steakImage("ribeye.jpg"), imageAlt: "Ribeye steak" },
       { name: "Filet Steak", priceOptions: ["8oz (226g) 29.00€", "12oz (340g) 37.00€"], description: "Lean, tender cut from the center of the tenderloin. It's virtually fat-free and the finest of all the steaks.", image: steakImage("filet-steak.jpg"), imageAlt: "Filet Steak" },
     ],
   },
