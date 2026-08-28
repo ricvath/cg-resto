@@ -51,10 +51,10 @@ export const foodSections: MenuSection[] = [
   {
     title: "Breakfast",
     items: [
-      { name: "Andalusian Breakfast", price: "12.90€", image: imageLibrary.breakfast, imageAlt: "Andalusian Breakfast" },
-      { name: "Catalan Breakfast", price: "5.50€", image: imageLibrary.breakfast, imageAlt: "Catalan Breakfast" },
+      { name: "Andalusian Breakfast", price: "12.90€", image: breakfastImage("andalusian-breakfast.png"), imageAlt: "Andalusian Breakfast" },
+      { name: "Catalan Breakfast", price: "5.50€", image: breakfastImage("catalan-breakfast.png"), imageAlt: "Catalan Breakfast" },
       { name: "English Breakfast", price: "14.90€", image: breakfastImage("english-breakfast.jpg"), imageAlt: "English Breakfast" },
-      { name: "Mediterran Breakfast", price: "11.50€", image: imageLibrary.breakfast, imageAlt: "Mediterran Breakfast" },
+      { name: "Mediterran Breakfast", price: "11.50€", image: breakfastImage("mediterranean-breakfast.png"), imageAlt: "Mediterran Breakfast" },
       { name: "Croissant Maxi", price: "2.80€", image: breakfastImage("croissant-maxi.jpg"), imageAlt: "Croissant Maxi" },
       { name: "Croissant with butter and jam", price: "3.70€", image: breakfastImage("croissant-butter-jam.jpg"), imageAlt: "Croissant with butter and jam" },
       { name: "Dirty Croissant", price: "10.90€", image: breakfastImage("dirty-croissant.jpg"), imageAlt: "Dirty Croissant" },
