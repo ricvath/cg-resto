@@ -65,9 +65,9 @@ export const foodSections: MenuSection[] = [
   {
     title: "Starter",
     items: [
-      { name: "Tabla de Guacamole", price: "11.00€", description: "Guacamole with toast, olives & cherry tomato", image: imageLibrary.main, imageAlt: "Tabla de Guacamole" },
-      { name: "Mini Focaccia with Allioli", price: "2.50€", description: "Mini focaccia with garlic mayonnaise & home made tomato sauce", image: imageLibrary.main, imageAlt: "Mini Focaccia with Allioli" },
-      { name: "Tabla de Jamon y Queso", price: "19.50€", description: "Serrano ham and cheese selection board", image: imageLibrary.main, imageAlt: "Tabla de Jamon y Queso" },
+      { name: "Tabla de Guacamole", price: "11.00€", description: "Guacamole with toast, olives & cherry tomato", image: starterImage("tabla-de-guacamole.png"), imageAlt: "Tabla de Guacamole" },
+      { name: "Mini Focaccia with Allioli", price: "2.50€", description: "Mini focaccia with garlic mayonnaise & home made tomato sauce", image: starterImage("mini-focaccia-with-allioli.png"), imageAlt: "Mini Focaccia with Allioli" },
+      { name: "Tabla de Jamon y Queso", price: "19.50€", description: "Serrano ham and cheese selection board", image: starterImage("tabla-de-jamon-y-queso.png"), imageAlt: "Tabla de Jamon y Queso" },
       { name: "Basket 3x3", price: "15.00€", description: "3x tempura king prawns, 3x Kentucky style chicken, 3x BBQ chicken wings, cocktail sauce, garlic mayo, BBQ sauce", image: starterImage("basket-3x3.jpg"), imageAlt: "Basket 3x3" },
       { name: "Lumpia", priceOptions: ["vegetarian 8.90€", "pork 9.90€"], description: "Traditional Filipino fried spring rolls (4pcs)", image: starterImage("lumpia.jpg"), imageAlt: "Lumpia" },
       { name: "Langostino en Tempura", price: "11.50€", description: "Tempura king prawns with kimchi mayo (5pcs)", image: starterImage("langostino-tempura.jpg"), imageAlt: "Langostino en Tempura" },
