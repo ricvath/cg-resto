@@ -58,7 +58,7 @@ const StructuredMenu = ({ menuId }: { menuId: SourceMenu["id"] }) => {
         <p className="text-[11px] uppercase tracking-[0.24em] text-[#d4ae48]">{copy.eyebrow}</p>
         <h1 className="mt-2 font-display text-5xl font-medium leading-none md:text-6xl">{copy.title}</h1>
         <p className="mx-auto mt-3 max-w-xl text-sm leading-6 text-[#e9e1d2]/90">{copy.intro}</p>
-        <p className="mt-4 text-[11px] uppercase tracking-[0.18em] text-[#e9e1d2]/75">{language === "en" ? "Allergen numbers are shown below each dish" : "Los números de alérgenos aparecen debajo de cada plato"}</p>
+        <p className="mt-4 text-[11px] uppercase tracking-[0.18em] text-[#e9e1d2]/75">{language === "en" ? "Tap any symbol to see what it means" : "Toca cualquier símbolo para ver qué significa"}</p>
       </header>
       <main className="mx-auto w-full max-w-[1120px] px-4 py-10 lg:py-16">
         <section><MenuSectionAccordion sections={sections} reserveImageSpace priceOptionsInPriceColumn /></section>

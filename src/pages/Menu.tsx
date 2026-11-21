@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getMenuDietaryInfo } from "@/data/menuDietaryInfo";
-import { DietaryMark } from "@/components/AllergenMark";
+import { AllergenMark, DietaryMark } from "@/components/AllergenMark";
 import {
   Accordion,
   AccordionContent,
@@ -452,11 +452,9 @@ const MenuItemRow = ({
           {dietary.tags.map((tag) => (
             <DietaryMark key={`${item.name}-${tag}`} tag={tag} language={language} />
           ))}
-          {dietary.allergens.length > 0 && (
-            <span className="ml-1 text-xs font-medium uppercase tracking-[0.14em] text-[#817664]">
-              {language === "en" ? "Allergens" : "Alérgenos"}: {dietary.allergens.join(" · ")}
-            </span>
-          )}
+          {dietary.allergens.map((allergen) => (
+            <AllergenMark key={`${item.name}-allergen-${allergen}`} number={allergen} language={language} />
+          ))}
         </div>
       )}
       {item.priceOptions && !priceOptionsInPriceColumn && (
