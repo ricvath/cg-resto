@@ -107,6 +107,9 @@ const StructuredMenu = ({ title, titleEs, eyebrow, intro, sections }: { title: s
     <SiteHeader />
     <header className="relative isolate overflow-hidden bg-[url('https://cg.diff.hu/wp-content/themes/cortesgarden/img/header-bg.jpg')] bg-cover bg-center px-4 pb-4 pt-[106px] text-center text-[#e9e1d2] before:absolute before:inset-0 before:-z-10 before:bg-[#0e0d0b]/65 md:pb-8 md:pt-[122px]">
       <h1 className="font-myanmar mb-0 text-[36px] uppercase leading-none md:text-[46px]">{language === "en" ? title : titleEs}</h1>
+      <p className="mx-auto mt-3 max-w-md text-sm leading-6 text-[#e9e1d2]/90">
+        {language === "en" ? "Tap any symbol to see what it means" : "Toca cualquier símbolo para ver qué significa"}
+      </p>
       <span className="sr-only">{eyebrow}. {intro}</span>
     </header>
     <main className="mx-auto grid w-full max-w-[1024px] gap-4 px-4 py-12 lg:grid-cols-[2fr_1fr] lg:py-20">
