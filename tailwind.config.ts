@@ -73,6 +73,7 @@ export default {
       },
       fontFamily: {
         myanmar: ["Myanmar MN", "serif"],
+        display: ["Cormorant Garamond", "Georgia", "serif"],
         sans: ["Inter", "sans-serif"],
       },
       borderRadius: {

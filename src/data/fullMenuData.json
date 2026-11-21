@@ -1,0 +1,3129 @@
+[
+  {
+    "id": "morning",
+    "label": "Morning Menu",
+    "note": "Breakfast served until 17:00",
+    "categories": [
+      {
+        "id": "breakfast",
+        "es": "Desayuno",
+        "en": "Breakfast",
+        "items": [
+          {
+            "n": "Desayuno Andaluz",
+            "p": "12,90€",
+            "a": [
+              2,
+              4,
+              5
+            ],
+            "d": "Oven baked eggs with smoked salmon, guacamole, toast"
+          },
+          {
+            "n": "Desayuno Catalán",
+            "p": "5,50€",
+            "a": [
+              2
+            ],
+            "d": "Toast, olive oil, tomato, Serrano ham"
+          },
+          {
+            "n": "Desayuno Inglés",
+            "p": "14,90€",
+            "a": [
+              2,
+              4,
+              7
+            ],
+            "img": "images/english-breakfast.webp",
+            "d": "Full English breakfast"
+          },
+          {
+            "n": "Desayuno Mediterráneo",
+            "p": "11,50€",
+            "a": [
+              2,
+              7
+            ],
+            "d": "Croissant, butter, jam, coffee, fresh orange juice"
+          },
+          {
+            "n": "Croissant Maxi",
+            "p": "2,80€",
+            "a": [
+              2,
+              7
+            ]
+          },
+          {
+            "n": "Croissant con Mantequilla y Mermelada",
+            "p": "3,70€",
+            "a": [
+              2,
+              7
+            ],
+            "img": "images/croissant-butter-jam.webp",
+            "d": "Croissant with butter and jam"
+          },
+          {
+            "n": "Dirty Croissant",
+            "p": "10,90€",
+            "a": [
+              2,
+              4,
+              7
+            ],
+            "img": "images/dirty-croissant.webp",
+            "d": "Croissant with arugula, dried tomato, avocado, scrambled eggs, house sauce"
+          },
+          {
+            "n": "Syrniki",
+            "p": "10,90€",
+            "a": [
+              2,
+              4,
+              7
+            ],
+            "img": "images/syrniki.webp",
+            "d": "Traditional eastern slavic sweet cottage cheese pancake with sour cream and jam"
+          }
+        ]
+      },
+      {
+        "id": "salads",
+        "es": "Ensaladas",
+        "en": "Salads",
+        "items": [
+          {
+            "n": "Ensalada Cortés",
+            "p": "14,00€",
+            "a": [
+              7,
+              10,
+              14
+            ],
+            "t": [
+              "veg"
+            ],
+            "img": "images/ensalada-cortes.webp",
+            "d": "Iceberg lettuce, cherry tomato, cucumber, sweetcorn, red onion, goat cheese, raisin, nut mix, balsamic vinegar"
+          },
+          {
+            "n": "Ensalada Mediterranean Quinoa",
+            "p": "17,00€",
+            "a": [
+              7,
+              10
+            ],
+            "t": [
+              "veg"
+            ],
+            "img": "images/ensalada-mediterranean-quinoa.webp",
+            "d": "Quinoa, cucumber, dried tomato, black olives, chickpea, feta cheese, iceberg lettuce, arugula, shredded carrot with olive oil, lemon, pine nut"
+          },
+          {
+            "n": "Ensalada Kalamata",
+            "p": "16,00€",
+            "a": [
+              7
+            ],
+            "t": [
+              "veg"
+            ],
+            "img": "images/ensalada-kalamata.webp",
+            "d": "Cherry tomato, feta, bell pepper, cucumber, red onion, kalamata olives, oregano, caper, kalamata dressing"
+          },
+          {
+            "n": "Aztec",
+            "p": "18,00€",
+            "a": [
+              4,
+              9
+            ],
+            "img": "images/aztec.webp",
+            "d": "Iceberg lettuce, cherry tomato, pulled BBQ chicken, baby spinach, sweetcorn, avocado, bell pepper, red onion, pumpkin seeds, chipotle mayo"
+          },
+          {
+            "n": "Ensalada BBQ Pulled Pork",
+            "p": "18,50€",
+            "a": [
+              2,
+              7,
+              9,
+              10
+            ],
+            "img": "images/ensalada-bbq-pulled-pork.webp",
+            "d": "Lettuce, pulled BBQ pork, jalapeño, bell pepper, red onion, shredded carrot, pickles, cheddar, croutons, crispy fried onion, walnut, honey BBQ dressing"
+          },
+          {
+            "n": "Satay King Prawn",
+            "p": "18,50€",
+            "a": [
+              3,
+              11,
+              13
+            ],
+            "img": "images/satay-king-prawn.webp",
+            "d": "Quinoa, king prawns, shredded carrot, edamame beans, soybean sprouts, chinese salad mix, bell pepper, avocado, toasted cashew, satay peanut sauce"
+          }
+        ],
+        "builder": {
+          "title": "Crea tu ensalada",
+          "subtitle": "Build your own salad",
+          "price": "9,90€",
+          "steps": [
+            {
+              "label": "Base",
+              "pick": "pick 1",
+              "options": "Iceberg lettuce, iceberg-arugula-lamb's mix, quinoa"
+            },
+            {
+              "label": "Protein",
+              "pick": "pick 2",
+              "extra": "+3,00€ each extra",
+              "options": "BBQ pulled chicken, texas BBQ pulled pork, tuna, king prawns, tofu, boiled egg, feta, mozzarella, goat cheese, parmesan, shredded cheddar"
+            },
+            {
+              "label": "Vitamin",
+              "pick": "pick 3",
+              "extra": "+2,50€ each extra",
+              "options": "Cherry tomato, shredded carrot, cucumber, beetroot, pickled red onion, sweet corn, edamame beans, broccoli, avocado, chickpea, soybean sprouts, chinese salad mix, green olives, black olives, kalamata olives, mushroom, korean kimchi, pickles, artichoke, caper, pineapple, baby spinach, jalapeño, bell pepper"
+            },
+            {
+              "label": "Dressing",
+              "pick": "pick 1",
+              "extra": "+2,50€ each extra",
+              "options": "Caesar, ranch, butter chicken, kimchi mayo, kalamata, chipotle mayo, teriyaki, honey BBQ, roasted jalapeño, satay peanut, sweet onion, allioli, olive oil, balsamic vinegar, green pesto"
+            },
+            {
+              "label": "Toppings",
+              "pick": "pick 1",
+              "extra": "+2,50€ each extra",
+              "options": "Nut mix, crouton, crispy fried onion, walnut, pine nut, raisin, toasted cashew, pumpkin seeds"
+            }
+          ]
+        }
+      },
+      {
+        "id": "focaccia",
+        "es": "Focaccia",
+        "en": "Focaccia",
+        "items": [
+          {
+            "n": "Margherita",
+            "p": "8,00€",
+            "a": [
+              2,
+              7
+            ],
+            "t": [
+              "veg"
+            ],
+            "d": "Tomato sauce, mozzarella, cherry tomato, fresh basil"
+          },
+          {
+            "n": "Green Pesto",
+            "p": "8,00€",
+            "a": [
+              2,
+              7
+            ],
+            "t": [
+              "veg"
+            ],
+            "d": "Herb butter, mozzarella, green pesto, arugula"
+          },
+          {
+            "n": "Toscan",
+            "p": "9,00€",
+            "a": [
+              2,
+              7
+            ],
+            "t": [
+              "veg"
+            ],
+            "d": "Tomato sauce, mozzarella, mushroom, black olives, oregano, dried tomato"
+          },
+          {
+            "n": "Pepperoni",
+            "p": "9,00€",
+            "a": [
+              2,
+              7
+            ],
+            "t": [
+              "spicy"
+            ],
+            "d": "Tomato sauce, mozzarella, hot salami, chili honey oil"
+          },
+          {
+            "n": "Corn, Cheese & Bacon",
+            "p": "9,00€",
+            "a": [
+              2,
+              7
+            ],
+            "d": "Herb butter, mozzarella, sweet corn, bacon"
+          },
+          {
+            "n": "BBQ Pulled Chicken",
+            "p": "9,00€",
+            "a": [
+              2,
+              7,
+              9
+            ],
+            "d": "BBQ sauce, mozzarella, BBQ smoked pulled chicken, crispy fried onion"
+          },
+          {
+            "n": "Garlic & Prawns",
+            "p": "9,50€",
+            "a": [
+              2,
+              3,
+              7
+            ],
+            "d": "Tomato sauce, mozzarella, king prawns, garlic, cherry tomato, chili"
+          }
+        ],
+        "builder": {
+          "title": "Make your own",
+          "subtitle": "Focaccia base",
+          "price": "6,00€",
+          "steps": [
+            {
+              "label": "Base",
+              "pick": "",
+              "options": "Focaccia, tomato sauce or herb butter, mozzarella"
+            },
+            {
+              "label": "Toppings",
+              "pick": "+1,00€ each",
+              "options": "Mushroom, black olives, cherry tomato, dried tomato, broccoli, corn, pineapple, artichoke, caper, arugula, garlic, onion, mozzarella cheese, fresh mozzarella balls, goat cheese, gorgonzola, parmesan cheese"
+            },
+            {
+              "label": "Extra toppings",
+              "pick": "+2,00€ each",
+              "options": "Seafood mix (calamari, king prawns, mussels), king prawn, tuna fish, anchovy, hot salami, Parma ham, meat Bologna style, bacon, Serrano ham, pulled BBQ chicken, pulled BBQ pork"
+            }
+          ]
+        }
+      },
+      {
+        "id": "pizza-meat",
+        "es": "Pizza · Carne",
+        "en": "Pizza · Meat",
+        "items": [
+          {
+            "n": "Salami Picante",
+            "p": "16,00€",
+            "a": [
+              2,
+              7
+            ],
+            "t": [
+              "spicy"
+            ],
+            "img": "images/salami-picante.webp",
+            "d": "Tomato sauce, mozzarella, hot salami, chili"
+          },
+          {
+            "n": "Salami Picante Gorgonzola",
+            "p": "16,80€",
+            "a": [
+              2,
+              7
+            ],
+            "t": [
+              "spicy"
+            ],
+            "img": "images/salami-picante.webp",
+            "d": "Tomato sauce, mozzarella, hot salami, gorgonzola, chili"
+          },
+          {
+            "n": "Prosciutto",
+            "p": "16,00€",
+            "a": [
+              2,
+              7
+            ],
+            "img": "images/prosciutto.webp",
+            "d": "Tomato sauce, mozzarella, Parma ham"
+          },
+          {
+            "n": "Caprichosa",
+            "p": "16,30€",
+            "a": [
+              2,
+              7
+            ],
+            "img": "images/caprichosa.webp",
+            "d": "Tomato sauce, mozzarella, Parma ham, mushroom"
+          },
+          {
+            "n": "Hawaiana",
+            "p": "16,30€",
+            "a": [
+              2,
+              7
+            ],
+            "img": "images/hawaiana.webp",
+            "d": "Tomato sauce, mozzarella, Parma ham, pineapple"
+          },
+          {
+            "n": "Quatro Staggioni",
+            "p": "16,50€",
+            "a": [
+              2,
+              7
+            ],
+            "d": "Tomato sauce, mozzarella, Parma ham, mushroom, artichoke, black olives"
+          },
+          {
+            "n": "Serrano",
+            "p": "16,50€",
+            "a": [
+              2,
+              7
+            ],
+            "img": "images/serrano.webp",
+            "d": "Tomato sauce, mozzarella, Serrano ham, arugula, parmesan cheese"
+          },
+          {
+            "n": "Bolognese",
+            "p": "17,20€",
+            "a": [
+              2,
+              7
+            ],
+            "img": "images/bolognese.webp",
+            "d": "Tomato sauce, mozzarella, Bologna style meat, parmesan cheese"
+          },
+          {
+            "n": "Andaluz",
+            "p": "16,80€",
+            "a": [
+              2,
+              7
+            ],
+            "t": [
+              "spicy"
+            ],
+            "img": "images/andaluz.webp",
+            "d": "Tomato sauce, mozzarella, bacon, hot salami, onion, corn, chili"
+          },
+          {
+            "n": "Texas BBQ Pulled Pork",
+            "p": "17,20€",
+            "a": [
+              2,
+              7,
+              9
+            ],
+            "img": "images/chopped.webp",
+            "d": "BBQ sauce, mozzarella, BBQ pulled pork, bacon, corn, onion"
+          },
+          {
+            "n": "Kansas BBQ Pulled Chicken",
+            "p": "17,20€",
+            "a": [
+              2,
+              7,
+              9
+            ],
+            "d": "BBQ sauce, mozzarella, BBQ pulled chicken, fried onion"
+          }
+        ]
+      },
+      {
+        "id": "pizza-veg",
+        "es": "Pizza · Vegetariana",
+        "en": "Pizza · Vegetarian",
+        "items": [
+          {
+            "n": "Margherita",
+            "p": "12,30€",
+            "a": [
+              2,
+              7
+            ],
+            "t": [
+              "veg"
+            ],
+            "img": "images/margherita.webp",
+            "d": "Tomato sauce, mozzarella, cherry tomato, fresh basil"
+          },
+          {
+            "n": "Napolitana",
+            "p": "12,50€",
+            "a": [
+              2,
+              7
+            ],
+            "t": [
+              "veg"
+            ],
+            "d": "Tomato sauce, mozzarella, cherry tomato, garlic"
+          },
+          {
+            "n": "Vegetariana",
+            "p": "16,50€",
+            "a": [
+              2,
+              7
+            ],
+            "t": [
+              "veg"
+            ],
+            "d": "Tomato sauce, mozzarella, mushroom, black olives, artichoke, dried tomato"
+          },
+          {
+            "n": "Quatro Formaggi",
+            "p": "16,50€",
+            "a": [
+              2,
+              4,
+              7
+            ],
+            "t": [
+              "veg"
+            ],
+            "img": "images/quatro-formaggi.webp",
+            "d": "Tomato sauce, mozzarella, goat cheese, gorgonzola, parmesan"
+          },
+          {
+            "n": "Trufa",
+            "p": "17,50€",
+            "a": [
+              2,
+              4,
+              7
+            ],
+            "t": [
+              "veg"
+            ],
+            "img": "images/trufa.webp",
+            "d": "Tomato sauce, mozzarella, truffle"
+          }
+        ]
+      },
+      {
+        "id": "pizza-sea",
+        "es": "Pizza · Marisco",
+        "en": "Pizza · Seafood",
+        "items": [
+          {
+            "n": "Tonno",
+            "p": "16,50€",
+            "a": [
+              2,
+              5,
+              7
+            ],
+            "img": "images/tonno.webp",
+            "d": "Tomato sauce, mozzarella, tuna, black olives, green capers, onion"
+          },
+          {
+            "n": "Gambas Pil Pil",
+            "p": "17,50€",
+            "a": [
+              2,
+              3,
+              7
+            ],
+            "img": "images/gambas-pil-pil-pizza.webp",
+            "d": "Tomato sauce, mozzarella, king prawns, garlic, cherry tomato, chilli"
+          },
+          {
+            "n": "Frutti di Mare",
+            "p": "17,50€",
+            "a": [
+              2,
+              3,
+              7,
+              8
+            ],
+            "img": "images/frutti-di-mare.webp",
+            "d": "Tomato sauce, mozzarella, prawns, mussels, octopus, calamari, garlic"
+          }
+        ]
+      },
+      {
+        "id": "starters",
+        "es": "Entradas",
+        "en": "Starters",
+        "items": [
+          {
+            "n": "Tabla de Guacamole",
+            "p": "11,00€",
+            "a": [
+              2
+            ],
+            "t": [
+              "veg"
+            ],
+            "d": "Guacamole with toast, olives & cherry tomato"
+          },
+          {
+            "n": "Mini Focaccia con Allioli",
+            "p": "2,50€",
+            "a": [
+              2,
+              4
+            ],
+            "d": "Mini focaccia with garlic mayonnaise & home made tomato sauce"
+          },
+          {
+            "n": "Tabla de Jamón y Queso",
+            "p": "19,50€",
+            "a": [
+              7,
+              14
+            ],
+            "d": "Serrano ham and cheese selection board"
+          },
+          {
+            "n": "Basket 3×3",
+            "p": "15,00€",
+            "a": [
+              2,
+              3,
+              4,
+              5,
+              7,
+              8,
+              9
+            ],
+            "img": "images/basket-3x3.webp",
+            "d": "3× tempura king prawns, 3× kentucky style chicken, 3× BBQ chicken wings, cocktail sauce, garlic mayo, BBQ sauce"
+          },
+          {
+            "n": "Lumpia",
+            "a": [
+              2,
+              3,
+              4,
+              5,
+              7,
+              8
+            ],
+            "img": "images/lumpia.webp",
+            "p": [
+              [
+                "Vegetarian",
+                "8,90€"
+              ],
+              [
+                "Pork",
+                "9,90€"
+              ],
+              [
+                "Chicken",
+                "9,90€"
+              ]
+            ],
+            "d": "Traditional Filipino fried spring rolls (4 pcs)"
+          },
+          {
+            "n": "Langostino en Tempura",
+            "p": "11,50€",
+            "a": [
+              2,
+              3
+            ],
+            "img": "images/langostino-tempura.webp",
+            "d": "Tempura king prawns with kimchi mayo (5 pcs)"
+          },
+          {
+            "n": "Tiras de Pollo",
+            "p": "12,00€",
+            "a": [
+              2,
+              4
+            ],
+            "img": "images/tiras-de-pollo.webp",
+            "d": "Kentucky style chicken with chips (5 pcs) + 1 sauce"
+          },
+          {
+            "n": "Edamames Fritos",
+            "p": "5,50€",
+            "a": [
+              12,
+              13
+            ],
+            "t": [
+              "veg",
+              "spicy"
+            ],
+            "img": "images/edamames-fritos.webp",
+            "d": "Fried edamame beans, salted or spicy"
+          }
+        ]
+      },
+      {
+        "id": "soups",
+        "es": "Sopas",
+        "en": "Soups",
+        "items": [
+          {
+            "n": "Gazpacho",
+            "p": "9,00€",
+            "a": [
+              2
+            ],
+            "t": [
+              "veg"
+            ],
+            "d": "Cold Andalusian tomato soup"
+          },
+          {
+            "n": "Salmorejo",
+            "p": "9,00€",
+            "a": [
+              2,
+              4
+            ],
+            "t": [
+              "veg"
+            ],
+            "d": "Cold Spanish vegetable soup"
+          }
+        ]
+      },
+      {
+        "id": "mains",
+        "es": "Principal",
+        "en": "Mains",
+        "items": [
+          {
+            "n": "Gambas Pil-Pil",
+            "p": "17,50€",
+            "a": [
+              3
+            ],
+            "t": [
+              "spicy"
+            ],
+            "img": "images/gambas-pil-pil.webp",
+            "d": "King prawns in olive oil with garlic and chili"
+          },
+          {
+            "n": "Alitas de Pollo BBQ con Patatas Fritas",
+            "p": "19,50€",
+            "a": [
+              2,
+              9,
+              12
+            ],
+            "t": [
+              "spicy"
+            ],
+            "img": "images/alitas-de-pollo.webp",
+            "d": "Sriracha chicken wings in honey-based BBQ sauce with coleslaw & chips"
+          },
+          {
+            "n": "Espagueti Gamba Scampi",
+            "p": "20,00€",
+            "a": [
+              2,
+              3
+            ],
+            "img": "images/espagueti-gamba-scampi.webp",
+            "d": "King prawns spaghetti"
+          },
+          {
+            "n": "Espagueti Bolonesa",
+            "p": "18,00€",
+            "a": [
+              2,
+              7
+            ],
+            "img": "images/espagueti-bolonesa.webp",
+            "d": "Bologna style spaghetti"
+          },
+          {
+            "n": "Sinangag",
+            "a": [
+              4,
+              13
+            ],
+            "img": "images/sinangag-beef.webp",
+            "p": [
+              [
+                "Beef",
+                "14,50€"
+              ],
+              [
+                "King prawns",
+                "15,50€"
+              ],
+              [
+                "Beef & prawns",
+                "16,90€"
+              ]
+            ],
+            "d": "Traditional Filipino garlic fried rice"
+          }
+        ]
+      },
+      {
+        "id": "sides",
+        "es": "Guarniciones",
+        "en": "Side dishes",
+        "items": [
+          {
+            "n": "Patatas Fritas",
+            "p": "5,50€",
+            "d": "French fries",
+            "img": "images/patatas-fritas.webp"
+          },
+          {
+            "n": "Patatas Steakhouse",
+            "p": "5,50€",
+            "d": "Steak potatoes",
+            "img": "images/patatas-steakhouse.webp"
+          },
+          {
+            "n": "Boniato Frito",
+            "p": "6,90€",
+            "d": "Sweet potato fries",
+            "img": "images/boniato-frito.webp"
+          },
+          {
+            "n": "Salsas · Sauces",
+            "p": "2,50€",
+            "a": [
+              4,
+              9
+            ],
+            "d": "Ketchup, mayo, garlic mayo, BBQ, chipotle mayo, roasted jalapeño mayo"
+          }
+        ]
+      },
+      {
+        "id": "desserts",
+        "es": "Postres",
+        "en": "Desserts",
+        "items": [
+          {
+            "n": "Tarta de Manzana",
+            "p": "7,50€",
+            "a": [
+              2,
+              4,
+              7,
+              13
+            ],
+            "d": "Apple cake"
+          },
+          {
+            "n": "Tarta de Chocolate",
+            "p": "7,50€",
+            "a": [
+              2,
+              4,
+              7
+            ],
+            "d": "Chocolate cake"
+          },
+          {
+            "n": "Tarta de Queso Fresa",
+            "p": "7,50€",
+            "a": [
+              2,
+              4,
+              7
+            ],
+            "d": "Strawberry cheesecake"
+          },
+          {
+            "n": "Tarta de Zanahoria",
+            "p": "7,50€",
+            "a": [
+              2,
+              4,
+              7,
+              10,
+              13
+            ],
+            "d": "Carrot cake"
+          },
+          {
+            "n": "Tarta Sueca de Almendras",
+            "p": "7,50€",
+            "a": [
+              4,
+              7,
+              10
+            ],
+            "t": [
+              "gf"
+            ],
+            "d": "Swedish almond cake"
+          },
+          {
+            "n": "Muffin Chocolate",
+            "p": "3,00€",
+            "a": [
+              2,
+              7
+            ]
+          },
+          {
+            "n": "Churros con Chocolate",
+            "p": "7,50€",
+            "a": [
+              2,
+              7
+            ],
+            "d": "Churros with hot chocolate"
+          },
+          {
+            "n": "Croissant con Crema de Pistacho",
+            "p": "6,50€",
+            "a": [
+              2,
+              4,
+              7,
+              10
+            ],
+            "d": "Croissant with pistachio cream"
+          },
+          {
+            "n": "Coulant de Chocolate con Helado",
+            "p": "7,50€",
+            "a": [
+              2,
+              4,
+              7
+            ],
+            "d": "Lava cake with vanilla ice cream"
+          },
+          {
+            "n": "Helado · Ice Cream",
+            "p": "5,50€",
+            "a": [
+              7
+            ],
+            "d": "Royal vanilla ice cream base in four flavours: 1. Strawberry biscuit cake with marshmallows · 2. Passion fruit with pineapple bits · 3. Oreo chocolate combo · 4. Toffee caramel with crushed almond"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "evening",
+    "label": "Evening Menu",
+    "categories": [
+      {
+        "id": "starters",
+        "es": "Entradas",
+        "en": "Starters",
+        "items": [
+          {
+            "n": "Tabla de Guacamole",
+            "p": "11,00€",
+            "a": [
+              2
+            ],
+            "t": [
+              "veg"
+            ],
+            "d": "Guacamole with toast, olives & cherry tomato"
+          },
+          {
+            "n": "Mini Focaccia con Allioli",
+            "p": "2,50€",
+            "a": [
+              2,
+              4
+            ],
+            "d": "Mini focaccia with garlic mayonnaise & home made tomato sauce"
+          },
+          {
+            "n": "Tabla de Jamón y Queso",
+            "p": "19,50€",
+            "a": [
+              7,
+              14
+            ],
+            "d": "Serrano ham and cheese selection board"
+          },
+          {
+            "n": "Basket 3×3",
+            "p": "15,00€",
+            "a": [
+              2,
+              3,
+              4,
+              5,
+              7,
+              8,
+              9
+            ],
+            "img": "images/basket-3x3.webp",
+            "d": "3× tempura king prawns, 3× kentucky style chicken, 3× BBQ chicken wings, cocktail sauce, garlic mayo, BBQ sauce"
+          },
+          {
+            "n": "Lumpia",
+            "a": [
+              2,
+              3,
+              4,
+              5,
+              7,
+              8
+            ],
+            "img": "images/lumpia.webp",
+            "p": [
+              [
+                "Vegetarian",
+                "8,90€"
+              ],
+              [
+                "Pork",
+                "9,90€"
+              ],
+              [
+                "Chicken",
+                "9,90€"
+              ]
+            ],
+            "d": "Traditional Filipino fried spring rolls (4 pcs)"
+          },
+          {
+            "n": "Langostino en Tempura",
+            "p": "11,50€",
+            "a": [
+              2,
+              3
+            ],
+            "img": "images/langostino-tempura.webp",
+            "d": "Tempura king prawns with kimchi mayo (5 pcs)"
+          },
+          {
+            "n": "Tiras de Pollo",
+            "p": "12,00€",
+            "a": [
+              2,
+              4
+            ],
+            "img": "images/tiras-de-pollo.webp",
+            "d": "Kentucky style chicken with chips (5 pcs) + 1 sauce"
+          },
+          {
+            "n": "Edamames Fritos",
+            "p": "5,50€",
+            "a": [
+              12,
+              13
+            ],
+            "t": [
+              "veg",
+              "spicy"
+            ],
+            "img": "images/edamames-fritos.webp",
+            "d": "Fried edamame beans, salted or spicy"
+          }
+        ]
+      },
+      {
+        "id": "salads",
+        "es": "Ensaladas",
+        "en": "Salads",
+        "items": [
+          {
+            "n": "Ensalada Cortés",
+            "p": "14,00€",
+            "a": [
+              7,
+              10,
+              14
+            ],
+            "t": [
+              "veg"
+            ],
+            "img": "images/ensalada-cortes.webp",
+            "d": "Iceberg lettuce, cherry tomato, cucumber, sweetcorn, red onion, goat cheese, raisin, nut mix, balsamic vinegar"
+          },
+          {
+            "n": "Ensalada Mediterranean Quinoa",
+            "p": "17,00€",
+            "a": [
+              7,
+              10
+            ],
+            "t": [
+              "veg"
+            ],
+            "img": "images/ensalada-mediterranean-quinoa.webp",
+            "d": "Quinoa, cucumber, dried tomato, black olives, chickpea, feta cheese, iceberg lettuce, arugula, shredded carrot with olive oil, lemon, pine nut"
+          },
+          {
+            "n": "Ensalada Kalamata",
+            "p": "16,00€",
+            "a": [
+              7
+            ],
+            "t": [
+              "veg"
+            ],
+            "img": "images/ensalada-kalamata.webp",
+            "d": "Cherry tomato, feta, bell pepper, cucumber, red onion, kalamata olives, oregano, caper, kalamata dressing"
+          },
+          {
+            "n": "Aztec",
+            "p": "18,00€",
+            "a": [
+              4,
+              9
+            ],
+            "img": "images/aztec.webp",
+            "d": "Iceberg lettuce, cherry tomato, pulled BBQ chicken, baby spinach, sweetcorn, avocado, bell pepper, red onion, pumpkin seeds, chipotle mayo"
+          },
+          {
+            "n": "Ensalada BBQ Pulled Pork",
+            "p": "18,50€",
+            "a": [
+              2,
+              7,
+              9,
+              10
+            ],
+            "img": "images/ensalada-bbq-pulled-pork.webp",
+            "d": "Lettuce, pulled BBQ pork, jalapeño, bell pepper, red onion, shredded carrot, pickles, cheddar, croutons, crispy fried onion, walnut, honey BBQ dressing"
+          },
+          {
+            "n": "Satay King Prawn",
+            "p": "18,50€",
+            "a": [
+              3,
+              11,
+              13
+            ],
+            "img": "images/satay-king-prawn.webp",
+            "d": "Quinoa, king prawns, shredded carrot, edamame beans, soybean sprouts, chinese salad mix, bell pepper, avocado, toasted cashew, satay peanut sauce"
+          }
+        ],
+        "builder": {
+          "title": "Crea tu ensalada",
+          "subtitle": "Build your own salad",
+          "price": "9,90€",
+          "steps": [
+            {
+              "label": "Base",
+              "pick": "pick 1",
+              "options": "Iceberg lettuce, iceberg-arugula-lamb's mix, quinoa"
+            },
+            {
+              "label": "Protein",
+              "pick": "pick 2",
+              "extra": "+3,00€ each extra",
+              "options": "BBQ pulled chicken, texas BBQ pulled pork, tuna, king prawns, tofu, boiled egg, feta, mozzarella, goat cheese, parmesan, shredded cheddar"
+            },
+            {
+              "label": "Vitamin",
+              "pick": "pick 3",
+              "extra": "+2,50€ each extra",
+              "options": "Cherry tomato, shredded carrot, cucumber, beetroot, pickled red onion, sweet corn, edamame beans, broccoli, avocado, chickpea, soybean sprouts, chinese salad mix, green olives, black olives, kalamata olives, mushroom, korean kimchi, pickles, artichoke, caper, pineapple, baby spinach, jalapeño, bell pepper"
+            },
+            {
+              "label": "Dressing",
+              "pick": "pick 1",
+              "extra": "+2,50€ each extra",
+              "options": "Caesar, ranch, butter chicken, kimchi mayo, kalamata, chipotle mayo, teriyaki, honey BBQ, roasted jalapeño, satay peanut, sweet onion, allioli, olive oil, balsamic vinegar, green pesto"
+            },
+            {
+              "label": "Toppings",
+              "pick": "pick 1",
+              "extra": "+2,50€ each extra",
+              "options": "Nut mix, crouton, crispy fried onion, walnut, pine nut, raisin, toasted cashew, pumpkin seeds"
+            }
+          ]
+        }
+      },
+      {
+        "id": "focaccia",
+        "es": "Focaccia",
+        "en": "Focaccia",
+        "items": [
+          {
+            "n": "Margherita",
+            "p": "8,00€",
+            "a": [
+              2,
+              7
+            ],
+            "t": [
+              "veg"
+            ],
+            "d": "Tomato sauce, mozzarella, cherry tomato, fresh basil"
+          },
+          {
+            "n": "Green Pesto",
+            "p": "8,00€",
+            "a": [
+              2,
+              7
+            ],
+            "t": [
+              "veg"
+            ],
+            "d": "Herb butter, mozzarella, green pesto, arugula"
+          },
+          {
+            "n": "Toscan",
+            "p": "9,00€",
+            "a": [
+              2,
+              7
+            ],
+            "t": [
+              "veg"
+            ],
+            "d": "Tomato sauce, mozzarella, mushroom, black olives, oregano, dried tomato"
+          },
+          {
+            "n": "Pepperoni",
+            "p": "9,00€",
+            "a": [
+              2,
+              7
+            ],
+            "t": [
+              "spicy"
+            ],
+            "d": "Tomato sauce, mozzarella, hot salami, chili honey oil"
+          },
+          {
+            "n": "Corn, Cheese & Bacon",
+            "p": "9,00€",
+            "a": [
+              2,
+              7
+            ],
+            "d": "Herb butter, mozzarella, sweet corn, bacon"
+          },
+          {
+            "n": "BBQ Pulled Chicken",
+            "p": "9,00€",
+            "a": [
+              2,
+              7,
+              9
+            ],
+            "d": "BBQ sauce, mozzarella, BBQ smoked pulled chicken, crispy fried onion"
+          },
+          {
+            "n": "Garlic & Prawns",
+            "p": "9,50€",
+            "a": [
+              2,
+              3,
+              7
+            ],
+            "d": "Tomato sauce, mozzarella, king prawns, garlic, cherry tomato, chili"
+          }
+        ],
+        "builder": {
+          "title": "Make your own",
+          "subtitle": "Focaccia base",
+          "price": "6,00€",
+          "steps": [
+            {
+              "label": "Base",
+              "pick": "",
+              "options": "Focaccia, tomato sauce or herb butter, mozzarella"
+            },
+            {
+              "label": "Toppings",
+              "pick": "+1,00€ each",
+              "options": "Mushroom, black olives, cherry tomato, dried tomato, broccoli, corn, pineapple, artichoke, caper, arugula, garlic, onion, mozzarella cheese, fresh mozzarella balls, goat cheese, gorgonzola, parmesan cheese"
+            },
+            {
+              "label": "Extra toppings",
+              "pick": "+2,00€ each",
+              "options": "Seafood mix (calamari, king prawns, mussels), king prawn, tuna fish, anchovy, hot salami, Parma ham, meat Bologna style, bacon, Serrano ham, pulled BBQ chicken, pulled BBQ pork"
+            }
+          ]
+        }
+      },
+      {
+        "id": "pizza-meat",
+        "es": "Pizza · Carne",
+        "en": "Pizza · Meat",
+        "items": [
+          {
+            "n": "Salami Picante",
+            "p": "16,00€",
+            "a": [
+              2,
+              7
+            ],
+            "t": [
+              "spicy"
+            ],
+            "img": "images/salami-picante.webp",
+            "d": "Tomato sauce, mozzarella, hot salami, chili"
+          },
+          {
+            "n": "Salami Picante Gorgonzola",
+            "p": "16,80€",
+            "a": [
+              2,
+              7
+            ],
+            "t": [
+              "spicy"
+            ],
+            "img": "images/salami-picante.webp",
+            "d": "Tomato sauce, mozzarella, hot salami, gorgonzola, chili"
+          },
+          {
+            "n": "Prosciutto",
+            "p": "16,00€",
+            "a": [
+              2,
+              7
+            ],
+            "img": "images/prosciutto.webp",
+            "d": "Tomato sauce, mozzarella, Parma ham"
+          },
+          {
+            "n": "Caprichosa",
+            "p": "16,30€",
+            "a": [
+              2,
+              7
+            ],
+            "img": "images/caprichosa.webp",
+            "d": "Tomato sauce, mozzarella, Parma ham, mushroom"
+          },
+          {
+            "n": "Hawaiana",
+            "p": "16,30€",
+            "a": [
+              2,
+              7
+            ],
+            "img": "images/hawaiana.webp",
+            "d": "Tomato sauce, mozzarella, Parma ham, pineapple"
+          },
+          {
+            "n": "Quatro Staggioni",
+            "p": "16,50€",
+            "a": [
+              2,
+              7
+            ],
+            "d": "Tomato sauce, mozzarella, Parma ham, mushroom, artichoke, black olives"
+          },
+          {
+            "n": "Serrano",
+            "p": "16,50€",
+            "a": [
+              2,
+              7
+            ],
+            "img": "images/serrano.webp",
+            "d": "Tomato sauce, mozzarella, Serrano ham, arugula, parmesan cheese"
+          },
+          {
+            "n": "Bolognese",
+            "p": "17,20€",
+            "a": [
+              2,
+              7
+            ],
+            "img": "images/bolognese.webp",
+            "d": "Tomato sauce, mozzarella, Bologna style meat, parmesan cheese"
+          },
+          {
+            "n": "Andaluz",
+            "p": "16,80€",
+            "a": [
+              2,
+              7
+            ],
+            "t": [
+              "spicy"
+            ],
+            "img": "images/andaluz.webp",
+            "d": "Tomato sauce, mozzarella, bacon, hot salami, onion, corn, chili"
+          },
+          {
+            "n": "Texas BBQ Pulled Pork",
+            "p": "17,20€",
+            "a": [
+              2,
+              7,
+              9
+            ],
+            "img": "images/chopped.webp",
+            "d": "BBQ sauce, mozzarella, BBQ pulled pork, bacon, corn, onion"
+          },
+          {
+            "n": "Kansas BBQ Pulled Chicken",
+            "p": "17,20€",
+            "a": [
+              2,
+              7,
+              9
+            ],
+            "d": "BBQ sauce, mozzarella, BBQ pulled chicken, fried onion"
+          }
+        ]
+      },
+      {
+        "id": "pizza-veg",
+        "es": "Pizza · Vegetariana",
+        "en": "Pizza · Vegetarian",
+        "items": [
+          {
+            "n": "Margherita",
+            "p": "12,30€",
+            "a": [
+              2,
+              7
+            ],
+            "t": [
+              "veg"
+            ],
+            "img": "images/margherita.webp",
+            "d": "Tomato sauce, mozzarella, cherry tomato, fresh basil"
+          },
+          {
+            "n": "Napolitana",
+            "p": "12,50€",
+            "a": [
+              2,
+              7
+            ],
+            "t": [
+              "veg"
+            ],
+            "d": "Tomato sauce, mozzarella, cherry tomato, garlic"
+          },
+          {
+            "n": "Vegetariana",
+            "p": "16,50€",
+            "a": [
+              2,
+              7
+            ],
+            "t": [
+              "veg"
+            ],
+            "d": "Tomato sauce, mozzarella, mushroom, black olives, artichoke, dried tomato"
+          },
+          {
+            "n": "Quatro Formaggi",
+            "p": "16,50€",
+            "a": [
+              2,
+              4,
+              7
+            ],
+            "t": [
+              "veg"
+            ],
+            "img": "images/quatro-formaggi.webp",
+            "d": "Tomato sauce, mozzarella, goat cheese, gorgonzola, parmesan"
+          },
+          {
+            "n": "Trufa",
+            "p": "17,50€",
+            "a": [
+              2,
+              4,
+              7
+            ],
+            "t": [
+              "veg"
+            ],
+            "img": "images/trufa.webp",
+            "d": "Tomato sauce, mozzarella, truffle"
+          }
+        ]
+      },
+      {
+        "id": "pizza-sea",
+        "es": "Pizza · Marisco",
+        "en": "Pizza · Seafood",
+        "items": [
+          {
+            "n": "Tonno",
+            "p": "16,50€",
+            "a": [
+              2,
+              5,
+              7
+            ],
+            "img": "images/tonno.webp",
+            "d": "Tomato sauce, mozzarella, tuna, black olives, green capers, onion"
+          },
+          {
+            "n": "Gambas Pil Pil",
+            "p": "17,50€",
+            "a": [
+              2,
+              3,
+              7
+            ],
+            "img": "images/gambas-pil-pil-pizza.webp",
+            "d": "Tomato sauce, mozzarella, king prawns, garlic, cherry tomato, chilli"
+          },
+          {
+            "n": "Frutti di Mare",
+            "p": "17,50€",
+            "a": [
+              2,
+              3,
+              7,
+              8
+            ],
+            "img": "images/frutti-di-mare.webp",
+            "d": "Tomato sauce, mozzarella, prawns, mussels, octopus, calamari, garlic"
+          }
+        ]
+      },
+      {
+        "id": "mains-ev",
+        "es": "Principal",
+        "en": "Mains",
+        "items": [
+          {
+            "n": "Gambas Pil-Pil",
+            "p": "17,50€",
+            "a": [
+              3
+            ],
+            "t": [
+              "spicy"
+            ],
+            "img": "images/gambas-pil-pil.webp",
+            "d": "King prawns in olive oil with garlic and chili"
+          },
+          {
+            "n": "Alitas de Pollo BBQ con Patatas Fritas",
+            "p": "19,50€",
+            "a": [
+              2,
+              9,
+              12
+            ],
+            "t": [
+              "spicy"
+            ],
+            "img": "images/alitas-de-pollo.webp",
+            "d": "Sriracha chicken wings in honey-based BBQ sauce with coleslaw & chips"
+          },
+          {
+            "n": "Espagueti Gamba Scampi",
+            "p": "20,00€",
+            "a": [
+              2,
+              3
+            ],
+            "img": "images/espagueti-gamba-scampi.webp",
+            "d": "King prawns spaghetti"
+          },
+          {
+            "n": "Espagueti Bolonesa",
+            "p": "18,00€",
+            "a": [
+              2,
+              7
+            ],
+            "img": "images/espagueti-bolonesa.webp",
+            "d": "Bologna style spaghetti"
+          },
+          {
+            "n": "Sinangag",
+            "a": [
+              4,
+              13
+            ],
+            "img": "images/sinangag-beef.webp",
+            "p": [
+              [
+                "Beef",
+                "14,50€"
+              ],
+              [
+                "King prawns",
+                "15,50€"
+              ],
+              [
+                "Beef & prawns",
+                "16,90€"
+              ]
+            ],
+            "d": "Traditional Filipino garlic fried rice"
+          }
+        ]
+      },
+      {
+        "id": "fish",
+        "es": "Pescado",
+        "en": "Fish",
+        "items": [
+          {
+            "n": "Filete de Salmón Ahumado (350 g)",
+            "p": "30,00€",
+            "a": [
+              5,
+              7,
+              9,
+              13
+            ],
+            "img": "images/filete-de-salmon-ahumado.webp",
+            "d": "Slow smoked grilled salmon steak glazed in cherry wine-orange sauce, with grilled vegetables and jasmine rice"
+          },
+          {
+            "n": "Salmón al Horno con Gambones",
+            "p": "31,00€",
+            "a": [
+              3,
+              5
+            ],
+            "d": "Oven baked salmon with king prawns, jasmine rice and grilled vegetables"
+          },
+          {
+            "n": "Sésamo Tataki Atún",
+            "p": "22,00€",
+            "a": [
+              5,
+              12,
+              13
+            ],
+            "img": "images/sesamo-tataki-atun.webp",
+            "d": "Gently-seared red tuna with citrus-soy sauce, wasabi and hiyashi wakame seaweed"
+          },
+          {
+            "n": "Calamar Frito Entero",
+            "p": "22,00€",
+            "a": [
+              2,
+              8
+            ],
+            "d": "Whole fried calamari in onion-tomato based marinara sauce"
+          }
+        ]
+      },
+      {
+        "id": "meat",
+        "es": "Carne",
+        "en": "Meat",
+        "items": [
+          {
+            "n": "Costillas de Cerdo Ahumado (500 g)",
+            "p": "28,75€",
+            "a": [
+              2,
+              3,
+              4,
+              7,
+              8,
+              9,
+              13
+            ],
+            "img": "images/costillas-de-cerdo.webp",
+            "d": "Slow smoked BBQ spareribs, coleslaw, french fries"
+          },
+          {
+            "n": "Codillo de Cerdo Asado al Horno (500 g)",
+            "p": "28,75€",
+            "a": [
+              2,
+              3,
+              4,
+              7,
+              8,
+              9,
+              13
+            ],
+            "d": "Oven baked smoked ham hock with grilled vegetables and french fries"
+          },
+          {
+            "n": "Costillas de Ternera Ahumado (500 g)",
+            "p": "30,00€",
+            "a": [
+              2,
+              3,
+              4,
+              7,
+              8,
+              9,
+              13
+            ],
+            "d": "Slow smoked BBQ beef ribs with coleslaw & french fries"
+          }
+        ]
+      },
+      {
+        "id": "soups",
+        "es": "Sopas",
+        "en": "Soups",
+        "items": [
+          {
+            "n": "Gazpacho",
+            "p": "9,00€",
+            "a": [
+              2
+            ],
+            "t": [
+              "veg"
+            ],
+            "d": "Cold Andalusian tomato soup"
+          },
+          {
+            "n": "Salmorejo",
+            "p": "9,00€",
+            "a": [
+              2,
+              4
+            ],
+            "t": [
+              "veg"
+            ],
+            "d": "Cold Spanish vegetable soup"
+          }
+        ]
+      },
+      {
+        "id": "sides",
+        "es": "Guarniciones",
+        "en": "Side dishes",
+        "items": [
+          {
+            "n": "Patatas Fritas",
+            "p": "5,50€",
+            "d": "French fries",
+            "img": "images/patatas-fritas.webp"
+          },
+          {
+            "n": "Patatas Steakhouse",
+            "p": "5,50€",
+            "d": "Steak potatoes",
+            "img": "images/patatas-steakhouse.webp"
+          },
+          {
+            "n": "Boniato Frito",
+            "p": "6,90€",
+            "d": "Sweet potato fries",
+            "img": "images/boniato-frito.webp"
+          },
+          {
+            "n": "Salsas · Sauces",
+            "p": "2,50€",
+            "a": [
+              4,
+              9
+            ],
+            "d": "Ketchup, mayo, garlic mayo, BBQ, chipotle mayo, roasted jalapeño mayo"
+          }
+        ]
+      },
+      {
+        "id": "desserts",
+        "es": "Postres",
+        "en": "Desserts",
+        "items": [
+          {
+            "n": "Tarta de Manzana",
+            "p": "7,50€",
+            "a": [
+              2,
+              4,
+              7,
+              13
+            ],
+            "d": "Apple cake"
+          },
+          {
+            "n": "Tarta de Chocolate",
+            "p": "7,50€",
+            "a": [
+              2,
+              4,
+              7
+            ],
+            "d": "Chocolate cake"
+          },
+          {
+            "n": "Tarta de Queso Fresa",
+            "p": "7,50€",
+            "a": [
+              2,
+              4,
+              7
+            ],
+            "d": "Strawberry cheesecake"
+          },
+          {
+            "n": "Tarta de Zanahoria",
+            "p": "7,50€",
+            "a": [
+              2,
+              4,
+              7,
+              10,
+              13
+            ],
+            "d": "Carrot cake"
+          },
+          {
+            "n": "Tarta Sueca de Almendras",
+            "p": "7,50€",
+            "a": [
+              4,
+              7,
+              10
+            ],
+            "t": [
+              "gf"
+            ],
+            "d": "Swedish almond cake"
+          },
+          {
+            "n": "Muffin Chocolate",
+            "p": "3,00€",
+            "a": [
+              2,
+              7
+            ]
+          },
+          {
+            "n": "Churros con Chocolate",
+            "p": "7,50€",
+            "a": [
+              2,
+              7
+            ],
+            "d": "Churros with hot chocolate"
+          },
+          {
+            "n": "Croissant con Crema de Pistacho",
+            "p": "6,50€",
+            "a": [
+              2,
+              4,
+              7,
+              10
+            ],
+            "d": "Croissant with pistachio cream"
+          },
+          {
+            "n": "Coulant de Chocolate con Helado",
+            "p": "7,50€",
+            "a": [
+              2,
+              4,
+              7
+            ],
+            "d": "Lava cake with vanilla ice cream"
+          },
+          {
+            "n": "Helado · Ice Cream",
+            "p": "5,50€",
+            "a": [
+              7
+            ],
+            "d": "Royal vanilla ice cream base in four flavours: 1. Strawberry biscuit cake with marshmallows · 2. Passion fruit with pineapple bits · 3. Oreo chocolate combo · 4. Toffee caramel with crushed almond"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "drinks",
+    "label": "Drinks Menu",
+    "categories": [
+      {
+        "id": "cocktails",
+        "es": "Cócteles",
+        "en": "Cocktails",
+        "items": [
+          {
+            "n": "Caipirinha",
+            "p": "12,00€"
+          },
+          {
+            "n": "Porn Star Martini",
+            "p": "14,00€"
+          },
+          {
+            "n": "Espresso Martini",
+            "p": "12,00€"
+          },
+          {
+            "n": "Mojito",
+            "p": "12,00€"
+          },
+          {
+            "n": "Mojito Strawberry",
+            "p": "12,00€"
+          },
+          {
+            "n": "Mojito Passion Fruit",
+            "p": "12,00€"
+          },
+          {
+            "n": "Sex on the Beach",
+            "p": "12,00€"
+          },
+          {
+            "n": "Piña Colada",
+            "p": "12,00€"
+          },
+          {
+            "n": "Cameleon Statik",
+            "p": "13,00€"
+          },
+          {
+            "n": "Pink Lady",
+            "p": "12,00€"
+          },
+          {
+            "n": "Frozen Mango Aperol Spritz",
+            "p": "12,50€"
+          },
+          {
+            "n": "Negroni",
+            "p": "12,00€"
+          },
+          {
+            "n": "Hurricane",
+            "p": "13,00€"
+          },
+          {
+            "n": "Aperol Passion Fruit Margarita",
+            "p": "12,00€"
+          },
+          {
+            "n": "Malibu Breeze",
+            "p": "12,00€"
+          },
+          {
+            "n": "Frozen Fresa Daiquiri",
+            "p": "12,00€"
+          }
+        ]
+      },
+      {
+        "id": "long",
+        "es": "Long Drinks",
+        "en": "Long drinks",
+        "items": [
+          {
+            "n": "Gin Tonic",
+            "p": "12,00€"
+          },
+          {
+            "n": "Cuba Libre",
+            "p": "12,00€"
+          },
+          {
+            "n": "Vodka & Coke",
+            "p": "12,00€"
+          },
+          {
+            "n": "Aperol Spritz",
+            "p": "11,00€"
+          },
+          {
+            "n": "Limoncello Spritz",
+            "p": "11,00€"
+          }
+        ]
+      },
+      {
+        "id": "beer",
+        "es": "Cervezas",
+        "en": "Beer",
+        "items": [
+          {
+            "n": "Victoria · Shandy · Clara",
+            "p": [
+              [
+                "Caña 0,26 l",
+                "3,00€"
+              ],
+              [
+                "Doble 0,36 l",
+                "4,00€"
+              ],
+              [
+                "Jarra 0,5 l",
+                "5,00€"
+              ]
+            ]
+          },
+          {
+            "n": "Heineken",
+            "p": "3,20€",
+            "d": "0,25 l"
+          },
+          {
+            "n": "San Miguel",
+            "p": "3,20€",
+            "d": "0,25 l"
+          },
+          {
+            "n": "Victoria 0.0%",
+            "p": "4,00€",
+            "d": "0,33 l"
+          },
+          {
+            "n": "Estrella Damm",
+            "p": "4,00€",
+            "d": "0,33 l"
+          },
+          {
+            "n": "Coronita",
+            "p": "4,50€",
+            "d": "0,33 l"
+          },
+          {
+            "n": "Guinness",
+            "p": "5,00€",
+            "d": "0,50 l"
+          },
+          {
+            "n": "Strongbow",
+            "p": "5,00€",
+            "d": "0,50 l"
+          },
+          {
+            "n": "Kopparberg",
+            "p": "5,00€",
+            "d": "Forest fruit, lime-strawberry (0,50 l)"
+          }
+        ]
+      },
+      {
+        "id": "red",
+        "es": "Tinto",
+        "en": "Red wine",
+        "cols": [
+          "Copa",
+          "Botella"
+        ],
+        "items": [
+          {
+            "n": "Tinto de la Casa",
+            "d": "Tinto seco, tempranillo · Abadía Mercier, España",
+            "p": [
+              [
+                "Copa",
+                "4,60€"
+              ],
+              [
+                "Botella",
+                "21,00€"
+              ]
+            ]
+          },
+          {
+            "n": "Pata Negra",
+            "d": "Reserva, Valdepeñas",
+            "p": [
+              [
+                "Copa",
+                "5,00€"
+              ],
+              [
+                "Botella",
+                "25,00€"
+              ]
+            ]
+          },
+          {
+            "n": "Abadía Mantrus",
+            "d": "Tinto crianza · Rioja, España",
+            "p": [
+              [
+                "Copa",
+                "5,15€"
+              ],
+              [
+                "Botella",
+                "25,50€"
+              ]
+            ]
+          },
+          {
+            "n": "Monte Lagares",
+            "d": "Tinto crianza · Rioja, España",
+            "p": [
+              [
+                "Copa",
+                "6,30€"
+              ],
+              [
+                "Botella",
+                "32,00€"
+              ]
+            ]
+          },
+          {
+            "n": "Beronia",
+            "d": "Tinto crianza, tempranillo · España",
+            "p": [
+              [
+                "Copa",
+                "6,50€"
+              ],
+              [
+                "Botella",
+                "34,00€"
+              ]
+            ]
+          },
+          {
+            "n": "Fuentespina",
+            "d": "Tempranillo · Ribera del Duero, España",
+            "p": [
+              [
+                "Copa",
+                "6,50€"
+              ],
+              [
+                "Botella",
+                "34,00€"
+              ]
+            ]
+          },
+          {
+            "n": "D-12",
+            "d": "Tinto crianza",
+            "p": [
+              [
+                "Copa",
+                "6,50€"
+              ],
+              [
+                "Botella",
+                "34,00€"
+              ]
+            ]
+          },
+          {
+            "n": "Lambrusco Tinto",
+            "d": "Italia",
+            "p": [
+              [
+                "Botella",
+                "22,00€"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "id": "white",
+        "es": "Blanco",
+        "en": "White wine",
+        "cols": [
+          "Copa",
+          "Botella"
+        ],
+        "items": [
+          {
+            "n": "Blanco de la Casa",
+            "d": "Blanco joven, verdejo · Abadía Mercier, España",
+            "p": [
+              [
+                "Copa",
+                "4,60€"
+              ],
+              [
+                "Botella",
+                "21,00€"
+              ]
+            ]
+          },
+          {
+            "n": "El Coto",
+            "d": "Rioja, España",
+            "p": [
+              [
+                "Copa",
+                "4,90€"
+              ],
+              [
+                "Botella",
+                "23,00€"
+              ]
+            ]
+          },
+          {
+            "n": "Montespina",
+            "d": "Blanco joven, sauvignon blanc · Rueda, España",
+            "p": [
+              [
+                "Copa",
+                "5,50€"
+              ],
+              [
+                "Botella",
+                "27,00€"
+              ]
+            ]
+          },
+          {
+            "n": "Viñasol",
+            "d": "Parellada y garnacha · DO Catalunya, España",
+            "p": [
+              [
+                "Copa",
+                "5,90€"
+              ],
+              [
+                "Botella",
+                "28,00€"
+              ]
+            ]
+          },
+          {
+            "n": "Vvero",
+            "d": "Chardonnay · España",
+            "p": [
+              [
+                "Copa",
+                "5,90€"
+              ],
+              [
+                "Botella",
+                "28,00€"
+              ]
+            ]
+          },
+          {
+            "n": "Villanueva Albariño",
+            "d": "Blanco seco, cosecha · Galicia, España",
+            "p": [
+              [
+                "Copa",
+                "5,90€"
+              ],
+              [
+                "Botella",
+                "29,00€"
+              ]
+            ]
+          },
+          {
+            "n": "La Mona",
+            "d": "Moscatel, semidulce",
+            "p": [
+              [
+                "Copa",
+                "5,70€"
+              ],
+              [
+                "Botella",
+                "29,00€"
+              ]
+            ]
+          },
+          {
+            "n": "Lusco Albariño",
+            "d": "Afrutado · Galicia, España",
+            "p": [
+              [
+                "Botella",
+                "65,00€"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "id": "rose",
+        "es": "Rosado",
+        "en": "Rosé wine",
+        "cols": [
+          "Copa",
+          "Botella"
+        ],
+        "items": [
+          {
+            "n": "Rosé de la Casa",
+            "d": "Rosado seco, syrah · Abadía Mercier, España",
+            "p": [
+              [
+                "Copa",
+                "4,60€"
+              ],
+              [
+                "Botella",
+                "21,00€"
+              ]
+            ]
+          },
+          {
+            "n": "Beronia Rosé",
+            "d": "Rosado seco frutado · Rioja, España",
+            "p": [
+              [
+                "Copa",
+                "5,20€"
+              ],
+              [
+                "Botella",
+                "26,00€"
+              ]
+            ]
+          },
+          {
+            "n": "Lambrusco Rosado",
+            "d": "Italia",
+            "p": [
+              [
+                "Botella",
+                "22,00€"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "id": "sweet",
+        "es": "Dulce y Jerez",
+        "en": "Sweet wine & sherry",
+        "cols": [
+          "Copa",
+          "Botella"
+        ],
+        "items": [
+          {
+            "n": "Málaga Virgen",
+            "p": [
+              [
+                "Copa",
+                "4,70€"
+              ],
+              [
+                "Botella",
+                "35,00€"
+              ]
+            ]
+          },
+          {
+            "n": "Sangría",
+            "p": [
+              [
+                "Copa",
+                "5,00€"
+              ],
+              [
+                "Jarra",
+                "20,00€"
+              ]
+            ]
+          },
+          {
+            "n": "Sangría Blanca",
+            "p": [
+              [
+                "Copa",
+                "5,00€"
+              ],
+              [
+                "Jarra",
+                "20,00€"
+              ]
+            ]
+          },
+          {
+            "n": "Tinto de Verano",
+            "p": [
+              [
+                "Copa",
+                "4,70€"
+              ],
+              [
+                "Jarra",
+                "21,00€"
+              ]
+            ]
+          },
+          {
+            "n": "Manzanilla, Tío Pepe, Osborne",
+            "p": [
+              [
+                "Copa",
+                "3,70€"
+              ],
+              [
+                "Botella",
+                "29,00€"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cava",
+        "es": "Champán y Cava",
+        "en": "Champagne & cava",
+        "cols": [
+          "Copa",
+          "Botella"
+        ],
+        "items": [
+          {
+            "n": "Cava de la Casa",
+            "p": [
+              [
+                "Copa",
+                "6,50€"
+              ],
+              [
+                "Botella",
+                "28,00€"
+              ]
+            ]
+          },
+          {
+            "n": "Freixenet Blanco",
+            "p": [
+              [
+                "Copa",
+                "8,00€"
+              ],
+              [
+                "Botella",
+                "32,00€"
+              ]
+            ]
+          },
+          {
+            "n": "Freixenet Negro",
+            "p": [
+              [
+                "Copa",
+                "8,00€"
+              ],
+              [
+                "Botella",
+                "32,00€"
+              ]
+            ]
+          },
+          {
+            "n": "Mumm Rouge Brut",
+            "p": [
+              [
+                "Botella",
+                "129,00€"
+              ]
+            ]
+          },
+          {
+            "n": "Mumm Rosé",
+            "p": [
+              [
+                "Botella",
+                "149,00€"
+              ]
+            ]
+          },
+          {
+            "n": "Moët Brut",
+            "p": [
+              [
+                "Botella",
+                "119,00€"
+              ]
+            ]
+          },
+          {
+            "n": "Moët Rosé",
+            "p": [
+              [
+                "Botella",
+                "149,00€"
+              ]
+            ]
+          },
+          {
+            "n": "Dom Pérignon",
+            "p": [
+              [
+                "Botella",
+                "299,00€"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "id": "rum",
+        "es": "Ron",
+        "en": "Rum",
+        "cols": [
+          "45 ml",
+          "90 ml"
+        ],
+        "items": [
+          {
+            "n": "Bacardi, Cacique, Brugal, Ron Barceló, Havana Club 3",
+            "p": [
+              [
+                "45 ml",
+                "3,50€"
+              ],
+              [
+                "90 ml",
+                "7,00€"
+              ]
+            ]
+          },
+          {
+            "n": "Havana Club 5, Havana Club 7, Legendario, Captain Morgan",
+            "p": [
+              [
+                "45 ml",
+                "4,00€"
+              ],
+              [
+                "90 ml",
+                "8,00€"
+              ]
+            ]
+          },
+          {
+            "n": "Diplomático, Zacapa",
+            "p": [
+              [
+                "45 ml",
+                "7,00€"
+              ],
+              [
+                "90 ml",
+                "14,00€"
+              ]
+            ]
+          },
+          {
+            "n": "Zacapa XO",
+            "p": [
+              [
+                "45 ml",
+                "20,00€"
+              ],
+              [
+                "90 ml",
+                "48,00€"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "id": "whisky",
+        "es": "Whisky",
+        "en": "Whisky",
+        "cols": [
+          "45 ml",
+          "90 ml"
+        ],
+        "items": [
+          {
+            "n": "Jim Beam, J&B, Dewar's, Jameson, Ballantine's, DYC, Johnnie Walker Red, Johnnie Walker Black, Cutty Sark, Jack Daniel's",
+            "p": [
+              [
+                "45 ml",
+                "3,50€"
+              ],
+              [
+                "90 ml",
+                "7,00€"
+              ]
+            ]
+          },
+          {
+            "n": "Cardhu 12, Chivas Regal, Macallan",
+            "p": [
+              [
+                "45 ml",
+                "6,00€"
+              ],
+              [
+                "90 ml",
+                "12,00€"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "id": "gin",
+        "es": "Ginebra",
+        "en": "Gin",
+        "cols": [
+          "45 ml",
+          "90 ml"
+        ],
+        "items": [
+          {
+            "n": "Larios / Rosé, Gordon's / Rosé, Bombay, Beefeater / Rosé",
+            "p": [
+              [
+                "45 ml",
+                "3,50€"
+              ],
+              [
+                "90 ml",
+                "7,00€"
+              ]
+            ]
+          },
+          {
+            "n": "Bombay Sapphire, Puerto de Indias / Rosé",
+            "p": [
+              [
+                "45 ml",
+                "4,00€"
+              ],
+              [
+                "90 ml",
+                "8,00€"
+              ]
+            ]
+          },
+          {
+            "n": "Tanqueray, Seagram's, Mint, Nordés",
+            "p": [
+              [
+                "45 ml",
+                "5,00€"
+              ],
+              [
+                "90 ml",
+                "10,00€"
+              ]
+            ]
+          },
+          {
+            "n": "Hendrick's, Roku, Citadelle, Monkey 47, Beefeater 24 / Black",
+            "p": [
+              [
+                "45 ml",
+                "5,50€"
+              ],
+              [
+                "90 ml",
+                "11,00€"
+              ]
+            ]
+          },
+          {
+            "n": "The London, Bulldog",
+            "p": [
+              [
+                "45 ml",
+                "6,00€"
+              ],
+              [
+                "90 ml",
+                "12,00€"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "id": "vodka",
+        "es": "Vodka",
+        "en": "Vodka",
+        "cols": [
+          "45 ml",
+          "90 ml"
+        ],
+        "items": [
+          {
+            "n": "Smirnoff, Stolichnaya",
+            "p": [
+              [
+                "45 ml",
+                "3,50€"
+              ],
+              [
+                "90 ml",
+                "7,00€"
+              ]
+            ]
+          },
+          {
+            "n": "Eristoff, Absolut",
+            "p": [
+              [
+                "45 ml",
+                "4,00€"
+              ],
+              [
+                "90 ml",
+                "8,00€"
+              ]
+            ]
+          },
+          {
+            "n": "Grey Goose, Belvedere, Finlandia",
+            "p": [
+              [
+                "45 ml",
+                "6,50€"
+              ],
+              [
+                "90 ml",
+                "13,00€"
+              ]
+            ]
+          },
+          {
+            "n": "Beluga, Cîroc, Haku",
+            "p": [
+              [
+                "45 ml",
+                "7,00€"
+              ],
+              [
+                "90 ml",
+                "14,00€"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tequila",
+        "es": "Tequila",
+        "en": "Tequila",
+        "cols": [
+          "45 ml",
+          "90 ml"
+        ],
+        "items": [
+          {
+            "n": "Jose Cuervo Silver, Gold",
+            "p": [
+              [
+                "45 ml",
+                "4,00€"
+              ],
+              [
+                "90 ml",
+                "8,00€"
+              ]
+            ]
+          },
+          {
+            "n": "Patrón Silver, Don Julio",
+            "p": [
+              [
+                "45 ml",
+                "7,00€"
+              ],
+              [
+                "90 ml",
+                "14,00€"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "id": "brandy",
+        "es": "Brandy y Coñac",
+        "en": "Brandy & cognac",
+        "cols": [
+          "45 ml",
+          "90 ml"
+        ],
+        "items": [
+          {
+            "n": "Soberano, 103, Magno",
+            "p": [
+              [
+                "45 ml",
+                "3,50€"
+              ],
+              [
+                "90 ml",
+                "7,00€"
+              ]
+            ]
+          },
+          {
+            "n": "Carlos I",
+            "p": [
+              [
+                "45 ml",
+                "4,50€"
+              ],
+              [
+                "90 ml",
+                "9,00€"
+              ]
+            ]
+          },
+          {
+            "n": "Hennessy, Rémy Martin, Grand Marnier",
+            "p": [
+              [
+                "45 ml",
+                "5,50€"
+              ],
+              [
+                "90 ml",
+                "11,00€"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "id": "liqueurs",
+        "es": "Licores",
+        "en": "Liqueurs",
+        "cols": [
+          "45 ml",
+          "90 ml"
+        ],
+        "items": [
+          {
+            "n": "Limoncello, Cointreau, Licor 43, Pacharán, Malibu, Baileys, Ricard, Disaronno Amaretto, Ruavieja Hierbas, Tía María, Triple Sec, Sambuca, Jägermeister, Martini Dry / Blanco / Rosso, Vodka Caramel, Campari",
+            "p": [
+              [
+                "45 ml",
+                "3,50€"
+              ],
+              [
+                "90 ml",
+                "7,00€"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "id": "smoothies",
+        "es": "Smoothies",
+        "en": "Smoothies",
+        "items": [
+          {
+            "n": "Berries Paradise",
+            "img": "images/berries-paradise.webp",
+            "d": "Strawberry, blueberry, raspberry, mango"
+          },
+          {
+            "n": "Caribbean Passion",
+            "img": "images/caribbean-passion.webp",
+            "d": "Papaya, mango, pineapple"
+          },
+          {
+            "n": "Colada Jungle",
+            "img": "images/colada-jungle.webp",
+            "d": "Banana, fresh coconut, pineapple"
+          },
+          {
+            "n": "Delightful",
+            "img": "images/delightful.webp",
+            "d": "Banana, blueberry, mango, blackcurrant"
+          },
+          {
+            "n": "Dragon Fruit Mix",
+            "img": "images/dragon-fruit-mix.webp",
+            "d": "Mango, strawberry, dragon fruit"
+          },
+          {
+            "n": "Green Power",
+            "img": "images/green-power.webp",
+            "t": [
+              "veg"
+            ],
+            "d": "Cucumber, broccoli, savoy cabbage, pineapple, spinach"
+          },
+          {
+            "n": "Tropical Heaven",
+            "img": "images/tropical-heaven.webp",
+            "d": "Honeydew melon, mango, kiwi, pineapple"
+          },
+          {
+            "n": "Vitality",
+            "img": "images/vitality.webp",
+            "d": "Banana, strawberry"
+          }
+        ]
+      },
+      {
+        "id": "milkshakes",
+        "es": "Batidos",
+        "en": "Milkshakes",
+        "items": [
+          {
+            "n": "Bananalicious",
+            "img": "images/bananalicious.webp",
+            "a": [
+              7
+            ],
+            "d": "Banana and coconut, whipped cream"
+          },
+          {
+            "n": "Cookies & Cream",
+            "img": "images/cookies-cream.webp",
+            "a": [
+              2,
+              7
+            ],
+            "d": "Chocolate cookie, whipped cream"
+          },
+          {
+            "n": "Pure Chocolate",
+            "img": "images/pure-chocolate.webp",
+            "a": [
+              7
+            ],
+            "d": "Chocolate, whipped cream, chocolate sauce"
+          },
+          {
+            "n": "Salted Caramel Dream",
+            "img": "images/salted-caramel-dream.webp",
+            "a": [
+              7
+            ],
+            "d": "Salted caramel, whipped cream"
+          },
+          {
+            "n": "Strawberry Fantasy",
+            "img": "images/strawberry-fantasy.webp",
+            "a": [
+              7
+            ],
+            "d": "Strawberry, whipped cream"
+          },
+          {
+            "n": "Vanilla Dream",
+            "img": "images/vanilla-dream.webp",
+            "a": [
+              7
+            ],
+            "d": "Vanilla, whipped cream"
+          }
+        ]
+      },
+      {
+        "id": "protein",
+        "es": "Batidos de Proteína",
+        "en": "Protein shakes",
+        "items": [
+          {
+            "n": "Choco Coco",
+            "img": "images/choco-coco-proteinshake.webp",
+            "a": [
+              7
+            ],
+            "d": "Chocolate and coconut protein shake"
+          },
+          {
+            "n": "Royal Vanilla",
+            "img": "images/royal-vanilla-proteinshake.webp",
+            "a": [
+              7
+            ],
+            "d": "Vanilla protein shake"
+          }
+        ]
+      },
+      {
+        "id": "coffee",
+        "es": "Café y Té",
+        "en": "Coffee & tea",
+        "items": [
+          {
+            "n": "Espresso",
+            "p": "2,60€"
+          },
+          {
+            "n": "Café Solo",
+            "p": "2,60€"
+          },
+          {
+            "n": "Cortado",
+            "p": "2,60€"
+          },
+          {
+            "n": "Café con Leche",
+            "p": [
+              [
+                "M",
+                "2,90€"
+              ],
+              [
+                "L",
+                "3,60€"
+              ]
+            ]
+          },
+          {
+            "n": "Matcha Latte",
+            "p": "4,50€"
+          },
+          {
+            "n": "Matcha Iced Latte",
+            "p": "5,00€"
+          },
+          {
+            "n": "Americano",
+            "p": [
+              [
+                "M",
+                "2,60€"
+              ],
+              [
+                "L",
+                "3,20€"
+              ]
+            ]
+          },
+          {
+            "n": "Cappuccino",
+            "p": "4,10€"
+          },
+          {
+            "n": "Special Latte",
+            "p": "4,50€",
+            "d": "Caramel, vanilla or hazelnut"
+          },
+          {
+            "n": "Latte Macchiato",
+            "p": "3,00€"
+          },
+          {
+            "n": "Café Irlandés",
+            "p": "6,70€"
+          },
+          {
+            "n": "Frappé Griego",
+            "p": "5,00€"
+          },
+          {
+            "n": "Chocolate Caliente",
+            "p": "3,90€"
+          },
+          {
+            "n": "ColaCao",
+            "p": "3,70€"
+          },
+          {
+            "n": "Té Verde · Green tea",
+            "p": "3,50€",
+            "d": "China gunpowder, Pai Mu Tan"
+          },
+          {
+            "n": "Té Rojo · Red tea",
+            "p": "3,50€",
+            "d": "Esbetic, Pu-erh"
+          },
+          {
+            "n": "Té Fruta / Herbal",
+            "p": "3,50€",
+            "d": "Rooibos, poleo-menta, strawberry cream, forest fruits, camomile, lime blossom"
+          },
+          {
+            "n": "Té Negro · Black tea",
+            "p": "3,50€",
+            "d": "Indian Darjeeling, English breakfast"
+          },
+          {
+            "n": "Chai Latte",
+            "p": "4,50€"
+          },
+          {
+            "n": "Té Helado · Ice tea",
+            "d": "Classic lemon, passion fruit",
+            "p": [
+              [
+                "0,4 l",
+                "3,90€"
+              ],
+              [
+                "0,6 l",
+                "5,50€"
+              ],
+              [
+                "1 l",
+                "9,00€"
+              ]
+            ]
+          },
+          {
+            "n": "Limonada · Lemonade",
+            "d": "Classic lemon, mint, strawberry, black currant, ginger, lavender, elderflower",
+            "p": [
+              [
+                "0,4 l",
+                "3,90€"
+              ],
+              [
+                "0,6 l",
+                "5,50€"
+              ],
+              [
+                "1 l",
+                "9,00€"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "id": "soft",
+        "es": "Refrescos",
+        "en": "Soft drinks",
+        "items": [
+          {
+            "n": "Refrescos",
+            "p": "3,20€",
+            "d": "Coca Cola, Zero, Fanta, Tonic, Ginger Ale (0,25 l)"
+          },
+          {
+            "n": "Aquarius, Nestea",
+            "p": "3,60€",
+            "d": "0,33 l"
+          },
+          {
+            "n": "Agua sin Gas",
+            "p": "3,30€",
+            "d": "Mineral water, still (0,33 l)"
+          },
+          {
+            "n": "Agua con Gas",
+            "p": "3,50€",
+            "d": "Mineral water, sparkling (0,33 l)"
+          },
+          {
+            "n": "Red Bull",
+            "p": "4,20€",
+            "d": "0,33 l"
+          },
+          {
+            "n": "Zumo de Naranja",
+            "p": "4,20€",
+            "d": "Fresh orange juice (0,33 l)"
+          },
+          {
+            "n": "Zumos · Juices",
+            "p": "3,20€",
+            "d": "Apple, peach, pineapple, orange (0,33 l)"
+          }
+        ]
+      }
+    ]
+  }
+]

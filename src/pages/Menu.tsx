@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { getMenuDietaryInfo, type DietaryTag } from "@/data/menuDietaryInfo";
+import { getMenuDietaryInfo } from "@/data/menuDietaryInfo";
+import { AllergenMark, DietaryMark } from "@/components/AllergenMark";
 import {
   Accordion,
   AccordionContent,
@@ -24,11 +25,21 @@ export type MenuItem = {
   description?: string;
   image?: string;
   imageAlt?: string;
+  allergens?: number[];
+  dietaryTags?: DietaryTag[];
+};
+
+export type MenuBuilder = {
+  title: string;
+  subtitle?: string;
+  price?: string;
+  steps: Array<{ label: string; pick?: string; extra?: string; options: string }>;
 };
 
 export type MenuSection = {
   title: string;
   items: MenuItem[];
+  builder?: MenuBuilder;
 };
 
 const imageLibrary = {
@@ -393,12 +404,6 @@ const MenuImageDialog = ({
   </Dialog>
 );
 
-const dietaryLabels: Record<DietaryTag, { en: string; es: string }> = {
-  gf: { en: "Gluten-free", es: "Sin gluten" },
-  spicy: { en: "Spicy", es: "Picante" },
-  veg: { en: "Vegetarian", es: "Vegetariano" },
-};
-
 const MenuItemRow = ({
   item,
   sectionTitle,
@@ -411,7 +416,10 @@ const MenuItemRow = ({
   priceOptionsInPriceColumn?: boolean;
 }) => {
   const { language } = useLanguage();
-  const dietary = getMenuDietaryInfo(item.name);
+  const fallbackDietary = getMenuDietaryInfo(item.name);
+  const dietary = item.allergens || item.dietaryTags
+    ? { allergens: item.allergens ?? [], tags: item.dietaryTags ?? [] }
+    : fallbackDietary;
 
   return (
   <div
@@ -431,7 +439,7 @@ const MenuItemRow = ({
       />
     )}
     <div className="min-w-0">
-      <h3 className="text-base font-bold leading-snug">
+      <h3 className="font-display text-[1.35rem] font-medium leading-tight text-[#39352f]">
         {item.name}
       </h3>
       {item.description && (
@@ -441,22 +449,11 @@ const MenuItemRow = ({
       )}
       {dietary && (dietary.allergens.length > 0 || dietary.tags.length > 0) && (
         <div className="mt-2 flex flex-wrap items-center gap-1.5" aria-label={language === "en" ? "Allergens and dietary information" : "Alérgenos e información dietética"}>
-          {dietary.allergens.map((allergen) => (
-            <span
-              key={`${item.name}-allergen-${allergen}`}
-              className="grid h-6 w-6 place-items-center bg-[#635b4f] text-[11px] font-bold text-[#e9e1d2]"
-              title={`${language === "en" ? "Allergen" : "Alérgeno"} ${allergen}`}
-            >
-              {allergen}
-            </span>
-          ))}
           {dietary.tags.map((tag) => (
-            <span
-              key={`${item.name}-${tag}`}
-              className="border border-[#9b8f7b] px-2 py-0.5 text-[10px] font-bold uppercase text-[#635b4f]"
-            >
-              {dietaryLabels[tag][language]}
-            </span>
+            <DietaryMark key={`${item.name}-${tag}`} tag={tag} language={language} />
+          ))}
+          {dietary.allergens.map((allergen) => (
+            <AllergenMark key={`${item.name}-allergen-${allergen}`} number={allergen} language={language} />
           ))}
         </div>
       )}
@@ -526,6 +523,28 @@ export const MenuSectionAccordion = ({
                 priceOptionsInPriceColumn={priceOptionsInPriceColumn}
               />
             ))}
+            {section.builder && (
+              <div className="mt-8 border border-[#b9ab94] bg-[#f7f2e9] p-5 md:p-7">
+                <div className="flex items-start justify-between gap-4 border-b border-[#d8cfbf] pb-4">
+                  <div>
+                    <h3 className="font-display text-3xl font-medium text-[#39352f]">{section.builder.title}</h3>
+                    {section.builder.subtitle && <p className="mt-1 text-xs uppercase tracking-[0.18em] text-[#817664]">{section.builder.subtitle}</p>}
+                  </div>
+                  {section.builder.price && <span className="shrink-0 font-bold text-[#526e4c]">{section.builder.price}</span>}
+                </div>
+                <div className="divide-y divide-[#d8cfbf]">
+                  {section.builder.steps.map((step) => (
+                    <div key={`${section.title}-${step.label}`} className="py-4">
+                      <div className="flex flex-wrap items-baseline justify-between gap-2">
+                        <h4 className="font-bold text-[#39352f]">{step.label}</h4>
+                        {(step.pick || step.extra) && <span className="text-xs uppercase tracking-[0.12em] text-[#817664]">{[step.pick, step.extra].filter(Boolean).join(" · ")}</span>}
+                      </div>
+                      <p className="mt-2 text-sm leading-6 text-[#635b4f]">{step.options}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </AccordionContent>
       </AccordionItem>
