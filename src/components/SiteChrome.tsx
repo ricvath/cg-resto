@@ -27,7 +27,7 @@ export const SiteHeader = () => {
         </Link>
         <nav className="hidden items-center gap-7 lg:flex" aria-label="Main navigation">
           {navItems.map(([label, href]) => (
-            <NavLink key={href} to={href} className={({ isActive }) => `text-base leading-none transition hover:text-[#e9e1d2] ${isActive ? "text-[#e9e1d2]" : "text-[#635b4f]"}`}>
+            <NavLink key={href} to={href} className={({ isActive }) => `relative py-2 text-base leading-none transition hover:text-white ${isActive ? "font-medium text-white after:absolute after:inset-x-0 after:-bottom-1 after:h-px after:bg-[#d4ae48]" : "text-[#d5cec2]"}`}>
               {label[language]}
             </NavLink>
           ))}
