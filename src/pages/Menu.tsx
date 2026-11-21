@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getMenuDietaryInfo } from "@/data/menuDietaryInfo";
-import { AllergenMark, DietaryMark } from "@/components/AllergenMark";
+import { DietaryMark } from "@/components/AllergenMark";
 import {
   Accordion,
   AccordionContent,
@@ -425,7 +425,7 @@ const MenuItemRow = ({
   <div
     className={`grid items-center gap-4 border-b border-dotted border-[#635b4f] px-4 py-2 ${
       item.image
-        ? "grid-cols-[72px_1fr_auto]"
+        ? "grid-cols-[64px_minmax(0,1fr)] sm:grid-cols-[72px_minmax(0,1fr)_auto]"
         : `grid-cols-[1fr_auto] ${reserveImageSpace ? "md:pl-[88px]" : ""}`
     }`}
   >
@@ -452,9 +452,11 @@ const MenuItemRow = ({
           {dietary.tags.map((tag) => (
             <DietaryMark key={`${item.name}-${tag}`} tag={tag} language={language} />
           ))}
-          {dietary.allergens.map((allergen) => (
-            <AllergenMark key={`${item.name}-allergen-${allergen}`} number={allergen} language={language} />
-          ))}
+          {dietary.allergens.length > 0 && (
+            <span className="ml-1 text-xs font-medium uppercase tracking-[0.14em] text-[#817664]">
+              {language === "en" ? "Allergens" : "Alérgenos"}: {dietary.allergens.join(" · ")}
+            </span>
+          )}
         </div>
       )}
       {item.priceOptions && !priceOptionsInPriceColumn && (
@@ -471,7 +473,7 @@ const MenuItemRow = ({
       )}
     </div>
     {(item.price || (item.priceOptions && priceOptionsInPriceColumn)) && (
-      <div className="grid min-w-[96px] gap-1 text-right text-base font-bold text-[#635b4f] md:min-w-[150px]">
+      <div className={`grid min-w-0 gap-1 text-right text-base font-bold text-[#635b4f] sm:min-w-[120px] md:min-w-[150px] ${item.image ? "col-start-2 sm:col-start-auto" : "min-w-[86px]"}`}>
         {item.price && <span>{item.price}</span>}
         {item.priceOptions && priceOptionsInPriceColumn && (
           <>

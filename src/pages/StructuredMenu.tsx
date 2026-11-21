@@ -1,7 +1,7 @@
 import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
 import { MenuSectionAccordion, foodSections, type MenuBuilder, type MenuItem, type MenuSection } from "@/pages/Menu";
 import { useLanguage, type Language } from "@/contexts/LanguageContext";
-import { Flame, Leaf, WheatOff } from "lucide-react";
+import { AllergenIcon, DietaryLegendIcon } from "@/components/AllergenMark";
 import fullMenuData from "@/data/fullMenuData.json";
 import type { DietaryTag } from "@/data/menuDietaryInfo";
 
@@ -50,7 +50,6 @@ const StructuredMenu = ({ menuId }: { menuId: SourceMenu["id"] }) => {
   const { language } = useLanguage();
   const menu = (fullMenuData as SourceMenu[]).find((entry) => entry.id === menuId)!;
   const copy = menuCopy[menuId][language];
-  const localizedAllergens = language === "en" ? allergens : allergensEs;
   const sections = toSections(menu, language);
   return (
     <div className="min-h-screen bg-[#e9e1d2] text-[#635b4f]">
@@ -59,19 +58,27 @@ const StructuredMenu = ({ menuId }: { menuId: SourceMenu["id"] }) => {
         <p className="text-[11px] uppercase tracking-[0.24em] text-[#d4ae48]">{copy.eyebrow}</p>
         <h1 className="mt-2 font-display text-5xl font-medium leading-none md:text-6xl">{copy.title}</h1>
         <p className="mx-auto mt-3 max-w-xl text-sm leading-6 text-[#e9e1d2]/90">{copy.intro}</p>
-        <p className="mt-4 text-[11px] uppercase tracking-[0.18em] text-[#e9e1d2]/75">{language === "en" ? "Tap any symbol to see what it means" : "Toca cualquier símbolo para ver qué significa"}</p>
+        <p className="mt-4 text-[11px] uppercase tracking-[0.18em] text-[#e9e1d2]/75">{language === "en" ? "Allergen numbers are shown below each dish" : "Los números de alérgenos aparecen debajo de cada plato"}</p>
       </header>
-      <main className="mx-auto grid w-full max-w-[1120px] gap-8 px-4 py-10 lg:grid-cols-[minmax(0,2fr)_280px] lg:py-16">
-        <section className="min-w-0"><MenuSectionAccordion sections={sections} reserveImageSpace priceOptionsInPriceColumn /></section>
-        <aside className="relative isolate h-fit bg-[url('https://cg.diff.hu/wp-content/themes/cortesgarden/img/event-bg.jpg')] bg-cover bg-center p-6 text-[#e9e1d2] before:absolute before:inset-0 before:-z-10 before:bg-[#263b2b]/90 lg:sticky lg:top-[100px]">
-          <h2 className="font-display text-4xl font-medium">{language === "en" ? "Allergens" : "Alérgenos"}</h2>
-          <ol className="mt-6 grid grid-cols-2 gap-x-4 gap-y-2 text-sm lg:grid-cols-1">{localizedAllergens.map((item, index) => <li key={item} className="flex items-center gap-3"><span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#e9e1d2] text-xs text-[#635b4f]">{index + 1}</span>{item}</li>)}</ol>
-          <div className="mt-7 space-y-3 border-t border-white/15 pt-5 text-base">
-            <div className="flex items-center gap-4"><WheatOff className="h-6 w-6 text-[#d4ae48]" aria-hidden="true" /><span>{language === "en" ? "Gluten-free" : "Sin gluten"}</span></div>
-            <div className="flex items-center gap-4"><Flame className="h-6 w-6 text-[#d77a72]" aria-hidden="true" /><span>{language === "en" ? "Spicy" : "Picante"}</span></div>
-            <div className="flex items-center gap-4"><Leaf className="h-6 w-6 text-[#8cb27f]" aria-hidden="true" /><span>{language === "en" ? "Vegetarian" : "Vegetariano"}</span></div>
+      <main className="mx-auto w-full max-w-[1120px] px-4 py-10 lg:py-16">
+        <section><MenuSectionAccordion sections={sections} reserveImageSpace priceOptionsInPriceColumn /></section>
+        <section className="mt-6 border-t border-[#cfc4b2] pb-4 pt-8" aria-labelledby="allergen-guide-title">
+          <h2 id="allergen-guide-title" className="flex items-center gap-4 text-[11px] uppercase tracking-[0.28em] text-[#526e4c] before:h-px before:w-6 before:bg-[#526e4c]">
+            Alérgenos · Allergens
+          </h2>
+          <div className="mt-8 grid gap-x-8 gap-y-5 sm:grid-cols-2 lg:grid-cols-4">
+            {(["gf", "spicy", "veg"] as DietaryTag[]).map((tag) => {
+              const tagLabels = tag === "gf" ? ["Sin gluten", "Gluten free"] : tag === "spicy" ? ["Picante", "Spicy"] : ["Vegetariana", "Vegetarian"];
+              return <div key={tag} className="flex items-center gap-3"><span className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-[#cfc4b2] text-[#526e4c]"><DietaryLegendIcon tag={tag} /></span><span className="font-display text-lg text-[#635b4f]">{tagLabels[0]} <span className="text-[#9a8e7c]">· {tagLabels[1]}</span></span></div>;
+            })}
+            {allergens.map((allergen, index) => (
+              <div key={allergen} className="flex items-center gap-3">
+                <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-[#cfc4b2] text-[#635b4f]"><AllergenIcon number={index + 1} /></span>
+                <span className="font-display text-lg text-[#635b4f]">{index + 1}. {allergensEs[index]} <span className="text-[#9a8e7c]">· {allergen}</span></span>
+              </div>
+            ))}
           </div>
-        </aside>
+        </section>
       </main>
       <SiteFooter />
     </div>

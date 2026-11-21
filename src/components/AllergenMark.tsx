@@ -31,7 +31,7 @@ const paths: Record<number, string[]> = {
   14: ["M12 3v5.8", "M12 8.8c-3 2-4.9 5-4.9 7.9a4.9 4.9 0 0 0 9.8 0c0-2.9-1.9-5.9-4.9-7.9z", "M12 21v-3.6"],
 };
 
-const Icon = ({ number }: { number: number }) => (
+export const AllergenIcon = ({ number }: { number: number }) => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="h-5 w-5">
     {paths[number]?.map((path) => <path key={path} d={path} />)}
   </svg>
@@ -51,7 +51,7 @@ const Mark = ({ label, children, tone = "default" }: { label: string; children: 
 );
 
 export const AllergenMark = ({ number, language }: { number: number; language: Language }) => (
-  <Mark label={`${number}. ${labels[number - 1][language]}`}><Icon number={number} /></Mark>
+  <Mark label={`${number}. ${labels[number - 1][language]}`}><AllergenIcon number={number} /></Mark>
 );
 
 const dietaryLabels: Record<DietaryTag, Record<Language, string>> = {
@@ -64,3 +64,9 @@ export const DietaryMark = ({ tag, language }: { tag: DietaryTag; language: Lang
   const icon = tag === "gf" ? <WheatOff className="h-5 w-5" /> : tag === "spicy" ? <Flame className="h-5 w-5" /> : <Leaf className="h-5 w-5" />;
   return <Mark label={dietaryLabels[tag][language]} tone={tag}>{icon}</Mark>;
 };
+
+export const DietaryLegendIcon = ({ tag }: { tag: DietaryTag }) => tag === "gf"
+  ? <WheatOff className="h-5 w-5" aria-hidden="true" />
+  : tag === "spicy"
+    ? <Flame className="h-5 w-5" aria-hidden="true" />
+    : <Leaf className="h-5 w-5" aria-hidden="true" />;
