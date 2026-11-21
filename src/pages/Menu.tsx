@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { getMenuDietaryInfo, type DietaryTag } from "@/data/menuDietaryInfo";
 import {
   Accordion,
   AccordionContent,
@@ -391,6 +393,12 @@ const MenuImageDialog = ({
   </Dialog>
 );
 
+const dietaryLabels: Record<DietaryTag, { en: string; es: string }> = {
+  gf: { en: "Gluten-free", es: "Sin gluten" },
+  spicy: { en: "Spicy", es: "Picante" },
+  veg: { en: "Vegetarian", es: "Vegetariano" },
+};
+
 const MenuItemRow = ({
   item,
   sectionTitle,
@@ -401,7 +409,11 @@ const MenuItemRow = ({
   sectionTitle: string;
   reserveImageSpace?: boolean;
   priceOptionsInPriceColumn?: boolean;
-}) => (
+}) => {
+  const { language } = useLanguage();
+  const dietary = getMenuDietaryInfo(item.name);
+
+  return (
   <div
     className={`grid items-center gap-4 border-b border-dotted border-[#635b4f] px-4 py-2 ${
       item.image
@@ -426,6 +438,27 @@ const MenuItemRow = ({
         <p className="mt-1 max-w-xl text-sm leading-5 text-[#635b4f]">
           {item.description}
         </p>
+      )}
+      {dietary && (dietary.allergens.length > 0 || dietary.tags.length > 0) && (
+        <div className="mt-2 flex flex-wrap items-center gap-1.5" aria-label={language === "en" ? "Allergens and dietary information" : "Alérgenos e información dietética"}>
+          {dietary.allergens.map((allergen) => (
+            <span
+              key={`${item.name}-allergen-${allergen}`}
+              className="grid h-6 w-6 place-items-center bg-[#635b4f] text-[11px] font-bold text-[#e9e1d2]"
+              title={`${language === "en" ? "Allergen" : "Alérgeno"} ${allergen}`}
+            >
+              {allergen}
+            </span>
+          ))}
+          {dietary.tags.map((tag) => (
+            <span
+              key={`${item.name}-${tag}`}
+              className="border border-[#9b8f7b] px-2 py-0.5 text-[10px] font-bold uppercase text-[#635b4f]"
+            >
+              {dietaryLabels[tag][language]}
+            </span>
+          ))}
+        </div>
       )}
       {item.priceOptions && !priceOptionsInPriceColumn && (
         <div className="mt-3 grid max-w-sm gap-1 text-sm text-primary md:text-base">
@@ -455,7 +488,8 @@ const MenuItemRow = ({
       </div>
     )}
   </div>
-);
+  );
+};
 
 export const MenuSectionAccordion = ({
   sections,
