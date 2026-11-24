@@ -1,6 +1,7 @@
 import { CalendarDays, Clock3, Music2 } from "lucide-react";
 import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { JulbordEventPromotion } from "@/components/JulbordPromotion";
 
 const Events = () => {
   const { language } = useLanguage();
@@ -11,7 +12,8 @@ const Events = () => {
       <h1 className="font-myanmar mb-0 text-[36px] uppercase leading-none md:text-[46px]">{language === "en" ? "Events" : "Eventos"}</h1>
     </header>
     <main className="mx-auto max-w-[1024px] px-4 py-12 md:py-20">
-      <article className="relative mx-auto max-w-md overflow-hidden bg-[url('https://cg.diff.hu/wp-content/themes/cortesgarden/img/event-bg.jpg')] bg-cover bg-center p-6 text-center">
+      <JulbordEventPromotion />
+      <article className="relative mx-auto mt-12 max-w-md overflow-hidden bg-[url('https://cg.diff.hu/wp-content/themes/cortesgarden/img/event-bg.jpg')] bg-cover bg-center p-6 text-center">
         <div className="absolute left-1/2 top-0 -translate-x-1/2 bg-[#e9e1d2] px-3 py-1 text-2xl font-bold text-[#635b4f]">05/11</div>
         <div className="min-h-[400px] border-2 border-[#e9e1d2] bg-[#635b4f] px-4 pb-4 pt-12 text-[#e9e1d2]">
           <p className="border-y border-dashed border-[#e9e1d2] py-2 text-sm uppercase">Live Music Program</p>

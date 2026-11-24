@@ -6,6 +6,7 @@ import Map from "@/components/Map";
 import { useNavigate } from "react-router-dom";
 import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { JulbordHomePromotion } from "@/components/JulbordPromotion";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -110,6 +111,7 @@ const Index = () => {
     <div className="relative">
       <SiteHeader />
       <Hero language={language} />
+      <JulbordHomePromotion />
 
       {/* Floating CTA Button */}
       {showFloatingCta && (
