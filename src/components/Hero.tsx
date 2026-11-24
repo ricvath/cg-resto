@@ -26,7 +26,7 @@ export const Hero = ({ language }: HeroProps) => {
   };
 
   return (
-    <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div className="home-hero relative flex min-h-[430px] flex-1 items-center justify-center overflow-hidden sm:min-h-[480px]">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-[url('/hero-l.jpg')] bg-cover bg-center"

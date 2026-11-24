@@ -32,14 +32,14 @@ const JulbordDialog = () => (
 );
 
 export const JulbordHomePromotion = () => (
-  <section className="border-y border-[#cdbfaa] bg-[#f3e4c9] px-4 py-7 text-center text-[#3f5945]">
+  <section className="shrink-0 border-y border-[#cdbfaa] bg-[#f3e4c9] px-4 py-4 text-center text-[#3f5945] sm:py-6">
     <p className="text-[11px] uppercase tracking-[0.28em] text-[#8f171b]">Christmas at Cortes Garden</p>
-    <h2 className="mt-2 font-display text-4xl font-medium text-[#7d171b]">Swedish Christmas Buffet</h2>
-    <div className="mt-3 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm">
+    <h2 className="mt-1 font-display text-3xl font-medium text-[#7d171b] sm:mt-2 sm:text-4xl">Swedish Christmas Buffet</h2>
+    <div className="mt-2 flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm sm:mt-3">
       <span className="inline-flex items-center gap-2"><CalendarDays className="h-4 w-4" /> 22 & 24 December</span>
       <span className="inline-flex items-center gap-2"><Clock3 className="h-4 w-4" /> Marbella</span>
     </div>
-    <div className="mt-5"><JulbordDialog /></div>
+    <div className="mt-3 sm:mt-4"><JulbordDialog /></div>
   </section>
 );
 

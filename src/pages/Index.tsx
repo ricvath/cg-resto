@@ -15,7 +15,7 @@ const Index = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const heroSection = document.querySelector(".min-h-screen");
+      const heroSection = document.querySelector(".home-hero");
       if (heroSection) {
         const heroBottom = heroSection.getBoundingClientRect().bottom;
         setShowFloatingCta(heroBottom < 0);
@@ -110,8 +110,10 @@ const Index = () => {
   return (
     <div className="relative">
       <SiteHeader />
-      <Hero language={language} />
-      <JulbordHomePromotion />
+      <div className="flex min-h-svh flex-col">
+        <Hero language={language} />
+        <JulbordHomePromotion />
+      </div>
 
       {/* Floating CTA Button */}
       {showFloatingCta && (
