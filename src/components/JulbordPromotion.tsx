@@ -10,6 +10,7 @@ import { CalendarDays, Clock3 } from "lucide-react";
 
 const cover = "/events/svenskt-julbord-cover.jpeg";
 const menu = "/events/svenskt-julbord-menu.jpeg";
+const bookingUrl = "https://widget.thefork.com/en-GB/a268eafa-2b04-408f-873e-f54390fb3fdd?step=date&utm_source=cortesgarden.com";
 
 const JulbordDialog = () => (
   <Dialog>
@@ -24,7 +25,19 @@ const JulbordDialog = () => (
         <DialogDescription className="mt-1 text-sm text-[#3f5945]">Swedish Christmas buffet at Cortes Garden</DialogDescription>
       </div>
       <div className="grid items-start gap-3 md:grid-cols-2">
-        <img src={cover} alt="Svenskt Julbord at Cortes Garden, dates, prices and booking details" className="h-auto w-full border border-[#d7c5a6]" />
+        <div className="relative">
+          <img src={cover} alt="Svenskt Julbord at Cortes Garden, dates, prices and booking details" className="h-auto w-full border border-[#d7c5a6]" />
+          <div className="absolute bottom-[2.5%] left-1/2 w-[38%] -translate-x-1/2 bg-[#f7e9cf] p-1.5 sm:p-2">
+            <a
+              href={bookingUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="flex min-h-11 w-full items-center justify-center bg-[#8f171b] px-2 py-2 text-center text-[10px] font-semibold uppercase tracking-[0.08em] text-[#fff6e5] transition hover:bg-[#721216] sm:text-xs sm:tracking-[0.12em]"
+            >
+              Book a table
+            </a>
+          </div>
+        </div>
         <img src={menu} alt="Svenskt Julbord buffet menu" className="h-auto w-full border border-[#d7c5a6]" />
       </div>
     </DialogContent>
